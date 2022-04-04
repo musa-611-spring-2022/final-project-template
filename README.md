@@ -24,15 +24,15 @@ Make an interactive website with skills learned from JavaScript class to introdu
 
 > 1. Main Webpage
 >
-> <img src="https://github.com/Hui-Tian/final-project-template/blob/main/img/main_page.png" width=50%>
+> <img src="https://github.com/Hui-Tian/final-project-template/blob/main/img/main_page.png" width=100%>
 >
 > 2. Sub-category Webpage
 >
-> <img src="https://github.com/Hui-Tian/final-project-template/blob/main/img/subcategory_page.png" width=50%>
+> <img src="https://github.com/Hui-Tian/final-project-template/blob/main/img/subcategory_page.png" width=100%>
 >
 > 3. Specific Site Webpage
 >
-> <img src="https://github.com/Hui-Tian/final-project-template/blob/main/img/seperate_page.png" width=50%>
+> <img src="https://github.com/Hui-Tian/final-project-template/blob/main/img/seperate_page.png" width=100%>
 
 
 ## Data Resource
