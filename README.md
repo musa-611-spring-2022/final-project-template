@@ -20,7 +20,7 @@ Make an interactive website with skills learned from JavaScript class to introdu
 * Use charting library
 * Use leaflet cartography
 
-## Initial Wireframe
+## Initial Wireframes
 
 > 1. Main Webpage
 >
