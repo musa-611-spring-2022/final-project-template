@@ -1,10 +1,13 @@
 {
   "dependencies": {
-    "http-server": "^14.1.0"
+    "http-server": "^14.1.0",
+    "huffmodel": "file:../huffmodel",
+    "leaflet": "^1.7.1"
   },
   "devDependencies": {
     "eslint": "^8.6.0",
-    "eslint-config-airbnb": "^19.0.4"
+    "eslint-config-airbnb": "^19.0.4",
+    "nodemon": "^2.0.15"
   },
   "eslintConfig": {
     "extends": "airbnb",
