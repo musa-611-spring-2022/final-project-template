@@ -1,18 +1,12 @@
-# MUSA 611 Final Project Template
+# Huff Model Visualization
 
-## Project Proposal
-
-
+## Installation guide
 ```
 # Install test dependencies (this only has to be done once)
 npm install
 
-# Run the linter
-npx eslint exercise
-
 # Run the web server; this is needed for the tests
-npx http-server --port 8000
+npm start 
 
-# Open a new terminal and run the tests
-npx jest
+# Open to the web address shown in the terminal
 ```
