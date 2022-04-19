@@ -1,12 +1,9 @@
 #map
 {
     width: auto;
-    height: 600px;
+    height: 800px;
 }
 
-#controls {
-    width: 50%;
-}
 .icon-marker{
     -webkit-text-stroke: 1px #FFF;
 }
@@ -48,5 +45,15 @@
     height: 25px; /* Slider handle height */
     background: #04AA6D; /* Green background */
     cursor: pointer; /* Cursor on hover */
+  }
+  
+  .flex-container {
+    display: flex;
+  }
+  
+  .flex-container > div {
+    background-color: #f1f1f1;
+    margin: 10px;
+    padding: 20px;
   }
   

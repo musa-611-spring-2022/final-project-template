@@ -9,19 +9,34 @@
 </head>
 <body>
 
-<div id="map"></div>
-
-<div id="controls">
-    <h4>Distance threshold: <span id="distanceThresholdValue"></span></h4>
-    <p>(Maximum distance in miles that a resident will travel)</p>
-    <div class="slidecontainer">
-    <input type="range" min="1" max="10" value="7" step=".5" class="slider" id="distanceThreshold">
+<div class="flex-container">
+    <div style="width:80%">
+        <div id="map"></div>
     </div>
+    <div style="width:20%">
 
-    <h4>Distance exponent: <span id="distanceExponentValue"></span></h4>
-    <p>(Higher the value, the more likely distance will be a deterrent)</p>
-    <div class="slidecontainer">
-    <input type="range" min="0" max="2" value="1" step=".1" class="slider" id="distanceExponent">
+        <div id="controls">
+            <h3>Control Huff Model Inputs</h3>
+            <h4>Origins: Philadelphia Census Tracts - 2010</h4>
+            
+            <h4>Destinations: Philadelphia Parks</h4>
+
+            <h4>Distance threshold: <span id="distanceThresholdValue"></span></h4>
+            <p>(Maximum distance in miles that a resident will travel)</p>
+            <div class="slidecontainer">
+            <input type="range" min="1" max="10" value="7" step=".5" class="slider" id="distanceThreshold">
+            </div>
+
+            <h4>Distance exponent: <span id="distanceExponentValue"></span></h4>
+            <p>(The higher the value, the more likely distance will be a deterrent)</p>
+            <div class="slidecontainer">
+            <input type="range" min="0" max="2" value="1" step=".1" class="slider" id="distanceExponent">
+            </div>
+
+            <h4>Attractiveness factors: ["Park Acreage"]</h4>
+            <p>Attractiveness factors are the qualities about the destination that encourage a resident to vist.</p> 
+
+        </div>
     </div>
 </div>
 <script src="https://kit.fontawesome.com/457a87d66e.js" crossorigin="anonymous"></script>

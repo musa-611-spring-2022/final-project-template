@@ -10,9 +10,14 @@ let customMap = L.map('map', {
 customMap.setView([39.9926, -75.1652], 12);
 
 let blockGroups;
-let properties;
+let destinations;
 let originLayer;
 let destinationLayer;
+
+let uniqueName;
+let attractivenessProperties;
+
+let faIcon = 'fa-tree';
 
 let dTSlider = document.getElementById('distanceThreshold');
 let dTOutput = document.getElementById('distanceThresholdValue');
@@ -20,18 +25,15 @@ let dTOutput = document.getElementById('distanceThresholdValue');
 let dESlider = document.getElementById('distanceExponent');
 let dEOutput = document.getElementById('distanceExponentValue');
 
-dTOutput.innerHTML = dTSlider.value; // Display the default slider value
-dEOutput.innerHTML = dESlider.value; // Display the default slider value
-
 function getColoredIcon(color) {
   return L.divIcon({
-    html: `<i class="fas fa-tree fa-3x" style="color:${color}"></i>`,
+    html: `<i class="fas ${faIcon} fa-3x" style="color:${color}"></i>`,
     iconSize: [20, 20],
     className: 'icon-marker',
   });
 }
 
-function displayHuffOnMap(map, originProbabilities) {
+function displayHuffOnMap(map, originProbabilities, nameProperty) {
   // Initialize the base layer
   if (originLayer) {
     map.removeLayer(originLayer);
@@ -47,13 +49,13 @@ function displayHuffOnMap(map, originProbabilities) {
   originLayer = L.geoJSON(originProbabilities, {
     onEachFeature(f, l) {
       if (f.probabilities.length > 0) {
-        let stringToShow = 'Residents in this census tract are most likely to visit: ';
+        let stringToShow = 'People in this census tract are most likely to use:<br />';
         let originFillColor;
         let originFillOpacity;
         console.log(f.probabilities);
         f.probabilities.splice(0, 5).forEach((dest, i) =>  {
           let destination = dest.feature;
-          let parkName = destination.properties.PUBLIC_NAME;
+          let parkName = destination.properties[nameProperty];
           if (i === 0) {
             originFillColor = destination.properties.color;
             originFillOpacity = dest.probability;
@@ -72,6 +74,11 @@ function displayHuffOnMap(map, originProbabilities) {
           color: 'white',
           weight: 0.4,
         });
+      } else {
+        l.setStyle({
+          fillOpacity: 0,
+          stroke: 0,
+        });
       }
     },
   }).addTo(map);
@@ -86,9 +93,10 @@ function displayHuffOnMap(map, originProbabilities) {
   let destinationsToShowFC = turf.featureCollection(destinationsToShowCenters);
   // destinationsToShowFC = Huff.setDestinationColors(destinationsToShowFC);
 
+  console.log(destinationsToShowFC);
   destinationLayer = L.geoJSON(destinationsToShowFC, {
     onEachFeature(f, l) {
-      l.bindPopup(`${f.properties.PUBLIC_NAME}, Acreage: ${f.properties.ACREAGE}`);
+      l.bindPopup(`${f.properties[uniqueName]}, ${attractivenessProperties}: ${f.properties[attractivenessProperties]}`);
     },
     pointToLayer(point, latlng) {
       return L.marker(latlng, { icon: getColoredIcon(point.properties.color) });
@@ -96,33 +104,81 @@ function displayHuffOnMap(map, originProbabilities) {
   }).addTo(map);
 }
 
-function runHuffModel(origins, destinations, dT, dE) {
+function runHuffModel(origins, destinations, dT, dE, uniqueNameProperty, attractivenessProperty) {
   // HUFF MODEL – GENERATE PROBABILITIES
-  let originProbabilities = Huff.generateProbabilities(origins, destinations, { distanceThreshold: dT, distanceExponent: dE, originKeyProperty: 'GEOID10' });
+  let originProbabilities = Huff.generateProbabilities(origins, destinations, {
+    distanceThreshold: dT, distanceExponent: dE, destinationAttractivenessProperty: attractivenessProperty, originKeyProperty: 'GEOID10',
+  });
 
-  displayHuffOnMap(customMap, originProbabilities);
+  displayHuffOnMap(customMap, originProbabilities, uniqueName);
 }
 
 // Update the current slider value (each time you drag the slider handle)
 dTSlider.oninput = function () {
   dTOutput.innerHTML = this.value;
-  runHuffModel(blockGroups, properties, dTSlider.value, dESlider.value);
+  runHuffModel(
+    blockGroups,
+    destinations,
+    dTSlider.value,
+    dESlider.value,
+    uniqueName,
+    attractivenessProperties,
+  );
 };
 
 dESlider.oninput = function () {
   dEOutput.innerHTML = this.value;
-  runHuffModel(blockGroups, properties, dTSlider.value, dESlider.value);
+  runHuffModel(
+    blockGroups,
+    destinations,
+    dTSlider.value,
+    dESlider.value,
+    uniqueName,
+    attractivenessProperties,
+  );
 };
 
 // loading origin and destination data from geojson files
+
+let indego = 'https://kiosks.bicycletransit.workers.dev/phl';
+let phillyParks = 'data/PPR_Properties.geojson';
+
+let destDataSet = phillyParks;
+
+if (destDataSet === phillyParks) {
+  uniqueName = 'PUBLIC_NAME';
+  attractivenessProperties = 'ACREAGE';
+  faIcon = 'fa-tree';
+} else if (destDataSet === indego) {
+  uniqueName = 'name';
+  attractivenessProperties = 'bikesAvailable';
+  faIcon = 'fa-bicycle';
+  dTSlider.setAttribute('min', 0.1);
+  dTSlider.setAttribute('max', 1.5);
+  dTSlider.setAttribute('step', 0.1);
+  dTSlider.value = 0.5;
+  dESlider.value = 1.5;
+}
+
+dTOutput.innerHTML = dTSlider.value; // Display the default slider value
+dEOutput.innerHTML = dESlider.value; // Display the default slider value
+
+
 fetch('data/Census_Tracts_2010.geojson')
   .then(resp => resp.json())
   .then(bgData => {
     blockGroups = bgData;
-    fetch('data/PPR_Properties.geojson').then(resp => resp.json()).then(propData => {
-      properties = propData;
-      let propertiesColored = Huff.setDestinationColors(properties);
-      runHuffModel(blockGroups, propertiesColored, dTSlider.value, dESlider.value);
+    fetch(destDataSet).then(resp => resp.json()).then(destData => {
+      destinations = destData;
+      let propertiesColored = Huff.setDestinationColors(destinations);
+      runHuffModel(
+        blockGroups,
+        propertiesColored,
+        dTSlider.value,
+        dESlider.value,
+        uniqueName,
+        attractivenessProperties,
+      );
     });
   });
 
