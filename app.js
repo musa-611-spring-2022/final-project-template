@@ -19,13 +19,17 @@ function main(origins, destinations) {
   }).addTo(map);
 
   // HUFF MODEL – GENERATE PROBABILITIES
-  let originProbabilities = Huff.generateProbabilities(origins, destinations, { distanceThreshold: 3, originKeyProperty: 'GEOID10' });
+  let destinations_with_colors = Huff.setDestinationColors(destinations);
+
+  let originProbabilities = Huff.generateProbabilities(origins, destinations_with_colors, { distanceThreshold: 3, originKeyProperty: 'GEOID10' });
+
 
   let uniqueDestinationNames = [];
   let destinationsToShow = [];
   L.geoJSON(originProbabilities, {
     onEachFeature(f, l) {
-      let parkName = f.probabilities[0].feature.properties.PUBLIC_NAME;
+      let destination = f.probabilities[0].feature;
+      let parkName = destination.properties.PUBLIC_NAME;
       if (!uniqueDestinationNames.includes(parkName)) {
         uniqueDestinationNames.push(parkName);
         destinationsToShow.push(f.probabilities[0].feature);
@@ -33,6 +37,8 @@ function main(origins, destinations) {
       let prob = `${(f.probabilities[0].probability * 100).toFixed(2)}%`;
       let stringToShow = `Residents in this block group have a ${prob} of visiting ${parkName}`;
       l.bindPopup(stringToShow);
+      console.log(destination);
+      l.setStyle({ color: destination.color });
     },
   }).addTo(map);
 
@@ -44,7 +50,13 @@ function main(origins, destinations) {
   });
 
   let destinationsToShowFC = turf.featureCollection(destinationsToShowCenters);
-  L.geoJSON(destinationsToShowFC).addTo(map);
+  // destinationsToShowFC = Huff.setDestinationColors(destinationsToShowFC);
+
+  L.geoJSON(destinationsToShowFC, {
+    onEachFeature(f, l) {
+      l.bindPopup(f.color);
+    },
+  }).addTo(map);
 }
 
 // loading origin and destination data from geojson files
