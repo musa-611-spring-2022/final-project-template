@@ -18,21 +18,37 @@ function main(origins, destinations) {
     attribution: '&copy; OSM Mapnik <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
   }).addTo(map);
 
-  // SHOW CENSUS BLOCK GROUPS ON MAP
-  L.geoJSON(origins).addTo(map);
-
-  // SHOW PARKS ON MAP
-  let destinationCenters = [];
-  turf.featureEach(destinations, (c, i) => { destinationCenters.push(turf.center(c)); });
-  // showing first 20 parks
-  destinationCenters = turf.featureCollection(destinationCenters.slice(0, 20));
-  L.geoJSON(destinationCenters).addTo(map);
-
   // HUFF MODEL – GENERATE PROBABILITIES
-  Huff.generateProbabilities(origins, destinations, { distanceThreshold: 3 });
+  let originProbabilities = Huff.generateProbabilities(origins, destinations, { distanceThreshold: 3, originKeyProperty: 'GEOID10' });
+
+  let uniqueDestinationNames = [];
+  let destinationsToShow = [];
+  L.geoJSON(originProbabilities, {
+    onEachFeature(f, l) {
+      let parkName = f.probabilities[0].feature.properties.PUBLIC_NAME;
+      if (!uniqueDestinationNames.includes(parkName)) {
+        uniqueDestinationNames.push(parkName);
+        destinationsToShow.push(f.probabilities[0].feature);
+      }
+      let prob = `${(f.probabilities[0].probability * 100).toFixed(2)}%`;
+      let stringToShow = `Residents in this block group have a ${prob} of visiting ${parkName}`;
+      l.bindPopup(stringToShow);
+    },
+  }).addTo(map);
+
+  let destinationsToShowCenters = [];
+  turf.featureEach(turf.featureCollection(destinationsToShow), (c, i) => {
+    let feature = turf.center(c);
+    feature.properties = c.properties;
+    destinationsToShowCenters.push(feature);
+  });
+
+  let destinationsToShowFC = turf.featureCollection(destinationsToShowCenters);
+  L.geoJSON(destinationsToShowFC).addTo(map);
 }
 
-fetch('data/Census_Block_Groups_2010.geojson')
+// loading origin and destination data from geojson files
+fetch('data/Census_Tracts_2010.geojson')
   .then(resp => resp.json())
   .then(bgData => {
     let blockGroups = bgData;
