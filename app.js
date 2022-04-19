@@ -47,7 +47,7 @@ function displayHuffOnMap(map, originProbabilities) {
   originLayer = L.geoJSON(originProbabilities, {
     onEachFeature(f, l) {
       if (f.probabilities.length > 0) {
-        let stringToShow = 'Residents in this block group are most likely to visit: ';
+        let stringToShow = 'Residents in this census tract are most likely to visit: ';
         let originFillColor;
         let originFillOpacity;
         console.log(f.probabilities);
