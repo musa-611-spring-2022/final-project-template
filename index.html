@@ -11,6 +11,20 @@
 
 <div id="map"></div>
 
+<div id="controls">
+    <h4>Distance threshold: <span id="distanceThresholdValue"></span></h4>
+    <p>(Maximum distance in miles that a resident will travel)</p>
+    <div class="slidecontainer">
+    <input type="range" min="1" max="10" value="7" step=".5" class="slider" id="distanceThreshold">
+    </div>
+
+    <h4>Distance exponent: <span id="distanceExponentValue"></span></h4>
+    <p>(Higher the value, the more likely distance will be a deterrent)</p>
+    <div class="slidecontainer">
+    <input type="range" min="0" max="2" value="1" step=".1" class="slider" id="distanceExponent">
+    </div>
+</div>
+<script src="https://kit.fontawesome.com/457a87d66e.js" crossorigin="anonymous"></script>
 <script src="bundle.js"></script>
 </body>
 </html>
