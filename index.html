@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-<title>Huff Model – Philly Parks</title>
+<title>Huff Model Data Explorer</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="node_modules/leaflet/dist/leaflet.css">
@@ -17,9 +17,25 @@
 
         <div id="controls">
             <h3>Control Huff Model Inputs</h3>
-            <h4>Origins: Philadelphia Census Tracts - 2010</h4>
-            
-            <h4>Destinations: Philadelphia Parks</h4>
+            <h4>Origins</h4>
+
+            <select name="origins" class="datasetinputs" value="tracts" id="originDataset">
+                <option value="tract">Philadelphia Census Tracts</option>
+                <option value="blockgroup">Philadelphia Block Groups </option>
+                <option value="customurl">Custom URL...</option>
+            </select>
+
+            <input type="text" id="originDatasetURL" class="datasetinputs" style="display:none;" value="https://" size="40">
+
+            <h4>Destinations</h4>
+
+            <select name="destinations" class="datasetinputs" value="parks" id="destDataset">
+                <option value="parks">Philadelphia Parks</option>
+                <option value="indego">Indego Bike Stations</option>
+                <option value="customurl">Custom URL...</option>
+            </select>
+
+            <input type="text" id="destDatasetURL" class="datasetinputs" style="display:none;" value="https://" size="40">
 
             <h4>Distance threshold: <span id="distanceThresholdValue"></span></h4>
             <p>(Maximum distance in miles that a resident will travel)</p>
@@ -33,7 +49,7 @@
             <input type="range" min="0" max="2" value="1" step=".1" class="slider" id="distanceExponent">
             </div>
 
-            <h4>Attractiveness factors: ["Park Acreage"]</h4>
+            <h4>Attractiveness factors: <span id="attractivenessValue"></span></h4>
             <p>Attractiveness factors are the qualities about the destination that encourage a resident to vist.</p> 
 
         </div>

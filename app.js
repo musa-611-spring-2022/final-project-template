@@ -2,6 +2,7 @@
 let L = require('leaflet');
 let Huff = require('huffmodel');
 let turf = require('@turf/turf');
+let isUrl = require('is-url');
 // Initialize the map
 let customMap = L.map('map', {
   scrollWheelZoom: false,
@@ -9,7 +10,7 @@ let customMap = L.map('map', {
 // Set the position and zoom level of the map
 customMap.setView([39.9926, -75.1652], 12);
 
-let blockGroups;
+let origins;
 let destinations;
 let originLayer;
 let destinationLayer;
@@ -24,6 +25,7 @@ let dTOutput = document.getElementById('distanceThresholdValue');
 
 let dESlider = document.getElementById('distanceExponent');
 let dEOutput = document.getElementById('distanceExponentValue');
+
 
 function getColoredIcon(color) {
   return L.divIcon({
@@ -49,10 +51,9 @@ function displayHuffOnMap(map, originProbabilities, nameProperty) {
   originLayer = L.geoJSON(originProbabilities, {
     onEachFeature(f, l) {
       if (f.probabilities.length > 0) {
-        let stringToShow = 'People in this census tract are most likely to use:<br />';
+        let stringToShow = 'People in this origin are most likely to go to:<br />';
         let originFillColor;
         let originFillOpacity;
-        console.log(f.probabilities);
         f.probabilities.splice(0, 5).forEach((dest, i) =>  {
           let destination = dest.feature;
           let parkName = destination.properties[nameProperty];
@@ -93,7 +94,6 @@ function displayHuffOnMap(map, originProbabilities, nameProperty) {
   let destinationsToShowFC = turf.featureCollection(destinationsToShowCenters);
   // destinationsToShowFC = Huff.setDestinationColors(destinationsToShowFC);
 
-  console.log(destinationsToShowFC);
   destinationLayer = L.geoJSON(destinationsToShowFC, {
     onEachFeature(f, l) {
       l.bindPopup(`${f.properties[uniqueName]}, ${attractivenessProperties}: ${f.properties[attractivenessProperties]}`);
@@ -117,7 +117,7 @@ function runHuffModel(origins, destinations, dT, dE, uniqueNameProperty, attract
 dTSlider.oninput = function () {
   dTOutput.innerHTML = this.value;
   runHuffModel(
-    blockGroups,
+    origins,
     destinations,
     dTSlider.value,
     dESlider.value,
@@ -129,7 +129,7 @@ dTSlider.oninput = function () {
 dESlider.oninput = function () {
   dEOutput.innerHTML = this.value;
   runHuffModel(
-    blockGroups,
+    origins,
     destinations,
     dTSlider.value,
     dESlider.value,
@@ -140,45 +140,90 @@ dESlider.oninput = function () {
 
 // loading origin and destination data from geojson files
 
-let indego = 'https://kiosks.bicycletransit.workers.dev/phl';
-let phillyParks = 'data/PPR_Properties.geojson';
-
-let destDataSet = phillyParks;
-
-if (destDataSet === phillyParks) {
-  uniqueName = 'PUBLIC_NAME';
-  attractivenessProperties = 'ACREAGE';
-  faIcon = 'fa-tree';
-} else if (destDataSet === indego) {
-  uniqueName = 'name';
-  attractivenessProperties = 'bikesAvailable';
-  faIcon = 'fa-bicycle';
-  dTSlider.setAttribute('min', 0.1);
-  dTSlider.setAttribute('max', 1.5);
-  dTSlider.setAttribute('step', 0.1);
-  dTSlider.value = 0.5;
-  dESlider.value = 1.5;
+function updateRangeValues() {
+  dTOutput.innerHTML = dTSlider.value; // Display the default slider value
+  dEOutput.innerHTML = dESlider.value; // Display the default slider value
+  attractivenessValue.innerHTML = attractivenessProperties;
 }
 
-dTOutput.innerHTML = dTSlider.value; // Display the default slider value
-dEOutput.innerHTML = dESlider.value; // Display the default slider value
-
-
-fetch('data/Census_Tracts_2010.geojson')
-  .then(resp => resp.json())
-  .then(bgData => {
-    blockGroups = bgData;
-    fetch(destDataSet).then(resp => resp.json()).then(destData => {
-      destinations = destData;
-      let propertiesColored = Huff.setDestinationColors(destinations);
-      runHuffModel(
-        blockGroups,
-        propertiesColored,
-        dTSlider.value,
-        dESlider.value,
-        uniqueName,
-        attractivenessProperties,
-      );
+function fetchDatasets(originDataSet, destinationDataSet, updateBounds = null) {
+  fetch(originDataSet)
+    .then(resp => resp.json())
+    .then(origData => {
+      origins = origData;
+      fetch(destinationDataSet).then(resp => resp.json()).then(destData => {
+        destinations = destData;
+        let propertiesColored = Huff.setDestinationColors(destinations);
+        if (updateBounds) {
+          let bounds = turf.bbox(destinations);
+          customMap.fitBounds([[bounds[1], bounds[0]], [bounds[3], bounds[2]]]);
+        }
+        runHuffModel(
+          origins,
+          propertiesColored,
+          dTSlider.value,
+          dESlider.value,
+          uniqueName,
+          attractivenessProperties,
+        );
+      });
     });
-  });
+}
 
+// 'data/Census_Block_Groups_2010.geojson'
+// Block groups:  https://opendata.arcgis.com/datasets/2f982bada233478ea0100528227febce_0.geojson
+// Tracts:  https://opendata.arcgis.com/datasets/8bc0786524a4486bb3cf0f9862ad0fbf_0.geojson
+// Parks:  https://opendata.arcgis.com/datasets/d52445160ab14380a673e5849203eb64_0.geojson
+// Bike stations: https://kiosks.bicycletransit.workers.dev/phl
+
+let data = {
+  blockgroup: 'data/Census_Block_Groups_2010.geojson',
+  tract: 'data/Census_Tracts_2010.geojson',
+  indego: 'https://kiosks.bicycletransit.workers.dev/phl',
+  parks: 'data/PPR_Properties.geojson',
+};
+
+let datasetinputs = document.getElementsByClassName('datasetinputs');
+
+function getDatasets(event) {
+  let updateBounds = false;
+  if (event && event.srcElement.id === 'destDataset') {
+    updateBounds = true;
+  }
+  let orig = data[document.getElementById('originDataset').value];
+  let dest = data[document.getElementById('destDataset').value];
+
+  if (dest === 'data/PPR_Properties.geojson') {
+    uniqueName = 'PUBLIC_NAME';
+    attractivenessProperties = 'ACREAGE';
+    faIcon = 'fa-tree';
+    dTSlider.setAttribute('min', 1);
+    dTSlider.setAttribute('max', 10);
+    dTSlider.setAttribute('step', 1);
+    dTSlider.value = 7;
+    dESlider.value = 1;
+  } else if (dest === 'https://kiosks.bicycletransit.workers.dev/phl') {
+    uniqueName = 'name';
+    attractivenessProperties = 'bikesAvailable';
+    faIcon = 'fa-bicycle';
+    dTSlider.setAttribute('min', 0.1);
+    dTSlider.setAttribute('max', 1.5);
+    dTSlider.setAttribute('step', 0.1);
+    dTSlider.value = 0.5;
+    dESlider.value = 1.5;
+  }
+  updateRangeValues();
+
+  if (isUrl(dest) && isUrl(orig)) {
+    document.getElementById('originText').innerHTML = orig;
+    document.getElementById('destText').innerHTML = dest;
+  }
+
+  fetchDatasets(orig, dest, updateBounds);
+}
+
+for (let i = 0; i < datasetinputs.length; i++) {
+  datasetinputs[i].addEventListener('change', getDatasets);
+}
+
+getDatasets();
