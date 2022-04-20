@@ -10,7 +10,7 @@
     "leaflet": "^1.7.1"
   },
   "scripts": {
-    "start": "beefy app.js:bundle.js 3000 --live",
+    "start": "beefy app.js:bundle.js",
     "bundle": "browserify app.js -o bundle.js"
   },
   "eslintConfig": {
