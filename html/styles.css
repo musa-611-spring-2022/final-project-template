@@ -1,0 +1,150 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+.map {
+  height: 300px;
+}
+
+.filters,
+.showcase {
+  padding: 1rem;
+  /*background-color: white;*/
+  background-image: linear-gradient(to bottom right, rgb(86, 184, 211), rgb(241, 241, 231));
+}
+
+.filter-button {
+  display: flex;
+  margin: 0.25rem 0;
+}
+
+.filter-button button{
+  height: 25px; 
+  width: 100px;
+  margin: auto;
+  font-family: 'Ink Free';
+  background:#b07528;
+  color:white;
+  border-radius: 4px;
+  transition-duration: 0.4s;
+}
+
+.filter-button button:hover {
+  background-color: #cb4070;
+  color: white;
+}
+
+.filter-title {
+  margin: 0.25rem 0;
+  text-align: center;
+  margin-bottom: 1.25rem;
+  font-family: 'Jazz LET';
+  font-size: 25px;
+  color: rgb(201, 192, 192);
+  text-shadow: 1px 1px 1px red,
+	  	         2px 2px 1px red;
+}
+
+.showcase-title {
+  margin: 0.25rem 0;
+  text-align: center;
+  margin-bottom: 1.25rem;
+  font-family: 'Jazz LET';
+  font-size: 25px;
+  color: red;
+  text-shadow: 1px 1px 1px rgb(201, 192, 192),
+	  	         2px 2px 1px rgb(201, 192, 192);
+}
+
+.filter-subtitle {
+  margin: 0.25rem 0;
+  font-size: 15px;
+  font-family: 'Comic Sans MS';
+  font-weight: bold;
+}
+
+.filter-field-expand{
+  display: flex;
+  margin: 0.5rem 0;
+}
+
+.showcase-field {
+  display: flex;
+  margin: 0.25rem 0;
+}
+
+.filter-field {
+  display: flex;
+  width: 50%;
+}
+
+.filter-field label,
+.showcase-field label {
+  width: 100%;
+  padding: 0.25rem 0;
+  font-weight: 600;
+  text-align: center;
+  font-family: 'MV Boli';
+}
+
+.filter-field input{
+  height: 25px; 
+  width: 25px;
+  margin-left: 0.5rem;
+}
+
+.showcase-field input{
+  accent-color: #9d3039;
+  height: 30px; 
+  width: 30px;
+  margin-left: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .map {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+  }
+
+  body {
+    padding-left: 5rem;
+    padding-right: auto;
+  }
+
+  .filters,
+  .showcase {
+    box-sizing: border-box;
+    width: 20%;
+    margin-right: auto;
+    pointer-events: visible;
+    position: relative;
+  }
+
+  .filters {
+    position: sticky;
+    top: 3rem;
+    border-radius: 0.5rem;
+    /*border: 1px solid gray;*/
+    margin-top: 1rem;
+    z-index: 1;
+    background-color: #eee;
+    box-shadow: 3px 3px 5px silver;
+  }
+
+  .showcase {
+    position: sticky;
+    top: 1rem;
+    border-radius: 0.5rem;
+    /*border: 1px solid gray;*/
+    margin-top: 5rem;
+    z-index: 1;
+    background-color: #eee;
+    box-shadow: 3px 3px 5px silver;
+  }
+}

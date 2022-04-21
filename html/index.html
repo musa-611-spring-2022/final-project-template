@@ -1,0 +1,89 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pokémon Helper</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+    <link type="text/css" rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.7/dist/leaflet-routing-machine.css" />
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="map" id="map">Map</div>
+    <div class="filters">
+      <div class="filter-title">Select Factors</div>
+      <div class="filter-subtitle">Real World</div>
+      <div class="filter-field-expand">
+        <div class="filter-field">
+          <input type="checkbox" id="Food" value="filter_1_checkbox" onchange="Filterfactor()" checked>
+          <label for="Food">Food</label>
+        </div>
+        <div class="filter-field">
+          <input type="checkbox" id="Drink" value="filter_2_checkbox" onchange="Filterfactor()" checked>
+          <label for="Drink">Drink</label>
+        </div>
+      </div>
+      <div class="filter-field-expand">
+        <div class="filter-field">
+          <input type="checkbox" id="Bus Stop" value="filter_3_checkbox" onchange="Filterfactor()" checked>
+          <label for="Bus Stop">Bus Stop</label>
+        </div>
+        <div class="filter-field">
+          <input type="checkbox" id="Crime" value="filter_4_checkbox" onchange="Filterfactor()" checked>
+          <label for="Crime">Crime</label>
+        </div>
+      </div>
+      <div class="filter-subtitle">Game World</div>
+      <div class="filter-field-expand">
+        <div class="filter-field">
+          <input type="checkbox" id="filter Poke Stops" value="filter_5_checkbox" checked>
+          <label for="filter Poke Stops">Poké Stops</label>
+        </div>
+        <div class="filter-field">
+          <input type="checkbox" id="filter Gym" value="filter_6_checkbox" onchange="Filterfactor()" checked>
+          <label for="filter Gym">Gym</label>
+        </div>
+      </div>
+      <div class="filter-field-expand">
+        <div class="filter-field">
+          <input type="checkbox" id="filter Raid" value="filter_7_checkbox" onchange="Filterfactor()" checked>
+          <label for="filter Raid">Raid</label>
+        </div>
+        <div class="filter-field">
+          <input type="checkbox" id="filter Nest" value="filter_8_checkbox" onchange="Filterfactor()" checked>
+          <label for="filter Nest">Nest</label>
+        </div>
+      </div>
+      <div class="filter-button">
+        <button class="route-button" type="button" onclick="getRoute()">Route!</button>
+      </div>
+    </div>
+    <div class="showcase">
+      <div class="showcase-title">Show PokéStops</div>
+      <div class="showcase-field">
+        <input type="checkbox" id="Poke Stops" value="show_1_checkbox" onchange="Showpokestop()">
+        <label for="Poke Stops">Poké Stops</label>
+      </div>
+      <div class="showcase-field">
+        <input type="checkbox" id="Gym" value="show_2_checkbox" onchange="Showpokestop()">
+        <label for="Gym">Gym</label>
+      </div>
+      <div class="showcase-field">
+        <input type="checkbox" id="Raid" value="show_3_checkbox" onchange="Showpokestop()">
+        <label for="Raid">Raid</label>
+      </div>
+      <div class="showcase-field">
+        <input type="checkbox" id="Nest" value="show_4_checkbox" onchange="Showpokestop()">
+        <label for="Nest">Nest</label>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+    <script src="https://unpkg.com/papaparse@5.3.2/papaparse.min.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@3.2.7/dist/leaflet-routing-machine.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
