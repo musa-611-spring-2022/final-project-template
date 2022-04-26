@@ -17,7 +17,6 @@ let destinationLayer;
 
 let uniqueName;
 let attractivenessProperties;
-let destinationProperties;
 
 let faIcon = 'fa-tree';
 
@@ -26,6 +25,8 @@ let dTOutput = document.getElementById('distanceThresholdValue');
 
 let dESlider = document.getElementById('distanceExponent');
 let dEOutput = document.getElementById('distanceExponentValue');
+let attractivenessValue = document.getElementById('attractivenessValue');
+
 
 let destPropText = document.getElementById('destinationProperties');
 
@@ -108,7 +109,7 @@ function displayHuffOnMap(map, originProbabilities, nameProperty) {
       attractivenessProperties.split(',').forEach(prop => {
         attractivenessString += `${prop}: ${f.properties[prop]}<br />`;
       });
-      l.bindPopup(`${f.properties[uniqueName]}<br /> ${attractivenessString}`);
+      l.bindPopup(`<b style="color:${f.properties.color}">${f.properties[uniqueName]}</b><br /> ${attractivenessString}`);
     },
     pointToLayer(point, latlng) {
       return L.marker(latlng, { icon: getColoredIcon(point.properties.color) });
@@ -118,9 +119,8 @@ function displayHuffOnMap(map, originProbabilities, nameProperty) {
 
 function runHuffModel(origins, destinations, dT, dE, uniqueNameProperty, attractivenessProperties) {
   // HUFF MODEL – GENERATE PROBABILITIES
-  attractivenessProperties = attractivenessProperties.split(',');
   let originProbabilities = Huff.generateProbabilities(origins, destinations, {
-    distanceThreshold: dT, distanceExponent: dE, destinationAttractivenessProperties: attractivenessProperties, originKeyProperty: 'GEOID10',
+    distanceThreshold: dT, distanceExponent: dE, destinationAttractivenessProperties: attractivenessProperties.split(','), originKeyProperty: 'GEOID10',
   });
 
   displayHuffOnMap(customMap, originProbabilities, uniqueName);
