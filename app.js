@@ -17,6 +17,7 @@ let destinationLayer;
 
 let uniqueName;
 let attractivenessProperties;
+let destinationProperties;
 
 let faIcon = 'fa-tree';
 
@@ -26,6 +27,12 @@ let dTOutput = document.getElementById('distanceThresholdValue');
 let dESlider = document.getElementById('distanceExponent');
 let dEOutput = document.getElementById('distanceExponentValue');
 
+let destPropText = document.getElementById('destinationProperties');
+
+
+function getFeatureProperties(feature) {
+  return Object.keys(feature.properties).join(', ');
+}
 
 function getColoredIcon(color) {
   return L.divIcon({
@@ -96,7 +103,12 @@ function displayHuffOnMap(map, originProbabilities, nameProperty) {
 
   destinationLayer = L.geoJSON(destinationsToShowFC, {
     onEachFeature(f, l) {
-      l.bindPopup(`${f.properties[uniqueName]}, ${attractivenessProperties}: ${f.properties[attractivenessProperties]}`);
+      let attractivenessString = '';
+
+      attractivenessProperties.split(',').forEach(prop => {
+        attractivenessString += `${prop}: ${f.properties[prop]}<br />`;
+      });
+      l.bindPopup(`${f.properties[uniqueName]}<br /> ${attractivenessString}`);
     },
     pointToLayer(point, latlng) {
       return L.marker(latlng, { icon: getColoredIcon(point.properties.color) });
@@ -104,10 +116,11 @@ function displayHuffOnMap(map, originProbabilities, nameProperty) {
   }).addTo(map);
 }
 
-function runHuffModel(origins, destinations, dT, dE, uniqueNameProperty, attractivenessProperty) {
+function runHuffModel(origins, destinations, dT, dE, uniqueNameProperty, attractivenessProperties) {
   // HUFF MODEL – GENERATE PROBABILITIES
+  attractivenessProperties = attractivenessProperties.split(',');
   let originProbabilities = Huff.generateProbabilities(origins, destinations, {
-    distanceThreshold: dT, distanceExponent: dE, destinationAttractivenessProperty: attractivenessProperty, originKeyProperty: 'GEOID10',
+    distanceThreshold: dT, distanceExponent: dE, destinationAttractivenessProperties: attractivenessProperties, originKeyProperty: 'GEOID10',
   });
 
   displayHuffOnMap(customMap, originProbabilities, uniqueName);
@@ -138,12 +151,25 @@ dESlider.oninput = function () {
   );
 };
 
+attractivenessValue.onchange = function () {
+  attractivenessProperties = this.value;
+  runHuffModel(
+    origins,
+    destinations,
+    dTSlider.value,
+    dESlider.value,
+    uniqueName,
+    attractivenessProperties,
+  );
+};
+
+
 // loading origin and destination data from geojson files
 
 function updateRangeValues() {
   dTOutput.innerHTML = dTSlider.value; // Display the default slider value
   dEOutput.innerHTML = dESlider.value; // Display the default slider value
-  attractivenessValue.innerHTML = attractivenessProperties;
+  attractivenessValue.value = attractivenessProperties;
 }
 
 function fetchDatasets(originDataSet, destinationDataSet, updateBounds = null) {
@@ -153,6 +179,8 @@ function fetchDatasets(originDataSet, destinationDataSet, updateBounds = null) {
       origins = origData;
       fetch(destinationDataSet).then(resp => resp.json()).then(destData => {
         destinations = destData;
+        destinationProperties = getFeatureProperties(destinations.features[0]);
+        destPropText.innerHTML = getFeatureProperties(destinations.features[0]);
         let propertiesColored = Huff.setDestinationColors(destinations);
         if (updateBounds) {
           let bounds = turf.bbox(destinations);
