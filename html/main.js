@@ -157,7 +157,8 @@ function getRoute() {
     ],
     lineOptions : {
       addWaypoints: false
-    }
+    },
+    router: L.Routing.mapbox('pk.eyJ1Ijoia3JtZXRlb3IiLCJhIjoiY2wwcjM2NmJoMjliZDNlcnZiOHJ5MjdhNSJ9.DHn_7OJhlBwMbxtFajnu2g')
   }).addTo(map);
 }
 
