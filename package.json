@@ -11,7 +11,7 @@
   },
   "scripts": {
     "start": "beefy app.js:bundle.js $PORT",
-    "dev": "beefy app.js:bundle.js --live",
+    "dev": "beefy app.js:bundle.js",
     "bundle": "browserify app.js -o bundle.js"
   },
   "eslintConfig": {

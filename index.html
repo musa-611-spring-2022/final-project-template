@@ -34,9 +34,15 @@
                 <option value="indego">Indego Bike Stations</option>
                 <option value="customurl">Custom URL...</option>
             </select>
-
-            <input type="text" id="destDatasetURL" class="datasetinputs" style="display:none;" value="https://" size="40">
-
+            <div id="customDestinationURLSettings" style="display:none;">
+            <p>
+            GeoJson URL...
+            <input type="text" id="destDatasetURL" class="datasetinputs" value="https://" size="40">
+            </p><p>
+            Property to use as unique name...
+            <input type="text" id="destUniqueName" class="datasetinputs" value="objectid" size="40">
+            </p>
+            </div>
             <h4>Distance threshold: <span id="distanceThresholdValue"></span></h4>
             <p>(Maximum distance in miles that a resident will travel)</p>
             <div class="slidecontainer">
@@ -52,6 +58,9 @@
             <h4>Attractiveness factors: <input type="text" id="attractivenessValue" size="40"></h4>
             <p>Attractiveness factors are the qualities about the destination that encourage a resident to vist.</p> 
             <p>Enter a comma-separated list of properties to use for attractiveness. The following properties are available for the destination, although only numeric properties can be used as factors: <span id="destinationProperties"></span>
+
+
+
         </div>
     </div>
 </div>

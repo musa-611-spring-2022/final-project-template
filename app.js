@@ -122,7 +122,6 @@ function runHuffModel(origins, destinations, dT, dE, uniqueNameProperty, attract
   let originProbabilities = Huff.generateProbabilities(origins, destinations, {
     distanceThreshold: dT, distanceExponent: dE, destinationAttractivenessProperties: attractivenessProperties.split(','), originKeyProperty: 'GEOID10',
   });
-
   displayHuffOnMap(customMap, originProbabilities, uniqueName);
 }
 
@@ -214,12 +213,31 @@ let data = {
 let datasetinputs = document.getElementsByClassName('datasetinputs');
 
 function getDatasets(event) {
+  let orig;
+  let dest;
+  let destDatasetURL = document.getElementById('customDestinationURLSettings');
+  let originDatasetURL = document.getElementById('originDatasetURL');
+
+  if (document.getElementById('destDataset').value === 'customurl') {
+    destDatasetURL.style.display = 'block';
+    dest = document.getElementById('destDatasetURL').value;
+  } else {
+    destDatasetURL.style.display = 'none';
+    dest = data[document.getElementById('destDataset').value];
+  }
+
+  if (document.getElementById('originDataset').value === 'customurl') {
+    originDatasetURL.style.display = 'block';
+    orig = document.getElementById('originDatasetURL').value;
+  } else {
+    originDatasetURL.style.display = 'none';
+    orig = data[document.getElementById('originDataset').value];
+  }
+
   let updateBounds = false;
   if (event && event.srcElement.id === 'destDataset') {
     updateBounds = true;
   }
-  let orig = data[document.getElementById('originDataset').value];
-  let dest = data[document.getElementById('destDataset').value];
 
   if (dest === 'data/PPR_Properties.geojson') {
     uniqueName = 'PUBLIC_NAME';
@@ -232,20 +250,24 @@ function getDatasets(event) {
     dESlider.value = 1;
   } else if (dest === 'https://kiosks.bicycletransit.workers.dev/phl') {
     uniqueName = 'name';
-    attractivenessProperties = 'bikesAvailable';
+    attractivenessProperties = 'bikesAvailable,totalDocks,docksAvailable';
     faIcon = 'fa-bicycle';
     dTSlider.setAttribute('min', 0.1);
     dTSlider.setAttribute('max', 1.5);
     dTSlider.setAttribute('step', 0.1);
     dTSlider.value = 0.5;
     dESlider.value = 1.5;
+  } else {
+    uniqueName = document.getElementById('destUniqueName').value;
+    attractivenessProperties = '';
+    faIcon = 'fa-map-marker';
+    dTSlider.setAttribute('min', 1);
+    dTSlider.setAttribute('max', 10);
+    dTSlider.setAttribute('step', 1);
+    dTSlider.value = 7;
+    dESlider.value = 1;
   }
   updateRangeValues();
-
-  if (isUrl(dest) && isUrl(orig)) {
-    document.getElementById('originText').innerHTML = orig;
-    document.getElementById('destText').innerHTML = dest;
-  }
 
   fetchDatasets(orig, dest, updateBounds);
 }
