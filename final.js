@@ -26,7 +26,7 @@ let showMapData;
 let points;
 
 const fetchMapData = () => {
-  fetch('slides.json')
+  fetch('https://raw.githubusercontent.com/sighuh/final-project-template/slides.json')
   .then(resp => resp.json())
   .then(data => {
     points = data;
