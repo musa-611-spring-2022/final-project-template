@@ -1,5 +1,3 @@
-# MUSA 611 Final Project Template
-
 # **MUSA 611: Final Project Proposal**
 
 ## Saiya Sheth
