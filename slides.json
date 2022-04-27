@@ -11,7 +11,7 @@
           "Chart": "add in ",
           "stroke-width": 2,
           "stroke-opacity": 1,
-          "stroke": "#555555"
+          "stroke": "#ac1917"
         },
         "geometry": {
           "type": "LineString",
@@ -78,7 +78,7 @@
       {
         "type": "Feature",
         "properties": {
-          "stroke": "#555555",
+          "stroke": "#ac1917",
           "stroke-width": 2,
           "stroke-opacity": 1,
           "Place": "Norwood",
@@ -155,7 +155,7 @@
           "Chart": "add in",
           "stroke-width": 2,
           "stroke-opacity": 1,
-          "stroke": "#555555"
+          "stroke": "#ac1917"
         },
         "geometry": {
           "type": "Point",
@@ -175,7 +175,7 @@
           "Chart": "add in",
           "stroke-width": 2,
           "stroke-opacity": 1,
-          "stroke": "#555555"
+          "stroke": "#ac1917"
         },
         "geometry": {
           "type": "Point",
