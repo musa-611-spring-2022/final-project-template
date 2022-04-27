@@ -26,7 +26,7 @@ let showMapData;
 let points;
 
 const fetchMapData = () => {
-  fetch('') //ADD IN DATA TO GITHUB USE RAW DATA LINK
+  fetch('slides.json')
   .then(resp => resp.json())
   .then(data => {
     points = data;
