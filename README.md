@@ -7,7 +7,7 @@ This is a sample application of Philadelphia Parks and Recreation data intended 
 # Install test dependencies (this only has to be done once)
 npm install
 
-# Run the web server; this is needed for the tests
+# Run the web server
 npm start 
 
 # Open to the web address shown in the terminal
