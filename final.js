@@ -31,8 +31,6 @@ const fetchMapData = () => {
   .then(resp => resp.json())
   .then(data => {
     showMapData(data);
-    l.addTo(map);
-    showCurrentSlide();
     console.log(data)
   });
 }
