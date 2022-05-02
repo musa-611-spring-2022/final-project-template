@@ -35,6 +35,7 @@ const fetchMapData = () => {
     showCurrentSlide();
     console.log(data)
   });
+}
 
 fetchMapData();
 
@@ -45,7 +46,7 @@ const slideContentDiv = document.querySelector('.slide-content');
 const slidePrevButton = document.querySelector('#prev-slide');
 const slideNextButton = document.querySelector('#next-slide');
 const slideJumpSelect = document.querySelector('#jump-to-slide');
-/*
+
 //make markers and map layers based on the json file  
 function updateMap(collection) {
     layerGroup.clearLayers();
@@ -55,7 +56,6 @@ function updateMap(collection) {
   
     return geoJsonLayer;
   }
-  */
 
   function dataCollection(slide_number) {
     return {
@@ -71,7 +71,14 @@ function showSlide(slide) {
   map.eachLayer(marker => {
     if (marker.feature && marker.feature.properties.title === slide.properties.title) {
     map.flyTo(marker.getLatLng(), 10);
-    }
+      marker
+        .bindPopup(`<h3>${slide.properties.Location}</h3>`)
+        .openPopup();
+    } else {
+      marker.closePopup();
+  };
+})
+}
 
 function showCurrentSlide() {
   const slide = points.features[currentSlideIndex];
@@ -119,13 +126,5 @@ slideJumpSelect.addEventListener('click', jumpToSlide);
 var chart = new ApexCharts(document.querySelector("#chart"), options);
 chart.render();
 
-/* Display a point marker with pop-up text
-L.marker([41.77, -72.69]).addTo(map) // EDIT marker coordinates
-.bindPopup("Insert pop-up text here"); // EDIT pop-up text message
-
-MAPBOX POPUP?
-const popup = new mapboxgl.Popup({ closeOnClick: false })
-.setLngLat([-96, 37.8])
-.setHTML('<h1>Hello World!</h1>')
-.addTo(map);
-*/
+initSlideSelect();
+showCurrentSlide();

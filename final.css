@@ -4,7 +4,7 @@ body {
     box-sizing: border-box;
     min-height: 100vh;
     flex-direction: column;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', 'helvetica', sans-serif;
     background-color:#eee;
     color: rgb(198, 9, 9);
   }
