@@ -16,25 +16,24 @@ Slide 6: NORWOOD
 let map = L.map('map').setView([40.751,-73.798], 9.95); //zoomed to NYC
 let layerGroup = L.layerGroup().addTo(map);
 
-L.tileLayer('https://api.mapbox.com/styles/v1/saisheth/cl1nsj746003g15nz6hd6pqvs/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoic2Fpc2hldGgiLCJhIjoiY2wwcjJscXdyMmdsbDNlcWt0eWQ3NHh4bCJ9._YM5R9AGKiS7q_v80O8NVQ',
-{}).addTo(map);
+L.tileLayer('https://api.mapbox.com/styles/v1/saisheth/cl1nsj746003g15nz6hd6pqvs/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoic2Fpc2hldGgiLCJhIjoiY2wwcjJscXdyMmdsbDNlcWt0eWQ3NHh4bCJ9._YM5R9AGKiS7q_v80O8NVQ', {
+attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
 
-let showMapData;
-let points;
+const showMapData = (features) => {
+  const layer = L.geoJSON(features);
+  layerGroup.clearLayers();
+  layerGroup.addLayer(layer);
+};
 
 const fetchMapData = () => {
   fetch('https://raw.githubusercontent.com/sighuh/final-project-template/blob/main/slides.json')
   .then(resp => resp.json())
   .then(data => {
-    L.geoJSON(data);
-    l.bindTooltip(layer => (
-      let title = layer.feature.properties.title;
-      let content = layer.feature.properties.content;
-      return 'Title: ${title<br>Content: ${content}';
-    })
-    .addTo(map);
+    showMapData(data);
+    l.addTo(map);
     showCurrentSlide();
-    console.log(data) 
+    console.log(data)
   });
 
 fetchMapData();
@@ -46,7 +45,7 @@ const slideContentDiv = document.querySelector('.slide-content');
 const slidePrevButton = document.querySelector('#prev-slide');
 const slideNextButton = document.querySelector('#next-slide');
 const slideJumpSelect = document.querySelector('#jump-to-slide');
-
+/*
 //make markers and map layers based on the json file  
 function updateMap(collection) {
     layerGroup.clearLayers();
@@ -56,6 +55,7 @@ function updateMap(collection) {
   
     return geoJsonLayer;
   }
+  */
 
   function dataCollection(slide_number) {
     return {
@@ -81,7 +81,7 @@ function showCurrentSlide() {
 // moving from slide to slide, iterating through to next, and moving back to previous
 function goNextSlide() {
   currentSlideIndex++;
-  if (currentSlideIndex === 23) {
+  if (currentSlideIndex === 6) {
       currentSlideIndex = 0;
     }
     showCurrentSlide();
@@ -122,4 +122,10 @@ chart.render();
 /* Display a point marker with pop-up text
 L.marker([41.77, -72.69]).addTo(map) // EDIT marker coordinates
 .bindPopup("Insert pop-up text here"); // EDIT pop-up text message
+
+MAPBOX POPUP?
+const popup = new mapboxgl.Popup({ closeOnClick: false })
+.setLngLat([-96, 37.8])
+.setHTML('<h1>Hello World!</h1>')
+.addTo(map);
 */

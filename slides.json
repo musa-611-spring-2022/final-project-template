@@ -10,6 +10,7 @@
         "fill": "#f2eded",
         "fill-opacity": 0.2,
         "slide_num": 1,
+        "popUpContent": "will edit",
         "chart": "var options = {
           series: [25, 15, 44, 55, 41, 17],
           chart: {
@@ -41,7 +42,7 @@
         legend: {
           show: false
         }
-        };,"
+        };",
         "content": "edit",
         "title": "NYC"
       },
@@ -114,6 +115,7 @@
         "fill": "#f2eded",
         "fill-opacity": 0.2,
         "slide_num": 2,
+        "popUpContent": "will edit",
         "chart": "edit",
         "content": "edit",
         "title": "Bronx"
@@ -203,6 +205,7 @@
         "fill": "#f2eded",
         "fill-opacity": 0.2,
         "slide_num": 3,
+        "popUpContent": "will edit",
         "chart": "edit",
         "content": "edit",
         "title": "Norwood"
