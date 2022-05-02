@@ -57,10 +57,10 @@ function updateMap(collection) {
     return geoJsonLayer;
   }
 
-  function dataCollection(slide_number) {
+  function dataCollection(slide_num) {
     return {
       type: 'FeatureCollection',
-      features: slideToShow.features.filter(f => f.properties.slide === slide_number),
+      features: slideToShow.features.filter(f => f.properties.slide === slide_num),
     };
   }
 
