@@ -178,21 +178,56 @@ function fetchDatasets(originDataSet, destinationDataSet, updateBounds = null) {
       origins = origData;
       fetch(destinationDataSet).then(resp => resp.json()).then(destData => {
         destinations = destData;
-        destinationProperties = getFeatureProperties(destinations.features[0]);
-        destPropText.innerHTML = getFeatureProperties(destinations.features[0]);
-        let propertiesColored = Huff.setDestinationColors(destinations);
-        if (updateBounds) {
-          let bounds = turf.bbox(destinations);
-          customMap.fitBounds([[bounds[1], bounds[0]], [bounds[3], bounds[2]]]);
+
+        // SPECIAL CASE TO GET ADD'L PROPERTIES FOR PARKS
+        if (destinationDataSet === 'data/PPR_Properties.geojson') {
+          fetch('data/facility_properties.json')
+            .then(resp => resp.json()).then(propData => {
+              let properties = Object.keys(propData[7]);
+              let newFeatures = [];
+              (Object.keys(destinations.features)).forEach(i => {
+                if (propData[i]) {
+                  properties.forEach(p => {
+                    destinations.features[i].properties[p] = propData[i][p];
+                  });
+                  newFeatures.push(destinations.features[i]);
+                }
+              });
+              console.log(newFeatures);
+              destinations.features = newFeatures;
+              destinationProperties = getFeatureProperties(destinations.features[6]);
+              destPropText.innerHTML = getFeatureProperties(destinations.features[0]);
+              let propertiesColored = Huff.setDestinationColors(destinations);
+              if (updateBounds) {
+                let bounds = turf.bbox(destinations);
+                customMap.fitBounds([[bounds[1], bounds[0]], [bounds[3], bounds[2]]]);
+              }
+              runHuffModel(
+                origins,
+                propertiesColored,
+                dTSlider.value,
+                dESlider.value,
+                uniqueName,
+                attractivenessProperties,
+              );
+            });
+        } else {
+          destinationProperties = getFeatureProperties(destinations.features[0]);
+          destPropText.innerHTML = getFeatureProperties(destinations.features[0]);
+          let propertiesColored = Huff.setDestinationColors(destinations);
+          if (updateBounds) {
+            let bounds = turf.bbox(destinations);
+            customMap.fitBounds([[bounds[1], bounds[0]], [bounds[3], bounds[2]]]);
+          }
+          runHuffModel(
+            origins,
+            propertiesColored,
+            dTSlider.value,
+            dESlider.value,
+            uniqueName,
+            attractivenessProperties,
+          );
         }
-        runHuffModel(
-          origins,
-          propertiesColored,
-          dTSlider.value,
-          dESlider.value,
-          uniqueName,
-          attractivenessProperties,
-        );
       });
     });
 }
@@ -241,7 +276,9 @@ function getDatasets(event) {
 
   if (dest === 'data/PPR_Properties.geojson') {
     uniqueName = 'PUBLIC_NAME';
-    attractivenessProperties = 'ACREAGE';
+
+    //    attractivenessProperties = 'ACREAGE';
+    attractivenessProperties = 'programNum';
     faIcon = 'fa-tree';
     dTSlider.setAttribute('min', 1);
     dTSlider.setAttribute('max', 10);
