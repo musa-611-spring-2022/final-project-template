@@ -35,9 +35,10 @@
         },
         "legend": {
           "show": false
-        },
-        "content": "edit",
-        "title": "NYC"
+        }
+      },
+        "content_slide": "edit",
+        "title_place": "NYC"
       },
       "geometry": {
         "type": "Polygon",
