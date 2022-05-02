@@ -1,6 +1,9 @@
 *.pyc
 poetry.lock
 node_modules/
+.DS_Store
+.editorconfig
+.gitattributes
 
 data/**/*.txt
 data/**/*.doc

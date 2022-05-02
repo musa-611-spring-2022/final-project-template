@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<title>Huff Model Data Explorer</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="node_modules/leaflet/dist/leaflet.css">
+<link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+<div class="flex-container">
+    <div style="width:80%">
+        <div id="map"></div>
+    </div>
+    <div style="width:20%">
+
+        <div id="controls">
+            <h3>Control Huff Model Inputs</h3>
+            <h4>Origins</h4>
+
+            <select name="origins" class="datasetinputs" value="tracts" id="originDataset">
+                <option value="tract">Philadelphia Census Tracts</option>
+                <option value="blockgroup">Philadelphia Block Groups </option>
+                <option value="customurl">Custom URL...</option>
+            </select>
+
+            <input type="text" id="originDatasetURL" class="datasetinputs" style="display:none;" value="https://" size="40">
+
+            <h4>Destinations</h4>
+
+            <select name="destinations" class="datasetinputs" value="parks" id="destDataset">
+                <option value="parks">Philadelphia Parks</option>
+                <option value="indego">Indego Bike Stations</option>
+                <option value="customurl">Custom URL...</option>
+            </select>
+            <div id="customDestinationURLSettings" style="display:none;">
+            <p>
+            GeoJson URL...
+            <input type="text" id="destDatasetURL" class="datasetinputs" value="https://" size="40">
+            </p><p>
+            Property to use as unique name...
+            <input type="text" id="destUniqueName" class="datasetinputs" value="objectid" size="40">
+            </p>
+            </div>
+            <h4>Distance threshold: <span id="distanceThresholdValue"></span></h4>
+            <p>(Maximum distance in miles that a resident will travel)</p>
+            <div class="slidecontainer">
+            <input type="range" min="1" max="10" value="7" step=".5" class="slider" id="distanceThreshold">
+            </div>
+
+            <h4>Distance exponent: <span id="distanceExponentValue"></span></h4>
+            <p>(The higher the value, the more likely distance will be a deterrent)</p>
+            <div class="slidecontainer">
+            <input type="range" min="0" max="2" value="1" step=".1" class="slider" id="distanceExponent">
+            </div>
+
+            <h4>Attractiveness factors: <input type="text" id="attractivenessValue" size="40"></h4>
+            <p>Attractiveness factors are the qualities about the destination that encourage a resident to vist.</p> 
+            <p>Enter a comma-separated list of properties to use for attractiveness. The following properties are available for the destination, although only numeric properties can be used as factors: <span id="destinationProperties"></span>
+
+
+
+        </div>
+    </div>
+</div>
+<script src="https://kit.fontawesome.com/457a87d66e.js" crossorigin="anonymous"></script>
+<script src="bundle.js"></script>
+</body>
+</html>

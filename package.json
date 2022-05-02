@@ -1,10 +1,18 @@
 {
   "dependencies": {
-    "http-server": "^14.1.0"
+    "@turf/turf": "^6.5.0",
+    "beefy": "^2.1.8",
+    "browserify": "^17.0.0",
+    "eslint": "^8.13.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "huffmodel": "^0.0.2",
+    "is-url": "^1.2.4",
+    "leaflet": "^1.7.1"
   },
-  "devDependencies": {
-    "eslint": "^8.6.0",
-    "eslint-config-airbnb": "^19.0.4"
+  "scripts": {
+    "start": "beefy app.js:bundle.js $PORT",
+    "dev": "beefy app.js:bundle.js",
+    "bundle": "browserify app.js -o bundle.js"
   },
   "eslintConfig": {
     "extends": "airbnb",
