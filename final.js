@@ -20,6 +20,9 @@ L.tileLayer('https://api.mapbox.com/styles/v1/saisheth/cl1nsj746003g15nz6hd6pqvs
 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
+let points;
+
+
 const showMapData = (features) => {
   const layer = L.geoJSON(features);
   layerGroup.clearLayers();
@@ -43,7 +46,6 @@ const slideTitleDiv = document.querySelector('.slide-title');
 const slideContentDiv = document.querySelector('.slide-content');
 const slidePrevButton = document.querySelector('#prev-slide');
 const slideNextButton = document.querySelector('#next-slide');
-const slideJumpSelect = document.querySelector('#jump-to-slide');
 
 //make markers and map layers based on the json file  
 function updateMap(collection) {
@@ -119,7 +121,6 @@ function initSlideSelect() {
 
 slidePrevButton.addEventListener('click', goPrevSlide);
 slideNextButton.addEventListener('click', goNextSlide);
-slideJumpSelect.addEventListener('click', jumpToSlide);
 
 var chart = new ApexCharts(document.querySelector("#chart"), options);
 chart.render();
