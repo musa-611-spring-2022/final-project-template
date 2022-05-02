@@ -1,3 +1,18 @@
+/* 
+Slide 1: NYC
+
+Slide 2: BRONX
+
+Slide 3: 10467 ZIPCODE
+
+Slide 4: COMMUNITY DIST 7
+
+Slide 5: CENSUS TRACTS NORWOOD
+
+Slide 6: NORWOOD
+
+*/
+
 let map = L.map('map').setView([40.751,-73.798], 9.95); //zoomed to NYC
 let layerGroup = L.layerGroup().addTo(map);
 
@@ -12,7 +27,7 @@ const fetchMapData = () => {
   .then(resp => resp.json())
   .then(data => {
     L.geoJSON(data);
-    .bindTooltip(layer => (
+    l.bindTooltip(layer => (
       let title = layer.feature.properties.title;
       let content = layer.feature.properties.content;
       return 'Title: ${title<br>Content: ${content}';
@@ -96,7 +111,7 @@ function initSlideSelect() {
     }
 }
 
-/*
+
 slidePrevButton.addEventListener('click', goPrevSlide);
 slideNextButton.addEventListener('click', goNextSlide);
 slideJumpSelect.addEventListener('click', jumpToSlide);
@@ -104,7 +119,7 @@ slideJumpSelect.addEventListener('click', jumpToSlide);
 var chart = new ApexCharts(document.querySelector("#chart"), options);
 chart.render();
 
-// Display a point marker with pop-up text
+/* Display a point marker with pop-up text
 L.marker([41.77, -72.69]).addTo(map) // EDIT marker coordinates
 .bindPopup("Insert pop-up text here"); // EDIT pop-up text message
 */
