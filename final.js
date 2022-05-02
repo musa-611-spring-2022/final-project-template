@@ -11,14 +11,16 @@ const fetchMapData = () => {
   fetch('https://raw.githubusercontent.com/sighuh/final-project-template/blob/main/slides.json')
   .then(resp => resp.json())
   .then(data => {
-    points = data;
-    showMapData = L.geoJSON(data)
-    showMapData.bindTooltip(l => l.feature.properties.title).
-    addTo(map);
+    L.geoJSON(data);
+    .bindTooltip(layer => (
+      let title = layer.feature.properties.title;
+      let content = layer.feature.properties.content;
+      return 'Title: ${title<br>Content: ${content}';
+    })
+    .addTo(map);
     showCurrentSlide();
     console.log(data) 
   });
-}
 
 fetchMapData();
 
@@ -54,11 +56,12 @@ function showSlide(slide) {
   map.eachLayer(marker => {
     if (marker.feature && marker.feature.properties.title === slide.properties.title) {
     map.flyTo(marker.getLatLng(), 10);
+    }
 
 function showCurrentSlide() {
   const slide = points.features[currentSlideIndex];
   showSlide(slide);
-}
+      }
   
 // moving from slide to slide, iterating through to next, and moving back to previous
 function goNextSlide() {
@@ -100,4 +103,8 @@ slideJumpSelect.addEventListener('click', jumpToSlide);
 
 var chart = new ApexCharts(document.querySelector("#chart"), options);
 chart.render();
+
+// Display a point marker with pop-up text
+L.marker([41.77, -72.69]).addTo(map) // EDIT marker coordinates
+.bindPopup("Insert pop-up text here"); // EDIT pop-up text message
 */
