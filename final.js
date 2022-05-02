@@ -27,7 +27,7 @@ const showMapData = (features) => {
 };
 
 const fetchMapData = () => {
-  fetch('https://raw.githubusercontent.com/sighuh/final-project-template/blob/main/slides.json')
+  fetch('https://raw.githubusercontent.com/sighuh/final-project-template/main/slides.json')
   .then(resp => resp.json())
   .then(data => {
     showMapData(data);
