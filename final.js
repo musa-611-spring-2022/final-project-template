@@ -60,7 +60,7 @@ function updateMap(collection) {
   function dataCollection(data) {
     return {
       type: 'FeatureCollection',
-      features: slideToShow.features.filter(f => f.properties.slide === slide_num),
+      features: slideToShow.features.filter(f => f.properties.slide_num === slide_num),
     };
   }
 
