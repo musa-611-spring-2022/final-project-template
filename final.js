@@ -108,24 +108,9 @@ function jumpToSlide() {
   showCurrentSlide();
 }
 
-//setting the initial slide and what it will display-linking to HTML
-function initSlideSelect() {
-  slideJumpSelect.innerHTML = ''; 
-  for (const [index, slide] of slides.entries()) {
-    const option = document.createElement('option');
-    option.value = index;
-    option.innerHTML = slide.title;
-    slideJumpSelect.appendChild(option);
-    }
-}
-
-
 slidePrevButton.addEventListener('click', goPrevSlide);
 slideNextButton.addEventListener('click', goNextSlide);
 /*
 var chart = new ApexCharts(document.querySelector("#chart"), options);
 chart.render();
 */
-
-initSlideSelect();
-showCurrentSlide();
