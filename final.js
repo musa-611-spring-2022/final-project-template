@@ -1,18 +1,3 @@
-/* 
-Slide 1: NYC
-
-Slide 2: BRONX
-
-Slide 3: 10467 ZIPCODE
-
-Slide 4: COMMUNITY DIST 7
-
-Slide 5: CENSUS TRACTS NORWOOD
-
-Slide 6: NORWOOD
-
-*/
-
 let map = L.map('map').setView([40.751,-73.798], 9.95); //zoomed to NYC
 let layerGroup = L.layerGroup().addTo(map);
 
