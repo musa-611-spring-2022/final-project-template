@@ -57,7 +57,7 @@ function updateMap(collection) {
     return geoJsonLayer;
   }
 
-  function dataCollection(slide_num) {
+  function dataCollection(data) {
     return {
       type: 'FeatureCollection',
       features: slideToShow.features.filter(f => f.properties.slide === slide_num),
@@ -66,7 +66,8 @@ function updateMap(collection) {
 
 function showSlide(slide) {
   slideTitleDiv.innerHTML = `<h3>${slide.properties.title}</h3>`;
-  slideContentDiv.innerHTML = `<p>${slide.properties.content}</p>`
+  slideContentDiv.innerHTML = `<p>${slide.properties.content}</p>`;
+  slideChartDiv.innerHTML = '<p>${slide.properies.chart}</p>';
   
   map.eachLayer(marker => {
     if (marker.feature && marker.feature.properties.title === slide.properties.title) {
