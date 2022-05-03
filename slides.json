@@ -37,7 +37,7 @@
           "show": false
         }
       },
-        "contentSlide": "edit",
+        "contentSlide": "Welcome to Laal NYC's Storymap showing the impact of Laal's Census 2020 Initiative. Laal NYC is located in Norwood, the Bronx. Norwood is home to a large and growing Bangladeshi community that have been historically under-resources, underrepresented and unknow. Bangladeshis are one of the fastest growing immigrant communities in NYC and the poorest compared to other Asian ethnic communities. According to a 2022 report by DOHMH on AAPI Health, 58% of Bangladeshi's in NYC earn an income 200% below the federal poverty level. Further, Bangladeshi households in NYC are the most rent burdened of AAPI New Yorkers, 70% pay over 30% of their income on housing. Resources to this specific demographic remain unavialable and inaccessible, leaving this community vulnerable. Like most immigrant communities, this population faces a range of economic and social stressors, including financial strains, discrimination, inadequate housing, and social isolation.",
         "titleSlide": "New York City"
       },
       "geometry": {
@@ -109,9 +109,9 @@
         "fill": "#f2eded",
         "fill-opacity": 0.2,
         "slideNum": 2,
-        "popUpContent": "will edit",
+        "popUpContent": "The recent ACS data (2016-2020) estimated 14,918 foreign born Bangladeshis and 10,891 US-born Bangladeshis.",
         "chart": "edit",
-        "contentSlide": "edit",
+        "contentSlide": "The Bronx is home to a large Bangladeshi community, mostly located in Parkchester, Grand Concourse and Norwood.",
         "titleSlide": "Bronx"
       },
       "geometry": {
@@ -198,7 +198,7 @@
         "fill": "#f2eded",
         "fill-opacity": 0.2,
         "slideNum": 3,
-        "popUpContent": "will edit",
+        "popUpContent": "Community District 7 includes Bedford Park, Fordham North, and Norwood. In Community District 7, nearly 44.5% of residents are foriegn-born (ACS 2014-18).",
         "chart": "edit",
         "contentSlide": "edit",
         "titleSlide": "Community District 7"

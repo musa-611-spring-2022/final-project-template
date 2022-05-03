@@ -2,16 +2,16 @@ body {
     margin: 0;
     display: flex;
     box-sizing: border-box;
-    min-height: 60vh;
+    min-height: 100vh;
     flex-direction: column;
-    font-family: 'Open Sans', 'helvetica', sans-serif;
+    font-family: 'Georgia', 'helvetica';
     font-size: 30px;
     background-color:rgb(255, 254, 254);
     color: rgb(198, 9, 9);
   }
   
   .top {
-    min-height: 20vh;
+    min-height: 10vh;
     margin: auto;
     padding: 10px 0;
     display: flex;
