@@ -73,7 +73,7 @@ function showSlide(slide) {
     if (marker.feature && marker.feature.properties.title === slide.properties.title) {
     map.flyTo(marker.getLatLng(), 10);
       marker
-        .bindPopup(`<h3>${slide.properties.Location}</h3>`)
+        .bindPopup(`<h3>${slide.properties.popUpContent}</h3>`)
         .openPopup();
     } else {
       marker.closePopup();
