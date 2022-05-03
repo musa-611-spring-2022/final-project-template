@@ -30,6 +30,7 @@ const slideTitleDiv = document.querySelector('.slide-title');
 const slideContentDiv = document.querySelector('.slide-content');
 const slidePrevButton = document.querySelector('#prev-slide');
 const slideNextButton = document.querySelector('#next-slide');
+const slideChartDiv = document.querySelector('#story');
 
 //make markers and map layers based on the json file  
 function updateMap(collection) {
@@ -73,7 +74,7 @@ function showCurrentSlide() {
 // moving from slide to slide, iterating through to next, and moving back to previous
 function goNextSlide() {
   currentSlideIndex++;
-  if (currentSlideIndex === 6) {
+  if (currentSlideIndex === 15) {
       currentSlideIndex = 0;
     }
     showCurrentSlide();
