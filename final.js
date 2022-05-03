@@ -22,7 +22,6 @@ attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStree
 
 let points;
 
-
 const showMapData = (features) => {
   const layer = L.geoJSON(features);
   layerGroup.clearLayers();
