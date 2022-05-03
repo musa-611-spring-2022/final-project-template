@@ -121,9 +121,10 @@ function initSlideSelect() {
 
 slidePrevButton.addEventListener('click', goPrevSlide);
 slideNextButton.addEventListener('click', goNextSlide);
-
+/*
 var chart = new ApexCharts(document.querySelector("#chart"), options);
 chart.render();
+*/
 
 initSlideSelect();
 showCurrentSlide();
