@@ -59,13 +59,13 @@ function updateMap(collection) {
   function dataCollection(data) {
     return {
       type: 'FeatureCollection',
-      features: slideToShow.features.filter(f => f.properties.slide_num === slide_num),
+      features: slideToShow.features.filter(f => f.properties.slideNum === slideNum),
     };
   }
 
 function showSlide(slide) {
-  slideTitleDiv.innerHTML = `<h3>${slide.properties.title}</h3>`;
-  slideContentDiv.innerHTML = `<p>${slide.properties.content}</p>`;
+  slideTitleDiv.innerHTML = `<h3>${slide.properties.titleSlide}</h3>`;
+  slideContentDiv.innerHTML = `<p>${slide.properties.contentSlide}</p>`;
   slideChartDiv.innerHTML = '<p>${slide.properies.chart}</p>';
   
   map.eachLayer(marker => {
