@@ -2,7 +2,7 @@ body {
     margin: 0;
     display: flex;
     box-sizing: border-box;
-    min-height: 100vh;
+    min-height: 60vh;
     flex-direction: column;
     font-family: 'Open Sans', 'helvetica', sans-serif;
     font-size: 30px;
