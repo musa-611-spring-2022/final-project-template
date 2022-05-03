@@ -5,14 +5,18 @@ body {
     min-height: 100vh;
     flex-direction: column;
     font-family: 'Open Sans', 'helvetica', sans-serif;
-    background-color:#eee;
+    font-size: 30px;
+    background-color:rgb(255, 254, 254);
     color: rgb(198, 9, 9);
   }
   
   .top {
     min-height: 20vh;
+    margin: auto;
+    padding: 10px 0;
     display: flex;
     flex-direction: column;
+    text-align: center;
   }
 
   .main {
@@ -31,7 +35,7 @@ body {
     width: 500px;
     padding-left: 1rem;
     padding-right: 1rem;
-    background-color: #eee;
+    background-color: rgb(255, 254, 254);
     color: rgb(14, 12, 12);
 }
 
