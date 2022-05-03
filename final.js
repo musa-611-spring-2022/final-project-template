@@ -18,6 +18,7 @@ const fetchMapData = () => {
   .then(resp => resp.json())
   .then(data => {
     showMapData(data);
+    showCurrentSlide();
     console.log(data)
   });
 }
@@ -48,6 +49,7 @@ function updateMap(collection) {
       features: slideToShow.features.filter(f => f.properties.slideNum === slideNum),
     };
   }
+  let slideToShow = { features: [] };  
 
 function showSlide(slide) {
   slideTitleDiv.innerHTML = `<h3>${slide.properties.titleSlide}</h3>`;
