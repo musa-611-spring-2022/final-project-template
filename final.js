@@ -61,8 +61,8 @@ function showSlide(slide) {
 
 
   map.eachLayer(marker => {
-    if (marker.feature && marker.feature.properties.title === slide.properties.title) {
-    map.flyTo(marker.getLatLng(), 10);
+    if (marker.feature && marker.feature.properties.titleSlide === slide.properties.titleSlide) {
+    map.flyTo(L.marker.getLatLng(), 20);
       marker
         .bindPopup(`<h3>${slide.properties.popUpContent}</h3>`)
         .openPopup();
