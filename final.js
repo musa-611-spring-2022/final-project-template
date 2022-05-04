@@ -110,10 +110,6 @@ slideNextButton.addEventListener('click', goNextSlide);
 var chart = new ApexCharts(document.querySelector("#chart"), options);
 chart.render();
 
-//add an icon--need to get rest of code from webpage
-marker.bindPopup(popupContent).openPopup();
-
-
 //add image overlay
 var imageUrl = 'https://maps.lib.utexas.edu/maps/historical/newark_nj_1922.jpg',
     imageBounds = [[40.712216, -74.22655], [40.773941, -74.12544]];
