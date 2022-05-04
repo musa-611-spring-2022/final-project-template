@@ -17,6 +17,7 @@ const fetchMapData = () => {
   fetch('https://raw.githubusercontent.com/sighuh/final-project-template/main/slides.json')
   .then(resp => resp.json())
   .then(data => {
+    points = data;
     showMapData(data);
     showCurrentSlide();
     console.log(data)
@@ -54,7 +55,7 @@ function updateMap(collection) {
 function showSlide(slide) {
   slideTitleDiv.innerHTML = `<h3>${slide.properties.titleSlide}</h3>`;
   slideContentDiv.innerHTML = `<p>${slide.properties.contentSlide}</p>`;
-  slideChartDiv.innerHTML = '<p>${slide.properies.chart}</p>';
+  //slideChartDiv.innerHTML = '<p>${slide.properies.chart}</p>';
   
   map.eachLayer(marker => {
     if (marker.feature && marker.feature.properties.title === slide.properties.title) {
@@ -100,4 +101,33 @@ slideNextButton.addEventListener('click', goNextSlide);
 /*
 var chart = new ApexCharts(document.querySelector("#chart"), options);
 chart.render();
+
+//add an icon--need to get rest of code from webpage
+marker.bindPopup(popupContent).openPopup();
+
+
+//add image overlay
+var imageUrl = 'https://maps.lib.utexas.edu/maps/historical/newark_nj_1922.jpg',
+    imageBounds = [[40.712216, -74.22655], [40.773941, -74.12544]];
+L.imageOverlay(imageUrl, imageBounds).addTo(map);
+
+//add laal as map marker
+
+//small text over map layer
+marker.bindTooltip("my tooltip text").openTooltip();
+
 */
+
+//added legend to the map, added in css
+let legend = L.control({position: "bottomleft"});
+legend.onAdd = function() {
+    let div = L.DomUtil.create("div", "legend");
+    div.innerHTML = 
+        '<p><b>Simple shapes in Leaflet</b></p><hr>' +
+        '<p>This map shows an example of adding shapes ' + 
+        'on a Leaflet map</p>' +
+        'The line layer has a <b>popup</b>. ' + 
+        'Click on the line to see it!<hr>';
+    return div;
+};
+legend.addTo(map);
