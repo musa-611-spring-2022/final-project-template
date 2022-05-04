@@ -13,6 +13,7 @@ const showMapData = (features) => {
   layerGroup.addLayer(layer);
 };
 
+
 const fetchMapData = () => {
   fetch('https://raw.githubusercontent.com/sighuh/final-project-template/main/slides.json')
   .then(resp => resp.json())
@@ -37,21 +38,13 @@ const slideChartDiv = document.querySelector('#story');
 //make markers and map layers based on the json file  
 function updateMap(collection) {
     layerGroup.clearLayers();
+    let featureJson = features.addTo(layerGroup);
     const geoJsonLayer = L.geoJSON(features, { pointToLayer: (p, latlng) => L.marker(latlng) })
       .bindTooltip(l => l.feature.properties)
       .addTo(layerGroup);
   
     return geoJsonLayer;
   }
-//pop-ups?
-function onEachFeature(feature, layer) {
-    if (feature.properties && feature.properties.popupContent) {
-        layer.bindPopup(feature.properties.popupContent);
-    }
-}
-L.geoJSON(layer, {
-  onEachFeature: onEachFeature
-}).addTo(map);
 
   function dataCollection(data) {
     return {
@@ -65,7 +58,8 @@ function showSlide(slide) {
   slideTitleDiv.innerHTML = `<h3>${slide.properties.titleSlide}</h3>`;
   slideContentDiv.innerHTML = `<p>${slide.properties.contentSlide}</p>`;
   //slideChartDiv.innerHTML = '<p>${slide.properies.chart}</p>';
-  
+
+
   map.eachLayer(marker => {
     if (marker.feature && marker.feature.properties.title === slide.properties.title) {
     map.flyTo(marker.getLatLng(), 10);
@@ -77,6 +71,7 @@ function showSlide(slide) {
   };
 })
 }
+
 
 function showCurrentSlide() {
   const slide = slides.features[currentSlideIndex];
@@ -136,19 +131,3 @@ legend.onAdd = function() {
     return div;
 };
 legend.addTo(map);
-
-select.addEventListener('change', () => {
-  slideNumber = parseInt(select.value, 10);
-  showSlide(slideNumber);
-});
-
-slides.forEach((slide, i) => {
-  let opt = document.createElement('option');
-  opt.value = i;
-  opt.innerHTML = slide.title;
-  select.appendChild(opt);
-});
-
-window.addEventListener('load', () => {
-  showSlide(slideNumber);
-});
