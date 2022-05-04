@@ -46,7 +46,7 @@ const slideChartDiv = document.querySelector('#story');
 function updateMap(collection) {
     layerGroup.clearLayers();
     let featureJson = features.addTo(layerGroup);
-    const geoJsonLayer = L.geoJSON(features, { geometryToLayer: (p, latlng) => L.marker(latlng) })
+    const geoJsonLayer = L.geoJSON(features, { pointsToLayer: (p, latlng) => L.marker(latlng) })
       .bindTooltip(l => l.feature.properties)
       .addTo(layerGroup);
   
