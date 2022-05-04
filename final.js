@@ -4,7 +4,7 @@ let layerGroup = L.layerGroup().addTo(map);
 L.marker([40.87369498325355, -73.880724989077587]).addTo(map);
 var popup = L.popup()
     .setLatLng([40.87369498325355, -73.880724989077587])
-    .setContent('<p>This is where the Laal offices are located.</p> <img src=laalBaari.png>')
+    .setContent('<center><img src=laalBaari.png style="width:90px;height:100px;"></center>')
     .openOn(map);
 
 L.tileLayer('https://api.mapbox.com/styles/v1/saisheth/cl1nsj746003g15nz6hd6pqvs/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoic2Fpc2hldGgiLCJhIjoiY2wwcjJscXdyMmdsbDNlcWt0eWQ3NHh4bCJ9._YM5R9AGKiS7q_v80O8NVQ', {
@@ -43,7 +43,7 @@ const slideChartDiv = document.querySelector('#story');
 
 
 //make markers and map layers based on the json file  
-function updateMap(collection) {
+function updateMap(data) {
     layerGroup.clearLayers();
     let featureJson = features.addTo(layerGroup);
     const geoJsonLayer = L.geoJSON(features, { pointsToLayer: (p, latlng) => L.marker(latlng) })
@@ -51,7 +51,7 @@ function updateMap(collection) {
       .addTo(layerGroup);
   
     return geoJsonLayer;
-  }
+  } 
 
   function dataCollection(data) {
     return {
