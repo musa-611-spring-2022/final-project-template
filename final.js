@@ -42,6 +42,7 @@ const slidePrevButton = document.querySelector('#prev-slide');
 const slideNextButton = document.querySelector('#next-slide');
 const slideChartDiv = document.querySelector('#story');
 
+
 //make markers and map layers based on the json file  
 function updateMap(collection) {
     layerGroup.clearLayers();
