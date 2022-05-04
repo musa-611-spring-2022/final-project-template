@@ -2,10 +2,8 @@ let map = L.map('map').setView([40.751,-73.798], 9.95); //zoomed to NYC
 let layerGroup = L.layerGroup().addTo(map);
 
 var laalIcon = L.icon({
-  iconUrl: 'laal logo JPG.jpg',
-  iconSize:     [38, 95], // size of the icon
-  iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
-  popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+  iconUrl: 'laalDot.jpg',
+  iconSize:     [10, 10], // size of the icon
 });
 L.marker([40.87369498325355, -73.880724989077587], {icon: laalIcon}).addTo(map);
 
