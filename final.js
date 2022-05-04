@@ -69,7 +69,7 @@ function showSlide(slide) {
 
   map.eachLayer(marker => {
     if (marker.feature && marker.feature.properties.titleSlide === slide.properties.titleSlide) {
-    map.flyTo(L.marker.getLatLng(), 10);
+    //map.flyTo(L.marker.getLatLng(), 10);
   };
 })
 }
