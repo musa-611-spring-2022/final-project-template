@@ -1,7 +1,7 @@
 let map = L.map('map').setView([40.751,-73.798], 9.95); //zoomed to NYC
 let layerGroup = L.layerGroup().addTo(map);
 
-L.marker([40.87369498325355, -73.880724989077587]).addTo(map);
+//L.marker([40.87369498325355, -73.880724989077587]).addTo(map);
 var popup = L.popup()
     .setLatLng([40.87369498325355, -73.880724989077587])
     .setContent('<center><img src=laalBaari.png style="width:90px;height:100px;"></center>')
@@ -12,13 +12,21 @@ attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStree
 }).addTo(map);
 
 let slides;
+let layer;
+
+var myStyle = {
+  "color": "red",
+  "weight": 2,
+  "opacity": 0.25
+};
 
 const showMapData = (features) => {
-  const layer = L.geoJSON(features);
+  const layer = L.geoJSON(features, {
+    style: myStyle})
+    .addTo(map);
   layerGroup.clearLayers();
   layerGroup.addLayer(layer);
 };
-
 
 const fetchMapData = () => {
   fetch('https://raw.githubusercontent.com/sighuh/final-project-template/main/slides.json')
@@ -43,7 +51,7 @@ const slideChartDiv = document.querySelector('#story');
 
 
 //make markers and map layers based on the json file  
-function updateMap(data) {
+function updateMap(features) {
     layerGroup.clearLayers();
     let featureJson = features.addTo(layerGroup);
     const geoJsonLayer = L.geoJSON(features, { pointsToLayer: (p, latlng) => L.marker(latlng) })
@@ -53,12 +61,15 @@ function updateMap(data) {
     return geoJsonLayer;
   } 
 
-  function dataCollection(data) {
+/*
+function dataCollection(geoJsonLayer) {
     return {
       type: 'FeatureCollection',
       features: slideToShow.features.filter(f => f.properties.slideNum === slideNum),
     };
   }
+*/
+
   let slideToShow = { features: [] };  
 
 function showSlide(slide) {
@@ -69,7 +80,7 @@ function showSlide(slide) {
 
   map.eachLayer(marker => {
     if (marker.feature && marker.feature.properties.titleSlide === slide.properties.titleSlide) {
-    //map.flyTo(L.marker.getLatLng(), 10);
+    //map.flyTo(slideNum(), 10);
   };
 })
 }
@@ -104,6 +115,7 @@ function jumpToSlide() {
 
 slidePrevButton.addEventListener('click', goPrevSlide);
 slideNextButton.addEventListener('click', goNextSlide);
+
 /*
 var chart = new ApexCharts(document.querySelector("#chart"), options);
 chart.render();
@@ -251,3 +263,4 @@ let norwood = L.polygon([
       fillOpacity: "0.5",
   }
 ).addTo(map);
+norwood.bindPopup("<b>Norwood</b>");
