@@ -70,7 +70,7 @@ function dataCollection(geoJsonLayer) {
   }
 */
 
-  let slideToShow = { features: [] };  
+let slideToShow = { features: [] };  
 
 function showSlide(slide) {
   slideTitleDiv.innerHTML = `<h3>${slide.properties.titleSlide}</h3>`;
