@@ -1,14 +1,12 @@
 let map = L.map('map').setView([40.751,-73.798], 9.95); //zoomed to NYC
 let layerGroup = L.layerGroup().addTo(map);
 
-var myIcon = L.icon({
-  iconUrl: 'laal logo.png',
-  iconSize: [38, 95],
-  iconAnchor: [22, 94],
-  popupAnchor: [-3, -76],
-});
+L.marker([40.87369498325355, -73.880724989077587]).addTo(map);
 
-L.marker([40.87369498325355, -73.880724989077587], {icon: myIcon}).addTo(map);
+var popup = L.popup()
+    .setLatLng(40.87369498325355, -73.880724989077587)
+    .setContent('<p>This is where Laal is located!</p>')
+    .openOn(map);
 
 L.tileLayer('https://api.mapbox.com/styles/v1/saisheth/cl1nsj746003g15nz6hd6pqvs/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoic2Fpc2hldGgiLCJhIjoiY2wwcjJscXdyMmdsbDNlcWt0eWQ3NHh4bCJ9._YM5R9AGKiS7q_v80O8NVQ', {
 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -48,7 +46,7 @@ const slideChartDiv = document.querySelector('#story');
 function updateMap(collection) {
     layerGroup.clearLayers();
     let featureJson = features.addTo(layerGroup);
-    const geoJsonLayer = L.geoJSON(features, { pointToLayer: (p, latlng) => L.marker(latlng) })
+    const geoJsonLayer = L.geoJSON(features, { geometryToLayer: (p, latlng) => L.marker(latlng) })
       .bindTooltip(l => l.feature.properties)
       .addTo(layerGroup);
   
