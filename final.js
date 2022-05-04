@@ -124,3 +124,63 @@ legend.onAdd = function() {
     return div;
 };
 legend.addTo(map);
+
+var census = [
+  {
+      "name":"Census Tract 425",
+      "percent_BA":29.82,
+      "n_BA":164,
+      "foreignborn_BA":305,
+      "total_pop":6248
+  },
+  {
+      "name":"Census Tract 419",
+      "percent_BA":14.33,
+      "n_BA":104,
+      "foreignborn_BA":167,
+      "total_pop":6090
+  },
+  {
+      "name":"Census Tract 431.01",
+      "percent_BA":10.2,
+      "n_BA":81,
+      "foreignborn_BA":382,
+      "total_pop": 5693
+  },
+  {
+      "name":"Census Tract 423",
+      "percent_BA":29.5,
+      "n_BA":77,
+      "foreignborn_BA":125,
+      "total_pop":4033
+  },
+  {
+      "name":"Census Tract 429.02",
+      "percent_BA":45,
+      "n_BA":45,
+      "foreignborn_BA":66,
+      "total_pop":3865
+  },
+  {
+      "name":"Census Tract 429.01",
+      "percent_BA":68.9,
+      "n_BA":528,
+      "foreignborn_BA":546,
+      "total_pop":3224
+  },   
+];
+
+JSC.Chart('chartDiv', {
+  type: 'horizontal column',
+  series: [
+     {
+        name:'',
+        points: [
+           {x: 'NYC', y: 50},
+           {x: 'Bronx', y: 32},
+           {x: 'CD 7', y: 40},
+           {x: 'Norwood', y: 30}
+        ]
+     },
+  ]
+});
