@@ -58,8 +58,8 @@ function updateMap(collection) {
   let slideToShow = { features: [] };  
 
 function showSlide(slide) {
-  slideTitleDiv.innerHTML = `<h3>${slide.properties.titleSlide}</h3>`;
-  slideContentDiv.innerHTML = `<p>${slide.properties.contentSlide}</p>`;
+  slideTitleDiv.innerHTML = `<h3>${slide.features.titleSlide}</h3>`;
+  slideContentDiv.innerHTML = `<p>${slide.features.contentSlide}</p>`;
   //slideChartDiv.innerHTML = '<p>${slide.properies.chart}</p>';
 
 
