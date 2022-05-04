@@ -1,6 +1,15 @@
 let map = L.map('map').setView([40.751,-73.798], 9.95); //zoomed to NYC
 let layerGroup = L.layerGroup().addTo(map);
 
+var myIcon = L.icon({
+  iconUrl: 'laal logo.png',
+  iconSize: [38, 95],
+  iconAnchor: [22, 94],
+  popupAnchor: [-3, -76],
+});
+
+L.marker([40.87369498325355, -73.880724989077587], {icon: myIcon}).addTo(map);
+
 L.tileLayer('https://api.mapbox.com/styles/v1/saisheth/cl1nsj746003g15nz6hd6pqvs/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoic2Fpc2hldGgiLCJhIjoiY2wwcjJscXdyMmdsbDNlcWt0eWQ3NHh4bCJ9._YM5R9AGKiS7q_v80O8NVQ', {
 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
@@ -62,7 +71,7 @@ function showSlide(slide) {
 
   map.eachLayer(marker => {
     if (marker.feature && marker.feature.properties.titleSlide === slide.properties.titleSlide) {
-    map.flyTo(L.marker.getLatLng(), 20);
+    map.flyTo(L.marker.getLatLng(), 10);
       marker
         .bindPopup(`<h3>${slide.properties.popUpContent}</h3>`)
         .openPopup();
@@ -114,13 +123,8 @@ marker.bindPopup(popupContent).openPopup();
 var imageUrl = 'https://maps.lib.utexas.edu/maps/historical/newark_nj_1922.jpg',
     imageBounds = [[40.712216, -74.22655], [40.773941, -74.12544]];
 L.imageOverlay(imageUrl, imageBounds).addTo(map);
-
-//add laal as map marker
-
-//small text over map layer
-marker.bindTooltip("my tooltip text").openTooltip();
-
 */
+
 
 //added legend to the map, added in css
 let legend = L.control({position: "bottomleft"});
