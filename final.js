@@ -5,7 +5,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/saisheth/cl1nsj746003g15nz6hd6pqvs
 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
-let points;
+let slides;
 
 const showMapData = (features) => {
   const layer = L.geoJSON(features);
@@ -17,7 +17,7 @@ const fetchMapData = () => {
   fetch('https://raw.githubusercontent.com/sighuh/final-project-template/main/slides.json')
   .then(resp => resp.json())
   .then(data => {
-    points = data;
+    slides = data;
     showMapData(data);
     showCurrentSlide();
     console.log(data)
@@ -43,6 +43,15 @@ function updateMap(collection) {
   
     return geoJsonLayer;
   }
+//pop-ups?
+function onEachFeature(feature, layer) {
+    if (feature.properties && feature.properties.popupContent) {
+        layer.bindPopup(feature.properties.popupContent);
+    }
+}
+L.geoJSON(layer, {
+  onEachFeature: onEachFeature
+}).addTo(map);
 
   function dataCollection(data) {
     return {
@@ -70,7 +79,7 @@ function showSlide(slide) {
 }
 
 function showCurrentSlide() {
-  const slide = points.features[currentSlideIndex];
+  const slide = slides.features[currentSlideIndex];
   showSlide(slide);
       }
   
@@ -123,11 +132,23 @@ let legend = L.control({position: "bottomleft"});
 legend.onAdd = function() {
     let div = L.DomUtil.create("div", "legend");
     div.innerHTML = 
-        '<p><b>Simple shapes in Leaflet</b></p><hr>' +
-        '<p>This map shows an example of adding shapes ' + 
-        'on a Leaflet map</p>' +
-        'The line layer has a <b>popup</b>. ' + 
-        'Click on the line to see it!<hr>';
+        '<p><b>Click on the map to view the data!</b></p><hr>';
     return div;
 };
 legend.addTo(map);
+
+select.addEventListener('change', () => {
+  slideNumber = parseInt(select.value, 10);
+  showSlide(slideNumber);
+});
+
+slides.forEach((slide, i) => {
+  let opt = document.createElement('option');
+  opt.value = i;
+  opt.innerHTML = slide.title;
+  select.appendChild(opt);
+});
+
+window.addEventListener('load', () => {
+  showSlide(slideNumber);
+});
