@@ -397,21 +397,28 @@ let fiveFeatureList = [];
 let returnInput = () => {
   if (nearest.checked === true) {
     fiveFeatureList = [];
-    if (document.querySelector('#warning') !== null) {
-      document.querySelector('#warning').remove();
-    }
+    // if (document.querySelector('#warning') !== null) {
+    //   document.querySelector('#warning').remove();
+    // }
     if (addressInput.value !== '') {
       inputAddressLayer.clearLayers();
       // get input address coordinates
       getAddressCoord(() => {
         focusAddress();
+      });
+      // get five closest points and their features
+      fiveFeatureList = getFiveClosetPoints(inputAddressCoord);
+      // show those in lists
+      let tempList = initNeighborListItems(fiveFeatureList);
+      updateNeighborList(tempList);
+      getAddressCoord(() => {
+        focusAddress();
+        // get five closest points and their features
         fiveFeatureList = getFiveClosetPoints(inputAddressCoord);
         // show those in lists
         let tempList = initNeighborListItems(fiveFeatureList);
         updateNeighborList(tempList);
       });
-      // focusAddress();
-      // get five closest points and their features
     } else if (addressInput.value === '' && currentAddress !== '') {
       inputAddressLayer.clearLayers();
       fiveFeatureList = getFiveClosetPoints(currentAddress);
@@ -450,11 +457,9 @@ let directionChecked = () => {
 
         let orgCoord = '';
         if (addressInput.value !== '') {
-          // inputAddressLayer.clearLayers();
           getAddressCoord(() => {
             orgCoord = inputAddressCoord;
           });
-          // focusAddress();
         } else if (addressInput.value === '' && currentAddress !== '') {
           orgCoord = currentAddress;
         } else {
@@ -467,6 +472,7 @@ let directionChecked = () => {
             .then(geocoderData => {
               let desFeature = geocoderData.features[0];
               let desCoord = desFeature.center;
+
               getRoute(orgCoord, desCoord, () => {
                 showDirection(desCoord);
                 // map.panTo([orgCoord[1], orgCoord[0]]);
@@ -475,7 +481,7 @@ let directionChecked = () => {
                   [desCoord[1], desCoord[0]],
                 ]);
               });
-            });
+              });
         }
       };
 
@@ -500,17 +506,8 @@ let directionChecked = () => {
         getAddressCoord(() => {
           focusAddress();
         });
-        // orgCoord = inputAddressCoord;
       }
-      // } else if (addressInput.value === '' && currentAddress !== '') {
-      //   orgCoord = currentAddress;
-      // } else {
-      //   orgCoord = '';
-      // }
-    } else {
-      console.log('why');
-      item3.appendChild(htmlToElement("<div id='warning'>You should input an address or turn on the location function!</div>"));
-    }
+    } 
   } else if (document.querySelector('.direction') !== null) {
     document.querySelector('.direction').remove();
   }

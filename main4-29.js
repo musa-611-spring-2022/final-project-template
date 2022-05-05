@@ -8,8 +8,11 @@ L.tileLayer('https://api.mapbox.com/styles/v1/amyqqlove/cl130k75m003815nk3vae7z1
 const zipSelect = document.querySelector('#zipcode-filter');
 const companySelect = document.querySelector('#company-filter');
 const typeSelect = document.querySelector('#type-filter');
+// const filteredCountSpan = document.querySelector('#filtered-count');
+// const sfList = document.querySelector('.shippingfacilities');
 const neighborList = document.querySelector('.neighbors ul');
 const addressInput = document.querySelector('#address-input');
+// const profileSelect = document.querySelector('#progile-filter');
 const item3 = document.querySelector('.item3');
 const searchClick = document.querySelector('#button');
 
@@ -38,13 +41,12 @@ let currentAddress = '';
 let handlePositionUpdated = (position) => {
   const latlng = [position.coords.latitude, position.coords.longitude];
 
-  // inputAddressLayer.clearLayers();
+  inputAddressLayer.clearLayers();
 
-  let currCircle = L.circleMarker(
+  L.circleMarker(
     latlng,
     { color: 'blue' },
   ).addTo(currentAddressLayer);
-  currCircle.bindPopup('ORIGIN');
   map.panTo(latlng);
   currentAddress = [latlng[1], latlng[0]];
 };
@@ -59,10 +61,6 @@ let stopTracking = () => {
   trackingID = null;
   console.log(trackingID);
   currentAddressLayer.clearLayers();
-  directionLayer.clearLayers();
-  if (document.querySelector('.direction') !== null) {
-    document.querySelector('.direction').remove();
-  }
 };
 
 const trackingButton = document.querySelector('#trackme');
@@ -83,7 +81,7 @@ trackingButton.addEventListener('click', () => {
 // get the location of input address
 // let returnFeature = '';
 let inputAddressCoord = '';
-let getAddressCoord = (callback) => {
+let getAddressCoord = () => {
   const inputAddress = addressInput.value;
   const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${inputAddress}.json?access_token=${mapboxApiToken}`;
   fetch(url)
@@ -91,17 +89,16 @@ let getAddressCoord = (callback) => {
     .then(geocoderData => {
       let returnFeature = geocoderData.features[0];
       inputAddressCoord = returnFeature.center;
-      callback();
     });
 }; // return [lng, lat]
 
 let focusAddress = () => {
   let startCircle = L.circleMarker(
     [inputAddressCoord[1], inputAddressCoord[0]],
-    { color: 'blue' },
+    { color: 'red' },
   ).addTo(inputAddressLayer);
 
-  startCircle.bindTooltip(addressInput.value).openTooltip();
+  startCircle.bindPopup(addressInput.value);
   map.panTo([inputAddressCoord[1], inputAddressCoord[0]]);
 };
 // stop of input address
@@ -181,7 +178,7 @@ let getFiveClosetPoints = (point) => {
 
 
 // get route
-async function getRoute(startPoint, desPoint, callback) {
+async function getRoute(startPoint, desPoint) {
   let lat1 = startPoint[1];
   let lon1 = startPoint[0];
   let lat2 = desPoint[1];
@@ -205,33 +202,32 @@ async function getRoute(startPoint, desPoint, callback) {
       coordinates: route,
     },
   };
-  callback();
 }
 
 
 let plotDirection = (geoJson, desPoint) => {
   directionLayer.addData(geoJson);
-  let desCircle = L.circleMarker(
-    [desPoint[1], desPoint[0]],
-    { color: 'red' },
-  ).addTo(directionLayer);
+  let desCircle = L.circle([desPoint[1], desPoint[0]], {
+    color: 'red',
+    fillColor: 'red',
+    radius: 50,
+  }).addTo(directionLayer);
 
   desCircle.bindPopup('DESTINATION');
-};
 
+  map.panTo([desPoint[1], desPoint[0]]);
+};
 
 let addDirection = (direcData) => {
   item3.innerHTML = '';
   let steps = direcData.legs[0].steps;
   item3.appendChild(htmlToElement('<div class="direction"></div>'));
-  let direction = document.querySelector('.direction');
   let tripInstructions = '';
+  let direction = document.querySelector('.direction');
   for (const step of steps) {
-    tripInstructions += `<li>${step.maneuver.instruction}</li>`;
+    tripInstructions = `<li><input type="checkbox">${step.maneuver.instruction}</li>`;
+    direction.appendChild(htmlToElement(tripInstructions));
   }
-  direction.innerHTML = `<p><strong>Trip duration: ${Math.floor(
-    direcData.duration / 60,
-  )} min </strong></p><ol>${tripInstructions}</ol>`;
 };
 
 // Direction End
@@ -282,20 +278,11 @@ let getFilteredFacility = () => {
 
 // show marker of the shipping facility
 
-let showFacilityMarker = (center) => {
+let showFacilityMarker = (Feature) => {
   facilityMarkerGroup.clearLayers();
-
-  const latlng = [center[1], center[0]];
-
-  L.circleMarker(
-    latlng,
-    { color: 'red' },
-  ).addTo(facilityMarkerGroup);
+  facilityMarkerGroup.addLayer(Feature);
+  const latlng = Feature.getBounds()._southWest;
   map.panTo(latlng);
-
-  // facilityMarkerGroup.addLayer(Feature);
-  // const latlng = Feature.getBounds()._southWest;
-  // map.panTo(latlng);
 };
 
 
@@ -309,8 +296,8 @@ const handleFacilityListItemClick = function hfl() {
     .then(resp => resp.json())
     .then(geocoderData => {
       const feature = geocoderData.features[0];
-      const center = feature.center;
-      showFacilityMarker(center);
+      const marker = L.geoJSON(feature);
+      showFacilityMarker(marker);
     });
 };
 
@@ -344,11 +331,8 @@ let initNeighborListItems = (neighData) => {
 
     tempList.push(neighborListItem);
 
-    if (show.checked === false) {
-      neighborListItem.addEventListener('click', handleFacilityListItemClick);
-    }
+    neighborListItem.addEventListener('click', handleFacilityListItemClick);
   });
-
   return tempList;
 };
 
@@ -371,7 +355,7 @@ let handleSelectChange = () => {
 };
 
 
-// searchClick.addEventListener('click', handleSelectChange);
+searchClick.addEventListener('click', handleSelectChange);
 
 // SHOW FILTERED LIST END //
 
@@ -403,15 +387,13 @@ let returnInput = () => {
     if (addressInput.value !== '') {
       inputAddressLayer.clearLayers();
       // get input address coordinates
-      getAddressCoord(() => {
-        focusAddress();
-        fiveFeatureList = getFiveClosetPoints(inputAddressCoord);
-        // show those in lists
-        let tempList = initNeighborListItems(fiveFeatureList);
-        updateNeighborList(tempList);
-      });
-      // focusAddress();
+      getAddressCoord();
+      focusAddress();
       // get five closest points and their features
+      fiveFeatureList = getFiveClosetPoints(inputAddressCoord);
+      // show those in lists
+      let tempList = initNeighborListItems(fiveFeatureList);
+      updateNeighborList(tempList);
     } else if (addressInput.value === '' && currentAddress !== '') {
       inputAddressLayer.clearLayers();
       fiveFeatureList = getFiveClosetPoints(currentAddress);
@@ -420,12 +402,10 @@ let returnInput = () => {
     } else {
       item3.appendChild(htmlToElement("<div id='warning'>You should input an address or turn on the location function!</div>"));
     }
-  } else {
-    handleSelectChange();
   }
 };
 
-// searchClick.addEventListener('click', returnInput);
+searchClick.addEventListener('click', returnInput);
 
 
 // direction function aggregation
@@ -436,131 +416,66 @@ let returnInput = () => {
 
 let directionChecked = () => {
   if (show.checked === true) {
-    if (currentAddress !== '' || addressInput.value !== '') {
-      let showDirection = (desPoint) => {
-        directionLayer.clearLayers();
-        plotDirection(geojson, desPoint);
-        addDirection(data);
-      };
+    console.log('checked');
+    let showDirection = (desPoint) => {
+      directionLayer.clearLayers();
+      plotDirection(geojson, desPoint);
+      addDirection(data);
+    };
 
-      const directionclick = function dc() {
-        const neighborListItem = this;
-        const address = neighborListItem.querySelector('.neighbor .address').textContent;
-        const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${address}.json?access_token=${mapboxApiToken}`;
+    const directionclick = function dc() {
+      const neighborListItem = this;
+      const address = neighborListItem.querySelector('.neighbor .address').textContent;
+      const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${address}.json?access_token=${mapboxApiToken}`;
 
-        let orgCoord = '';
-        if (addressInput.value !== '') {
-          // inputAddressLayer.clearLayers();
-          getAddressCoord(() => {
-            orgCoord = inputAddressCoord;
-          });
-          // focusAddress();
-        } else if (addressInput.value === '' && currentAddress !== '') {
-          orgCoord = currentAddress;
-        } else {
-          orgCoord = '';
-        }
-
-        if (orgCoord !== '') {
-          fetch(url)
-            .then(resp => resp.json())
-            .then(geocoderData => {
-              let desFeature = geocoderData.features[0];
-              let desCoord = desFeature.center;
-              getRoute(orgCoord, desCoord, () => {
-                showDirection(desCoord);
-                // map.panTo([orgCoord[1], orgCoord[0]]);
-                map.fitBounds([
-                  [orgCoord[1], orgCoord[0]],
-                  [desCoord[1], desCoord[0]],
-                ]);
-              });
-            });
-        }
-      };
-
-      let removeEvent = () => {
-        document.querySelectorAll('.neighbor').forEach(neighbor => {
-          neighbor.removeEventListener('click', handleFacilityListItemClick);
-        });
-      };
-
-      let showInstructions = () => {
-        document.querySelectorAll('.neighbor').forEach(neighbor => {
-          neighbor.addEventListener('click', directionclick);
-        });
-      };
-
-      removeEvent();
-      showInstructions();
-
-      // let orgCoord = '';
+      let orgCoord = '';
       if (addressInput.value !== '') {
-        inputAddressLayer.clearLayers();
-        getAddressCoord(() => {
-          focusAddress();
-        });
-        // orgCoord = inputAddressCoord;
+        getAddressCoord();
+        orgCoord = inputAddressCoord;
+      } else if (addressInput.value === '' && currentAddress !== '') {
+        orgCoord = currentAddress;
+      } else {
+        orgCoord = '';
       }
-      // } else if (addressInput.value === '' && currentAddress !== '') {
-      //   orgCoord = currentAddress;
-      // } else {
-      //   orgCoord = '';
-      // }
+
+      if (orgCoord !== '') {
+        fetch(url)
+          .then(resp => resp.json())
+          .then(geocoderData => {
+            let desFeature = geocoderData.features[0];
+            let desCoord = desFeature.center;
+            getRoute(orgCoord, desCoord);
+            showDirection(desCoord);
+          });
+      }
+    };
+
+    let showInstructions = () => {
+      document.querySelectorAll('.neighbor').forEach(neighbor => {
+        neighbor.addEventListener('click', directionclick);
+      });
+    };
+
+    showInstructions();
+
+    let orgCoord = '';
+    if (addressInput.value !== '') {
+      getAddressCoord();
+      orgCoord = inputAddressCoord;
+    } else if (addressInput.value === '' && currentAddress !== '') {
+      orgCoord = currentAddress;
     } else {
-      console.log('why');
+      orgCoord = '';
+    }
+
+    if (orgCoord === '') {
       item3.appendChild(htmlToElement("<div id='warning'>You should input an address or turn on the location function!</div>"));
     }
-  } else if (document.querySelector('.direction') !== null) {
-    document.querySelector('.direction').remove();
+
+    console.log('end');
   }
 };
+
 
 // show.addEventListener('change', directionChecked)
-// searchClick.addEventListener('click', directionChecked);
-
-
-// clear other layes except map when click search button
-
-let clearLayers = () => {
-  directionLayer.clearLayers();
-  facilityMarkerGroup.clearLayers();
-  if (addressInput.value === '') {
-    inputAddressLayer.clearLayers();
-  }
-  if (currentAddress === '') {
-    currentAddressLayer.clearLayers();
-  }
-};
-
-
-
-// add warning and remove warining
-
-let addWarining = () => {
-  if ((nearest.checked === false && show.checked === false) || (addressInput.value !== '' || currentAddress !== '')) {
-    if (document.querySelector('#warning') !== null) {
-      document.querySelector('#warning').remove();
-    }
-  } else if ((nearest.checked === true || show.checked === true) && (addressInput.value === '' && currentAddress === '')) {
-    if (document.querySelector('#warning') === null) {
-      item3.appendChild(htmlToElement("<div id='warning'>You should input an address or turn on the location function!</div>"));
-    }
-  }
-};
-
-let allClickFunc = () => {
-  returnInput();
-  directionChecked();
-  clearLayers();
-  addWarining();
-};
-
-searchClick.addEventListener('click', allClickFunc);
-
-
-
-
-
-
-
+searchClick.addEventListener('click', directionChecked);

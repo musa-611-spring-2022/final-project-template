@@ -83,7 +83,7 @@ trackingButton.addEventListener('click', () => {
 // get the location of input address
 // let returnFeature = '';
 let inputAddressCoord = '';
-let getAddressCoord = (callback) => {
+let getAddressCoord = () => {
   const inputAddress = addressInput.value;
   const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${inputAddress}.json?access_token=${mapboxApiToken}`;
   fetch(url)
@@ -91,7 +91,6 @@ let getAddressCoord = (callback) => {
     .then(geocoderData => {
       let returnFeature = geocoderData.features[0];
       inputAddressCoord = returnFeature.center;
-      callback();
     });
 }; // return [lng, lat]
 
@@ -181,7 +180,7 @@ let getFiveClosetPoints = (point) => {
 
 
 // get route
-async function getRoute(startPoint, desPoint, callback) {
+async function getRoute(startPoint, desPoint) {
   let lat1 = startPoint[1];
   let lon1 = startPoint[0];
   let lat2 = desPoint[1];
@@ -205,7 +204,6 @@ async function getRoute(startPoint, desPoint, callback) {
       coordinates: route,
     },
   };
-  callback();
 }
 
 
@@ -403,15 +401,13 @@ let returnInput = () => {
     if (addressInput.value !== '') {
       inputAddressLayer.clearLayers();
       // get input address coordinates
-      getAddressCoord(() => {
-        focusAddress();
-        fiveFeatureList = getFiveClosetPoints(inputAddressCoord);
-        // show those in lists
-        let tempList = initNeighborListItems(fiveFeatureList);
-        updateNeighborList(tempList);
-      });
-      // focusAddress();
+      getAddressCoord();
+      focusAddress();
       // get five closest points and their features
+      fiveFeatureList = getFiveClosetPoints(inputAddressCoord);
+      // show those in lists
+      let tempList = initNeighborListItems(fiveFeatureList);
+      updateNeighborList(tempList);
     } else if (addressInput.value === '' && currentAddress !== '') {
       inputAddressLayer.clearLayers();
       fiveFeatureList = getFiveClosetPoints(currentAddress);
@@ -451,10 +447,9 @@ let directionChecked = () => {
         let orgCoord = '';
         if (addressInput.value !== '') {
           // inputAddressLayer.clearLayers();
-          getAddressCoord(() => {
-            orgCoord = inputAddressCoord;
-          });
+          getAddressCoord();
           // focusAddress();
+          orgCoord = inputAddressCoord;
         } else if (addressInput.value === '' && currentAddress !== '') {
           orgCoord = currentAddress;
         } else {
@@ -467,14 +462,13 @@ let directionChecked = () => {
             .then(geocoderData => {
               let desFeature = geocoderData.features[0];
               let desCoord = desFeature.center;
-              getRoute(orgCoord, desCoord, () => {
-                showDirection(desCoord);
-                // map.panTo([orgCoord[1], orgCoord[0]]);
-                map.fitBounds([
-                  [orgCoord[1], orgCoord[0]],
-                  [desCoord[1], desCoord[0]],
-                ]);
-              });
+              getRoute(orgCoord, desCoord);
+              showDirection(desCoord);
+              // map.panTo([orgCoord[1], orgCoord[0]]);
+              map.fitBounds([
+                [orgCoord[1], orgCoord[0]],
+                [desCoord[1], desCoord[0]],
+              ]);
             });
         }
       };
@@ -497,9 +491,8 @@ let directionChecked = () => {
       // let orgCoord = '';
       if (addressInput.value !== '') {
         inputAddressLayer.clearLayers();
-        getAddressCoord(() => {
-          focusAddress();
-        });
+        getAddressCoord();
+        focusAddress();
         // orgCoord = inputAddressCoord;
       }
       // } else if (addressInput.value === '' && currentAddress !== '') {
