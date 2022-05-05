@@ -1,0 +1,111 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Canvass Helper</title>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.6.0/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.0/mapbox-gl.css' rel='stylesheet' />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+  <link rel="stylesheet" href="css/styles.css">
+
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css" rel="stylesheet">
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js"></script>
+</head>
+<body>
+
+  <div class="map" id="map">Map</div>
+
+  <!-- three grids -->
+  <div class="grid-container">
+
+    <div class="item1">
+      <div id="trackme">
+        <img src="trackme.png" width="28" height="28" style="margin-left: 4%;;;;;;;">
+      </div>
+    </div>
+      
+    <div class="item2">
+      <div class="filters">
+
+        <div class="filter-field">
+          <label for="zipcode-filter">zipcode</label>
+          <input id="zipcode-filter" value="19104">
+        </div>
+        
+        <div class="filter-field">
+          <label for="address-input">Address</label>
+          <input id="address-input">
+        </div>
+    
+        <div class="filter-field">
+          <label for="company-filter">company</label>
+          <select id="company-filter">
+            <option value=''>(All Companies)</option>
+            <option>FedEx</option>
+            <option>UPS</option>
+            <option>DHL</option>
+          </select>
+        </div>
+    
+        <div class="filter-field">
+          <label for="type-filter">type</label>
+          <select id="type-filter">
+            <option value=''>(All Service Types)</option>
+            <option>Drop Box</option>
+            <option>Staffed Facility</option>
+            <option>Authorized Ship Center</option>
+          </select>
+        </div>
+    
+        <div>
+          <span>
+            <input class="checkbox" type="checkbox" id="nearest">
+            <label>Nearest facilities</label>
+          </span>
+          <span style="position:absolute; left: 50%;">
+            <input class="checkbox" type="checkbox" id="showdirection">
+            <label>Show direction</label>
+          </span>
+        </div>
+
+        <div>
+          <span class="profile">
+            <label>travel mode</label>
+            <select id="profile-filter">
+              <option>driving</option>
+              <option>walking</option>
+              <option>cycling</option>
+            </select>
+          </span>
+          <span> 
+            <button type="button" id="button">search</button>
+          </span>
+        </div>
+      </div>
+      
+      <div class="neighbors">
+        <ul id="neighborsUL" style="list-style-type:circle">
+        </ul>
+      </div>
+    </div>
+
+    <div class="item3">
+      <!-- <div class="direction"></div> -->
+      <!-- <div id="warning">You should input an address or turn on the location function!</div> -->
+    </div>
+  </div>
+
+  <!-- have a grid try -->
+ 
+  <!-- have a grid try -->
+
+  <script src="js/data.js"></script>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+  <script src="https://unpkg.com/papaparse@5.3.2/papaparse.min.js"></script>
+  <script src="js/tools.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

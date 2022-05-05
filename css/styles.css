@@ -1,0 +1,254 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+.map {
+  height: 300px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 10px;
+  grid-template-rows: auto auto;
+}
+
+.item1 {
+  height: 20px;
+  width: 35rem;
+}
+
+.item2 {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  width: auto;
+  height: 100%;
+}
+
+.item3 {
+  height: auto;
+  width: auto;
+}
+
+.filters {
+  padding: 1rem;
+  background-color: white;
+}
+
+#trackme {
+  position: fixed;
+  top: 3rem;
+  width: 31px;
+  height: 31px;
+  border-radius: 0.3rem;
+  border: 2px solid #ccc;
+  margin-top: 1.6rem;
+  z-index: 1;
+  background-color: white;
+  margin-left: -0.1px;
+}
+
+#icon {
+  height: 100%;
+  width: 100%;
+}
+
+.direction {
+  position: sticky;
+  top: 10rem;
+  width: 20%;
+  border-radius: 0.5rem;
+  border: 1px solid gray;
+  margin-top: 10rem;
+  z-index: 1;
+  background-color: #eee;
+  box-shadow: 3px 3px 5px silver;
+  Overflow-y:scroll;
+}
+
+#directionUL {
+  list-style-type: circle;
+  padding-right: 1rem;
+}
+
+.filter-summary {
+  text-align: center;
+  padding-top: 1rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.neighbors > ul {
+  list-style: none;
+  padding: 1rem;
+}
+
+.neighbors li {
+  padding: 0.5rem 0;
+  border-top: 1px solid silver;
+}
+
+.filter-field {
+  display: flex;
+  margin: 0.25rem 0;
+}
+
+.filter-field label {
+  width: 9rem;
+  padding: 0.25rem 0;
+  font-weight: 600;
+}
+
+.filter-field input,
+.filter-field select {
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid gray;
+  background-color: #fff8f0;
+  padding-left: 0.25rem;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.neighbor .name {
+  display: block;
+}
+
+.neighbor .address {
+  display: block;
+  font-weight: 300;
+}
+
+
+/*
+  Emojis:
+  - 🗳️ 01F5F3
+  - 📫 01F4C5
+*/
+.neighbor .party::before {
+  content: "\01F3E4";
+  padding-right: 0.5rem;
+}
+
+.neighbor .last-vote-date::before {
+  content: "\01F4EC";
+  padding-right: 0.5rem;
+}
+
+#button {
+  position: absolute;
+  left:50%;
+}
+/*
+  Bootstrap's screen-width breakpoints:
+  X-Small    < 576px
+  Small      ≥ 576px
+  Medium     ≥ 768px
+  Large      ≥ 992px
+  X-large    ≥ 1200px
+  XX-large   ≥ 1400px
+
+  (Source: https://getbootstrap.com/docs/5.0/layout/breakpoints/#available-breakpoints)
+*/
+
+
+@media screen and (min-width: 768px) {
+  .map {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+  }
+
+  body {
+    padding-left: auto;
+    padding-right: 1rem;
+  }
+
+  .filters,
+  .neighbors {
+    box-sizing: border-box;
+    width: 30rem;
+    margin-left: auto;
+    pointer-events: visible;
+    position: relative;
+    margin-right: 2%;
+}
+
+  .direction {
+    position: fixed;
+    width: 20rem;
+    border-radius: 0.5rem;
+    border: 1px solid gray;
+    margin-top: 30%;
+    z-index: 1;
+    background-color: #eee;
+    box-shadow: 3px 3px 5px silver;
+    height: 12rem;
+    overflow-y: scroll;
+}
+
+  #warning {
+    position: fixed;
+    width: 29rem;
+    border: 1px solid gray;
+    margin-top: -10rem;
+    z-index: 1;
+    box-shadow: 3px 3px 5px silver;
+    height: 2rem;
+    margin-left: 17rem;
+    background-color: #eee;
+    color: red;
+    align-content: center;
+}
+
+
+
+  .filters {
+    position: sticky;
+    top: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid gray;
+    margin-top: 1rem;
+    z-index: 1;
+    background-color: #eee;
+    box-shadow: 3px 3px 5px silver;
+    margin-right: 2%;
+    width: 30rem;
+}
+
+  .neighbors > ul {
+    pointer-events: all;
+    padding-top: 0;
+  }
+
+  .neighbors li {
+    background-color: white;
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid gray;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .neighbors > ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .neighbors li {
+    display: inline-block;
+    width: calc(50% - 3rem);
+    pointer-events: all;
+    margin-top: 0;
+  }
+}
