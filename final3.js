@@ -2,6 +2,12 @@ let map = L.map('map').setView([40.751,-73.798], 9.95); //zoomed to NYC
 L.tileLayer('https://api.mapbox.com/styles/v1/saisheth/cl1nsj746003g15nz6hd6pqvs/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoic2Fpc2hldGgiLCJhIjoiY2wwcjJscXdyMmdsbDNlcWt0eWQ3NHh4bCJ9._YM5R9AGKiS7q_v80O8NVQ', {
 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
+let layerGroup = L.layerGroup().addTo(map);
+
+var popup = L.popup()
+    .setLatLng([40.87369498325355, -73.880724989077587])
+    .setContent('<center><img src=laalBaari.png style="width:90px;height:100px;"></center>')
+    .openOn(map);
 
 let slideNumber = 0;
 let currentLayer = new L.LayerGroup().addTo(map);
@@ -23,7 +29,7 @@ const fetchMapData = () => {
   .then(data => {
     slides = data;
     showMapData(data);
-    showCurrentSlide();
+    showSlide();
     console.log(data)
   });
 }
@@ -90,3 +96,13 @@ slides.forEach((slide, i) => {
 window.addEventListener('load', () => {
   showSlide(slideNumber);
 });
+
+//added legend to the map, added in css
+let legend = L.control({position: "bottomleft"});
+legend.onAdd = function() {
+    let div = L.DomUtil.create("div", "legend");
+    div.innerHTML = 
+        '<p><b>Click on the map to view the data!</b></p><hr>';
+    return div;
+};
+legend.addTo(map);
