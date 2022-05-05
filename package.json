@@ -28,6 +28,7 @@
       "comma-dangle": "off",
       "func-names": "off",
       "no-console": "off",
+      "no-loop-func": "off",
       "no-plusplus": "off",
       "no-multiple-empty-lines": "off",
       "no-multi-spaces": "off",
