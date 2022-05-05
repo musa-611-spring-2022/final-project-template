@@ -24,6 +24,7 @@
     "rules": {
       "arrow-body-style": "off",
       "arrow-parens": "off",
+      "camelcase": "off",
       "comma-dangle": "off",
       "func-names": "off",
       "no-console": "off",
