@@ -14,7 +14,9 @@
       "document": "readonly",
       "fetch": "readonly",
       "htmlToElement": "readonly",
-      "htmlToElements": "readonly"
+      "htmlToElements": "readonly",
+      "navigator": "readonly",
+      "neighborData": "readonly"
     },
     "rules": {
       "arrow-parens": "off",
@@ -36,6 +38,17 @@
         {
           "selector": "WithStatement",
           "message": "`with` is disallowed in strict mode because it makes code impossible to predict and optimize."
+        }
+      ],
+      "no-underscore-dangle": [
+        "error",
+        { "allow": ["_southWest"] }
+      ],
+      "prefer-destructuring": [
+        "error",
+        {
+          "array": false,
+          "object": false
         }
       ]
     }
