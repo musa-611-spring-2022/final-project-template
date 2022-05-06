@@ -17,6 +17,7 @@
       "Chart": "readonly",
       "L": "readonly",
       "mapboxgl": "readonly",
+      "Plotly": "readonly",
 
       "htmlToElement": "readonly",
       "htmlToElements": "readonly"
