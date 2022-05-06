@@ -53,22 +53,22 @@ const slideChartDiv = document.querySelector('#story');
 //make markers and map layers based on the json file  
 function updateMap(features) {
     layerGroup.clearLayers();
-    let featureJson = features.addTo(layerGroup);
-    const geoJsonLayer = L.geoJSON(features, { pointsToLayer: (p, latlng) => L.marker(latlng) })
+    // let featureJson = features.addTo(layerGroup);
+    const geoJsonLayer = L.geoJSON(features, { style: myStyle, pointsToLayer: (p, latlng) => L.marker(latlng) })
       .bindTooltip(l => l.feature.properties)
       .addTo(layerGroup);
   
     return geoJsonLayer;
   } 
 
-/*
-function dataCollection(geoJsonLayer) {
-    return {
-      type: 'FeatureCollection',
-      features: slideToShow.features.filter(f => f.properties.slideNum === slideNum),
-    };
-  }
-*/
+
+// function dataCollection() {
+//     return {
+//       type: 'FeatureCollection',
+//       features: slides.features.filter(f => f.properties.slideNum === slideNum),
+//     };
+//   }
+
 
 let slideToShow = { features: [] };  
 
@@ -77,7 +77,7 @@ function showSlide(slide) {
   slideContentDiv.innerHTML = `<p>${slide.properties.contentSlide}</p>`;
   //slideChartDiv.innerHTML = '<p>${slide.properies.chart}</p>';
 
-
+  updateMap(slide)
   map.eachLayer(marker => {
     if (marker.feature && marker.feature.properties.titleSlide === slide.properties.titleSlide) {
     //map.flyTo(slideNum(), 10);
@@ -120,7 +120,7 @@ slideNextButton.addEventListener('click', goNextSlide);
 var chart = new ApexCharts(document.querySelector("#chart"), options);
 chart.render();
 //add image overlay
-var imageUrl = 'https://maps.lib.utexas.edu/maps/historical/newark_nj_1922.jpg',
+var imageUrl = '...jpg',
     imageBounds = [[40.712216, -74.22655], [40.773941, -74.12544]];
 L.imageOverlay(imageUrl, imageBounds).addTo(map);
 */
@@ -136,6 +136,7 @@ legend.onAdd = function() {
 };
 legend.addTo(map);
 
+/*
 var census = [
   {
       "name":"Census Tract 425",
@@ -180,6 +181,7 @@ var census = [
       "total_pop":3224
   },   
 ];
+
 
 JSC.Chart('chartDiv', {
   type: 'horizontal column',
@@ -264,3 +266,4 @@ let norwood = L.polygon([
   }
 ).addTo(map);
 norwood.bindPopup("<b>Norwood</b>");
+*/
