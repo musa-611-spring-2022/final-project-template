@@ -1,0 +1,120 @@
+<% layout('layout/boilerplate') %>
+
+<div class="row">
+	<h1 class="text-center">Edit Site</h1>
+	<div class="col-6 offset-3">
+		<form action="/historicsites/<%= historicsite._id%>?_method=PUT" method="POST" class="needs-validation" novalidate enctype="multipart/form-data">
+
+			<div class="mb-3">
+				<label for="title" class="form-label">New Name</label>
+				<input type="text" id="Title" name="historicsite[name]" class="form-control" value="<%= historicsite.name%>" required>
+				<div class="invalid-feedback">
+					Please enter a new name.
+				</div>
+			</div>
+
+
+			<div class="mb-3">
+				<label for="location" class="form-label">New Address</label>
+				<input type="text" id="location" name="historicsite[address]" class="form-control" value="<%= historicsite.address%>" required>
+				<div class="invalid-feedback">
+					Please center a new address.
+				</div>
+			</div>
+
+
+			<div class="mb-3">
+
+				<div class="">
+					<label for="separatorTags" class="form-label">Edit People</label>
+					<select class="form-select form-control" id="separatorTags" name="historicsite[people][]" multiple data-allow-new="true" data-separator=" |,|  ">
+						<option value="">placeholder</option>
+						<% if (historicsite.people.length) { %>
+						<% for (let p of historicsite.people) { %>
+						<option value="<%= p %>" selected="selected"><%= p %></option>
+						<% } %>
+						<% } else {%> 
+						<option value="" >Type a name...</option>you need at least one option with the placeholder
+						<% } %>
+					</select>
+				</div>
+
+
+
+
+<!-- 
+				<label class="form-label" for="validationTagsNew">Edit People</label>
+				<select id="validationTagsNew" name="historicsite[people][]" multiple data-allow-new="true">
+					<option selected disabled hidden value="">Choose a tag...</option>
+					<% for (let p of historicsite.people) { %>
+					<option data-badge-style="success" selected="selected"><%= p %></option>
+					<% } %>
+				</select> -->
+
+			</div>
+
+
+
+
+			<div class="mb-3">
+				<label class="form-label">Edit Description</label>
+				<div class="form-file custom-file">
+					<div class="dynamicTextarea">
+						<% for (let para of historicsite.description) { %>
+						<div>
+							<textarea class="form-control mb-3" id="description" name="historicsite[description][]"><%= para %></textarea>
+						</div>
+
+						<% } %>
+					</div>
+					<label for="add">New paragraph?</label>
+					<input type="checkbox" id="add" class="addNewPara" onchange="addNewTextarea()">
+				</div>
+			</div>
+
+
+
+			<div class="mb-3">
+				<label class="form-label">Add More Image(s)</label>
+				<div class="form-file custom-file">
+					<input class="form-control custom-file-input" type="file" id="image" name="image" multiple
+					onchange="previewMultiple(event)">
+					<label for="image" class="form-label custom-file-label mt-2" style="font-size: 0.8rem"></label>
+				</div>
+				<div id="formFile"></div>
+				<div class="invalid-feedback">
+					Please choose a new image.
+				</div>
+			</div>
+
+
+
+
+
+			<div class="mb-3">
+				<% historicsite.image.forEach(function(img, i) { %>
+				<img src="<%= img.thumbnail %>" alt="" class="img-thumbnail">
+				<div class="form-check_inline">
+					<input type="checkbox" name="deleteImage[]" value="<%= img.filename %>" id="image-<%= i %>">
+					<label for="image-<%= i %>">Delete?</label>
+
+				</div>
+
+				<% }) %>
+
+			</div>
+
+
+
+			<div class="mb-3">
+				<button class="btn btn-info">Update Historic Site</button>
+			</div>
+
+		</form>
+
+		<footer class="mb-3">
+			<a href="/historicsites/<%= historicsite._id%>">Back to Site</a>
+		</footer>
+
+	</div>
+</div>

@@ -1,0 +1,87 @@
+<% layout('layout/boilerplate') %>
+
+<h5>Home of the 7th Ward, Philly!</h5>
+<div>
+	<img src="https://res.cloudinary.com/dgmbzj4cy/image/upload/v1651686166/MUSA-611-7th-Ward/Screen_Shot_2022-05-04_at_1.42.11_PM_qyvjrb.png" class="img-fluid mb-3">
+</div>
+<div id='map' style='width: 100%; height: 100vh;' class="mb-3"></div>
+
+
+
+
+<script>
+
+
+
+	const arrayOfDocsHist = <%- JSON.stringify(arrayOfDocsHist) %>;
+
+
+	const mapToken = '<%- process.env.MAP_BOX_TOKEN %>';
+
+
+	mapboxgl.accessToken = mapToken;
+	const map = new mapboxgl.Map({
+    container: 'map', // container ID
+    style: 'mapbox://styles/mapbox/outdoors-v11', // style URL
+    center: [-75.16406863194295, 39.943832192134046], // starting position [lng, lat]
+    zoom: 15 // starting zoom
+});
+
+	const populateMarker =  () => {
+		for (let object of arrayOfDocsHist) {
+			const coor = object.geometry.coordinates;
+			const name = object.name;
+			const address = object.address;
+			const id = object._id;
+			const img = object.image[0].url;
+			const html = `<a href="/historicsites/${id}"><h5>${name}</a></h5><p>${address}</p><img src="${img}" class="img-fluid mb-3">`;
+
+			// create new popup
+			let popup = new mapboxgl.Popup({ offset: 25 }).setHTML(html);
+			let popup_clicked = new mapboxgl.Popup({ offset: 25 }).setHTML(html);
+
+			// create the marker
+			let marker = new mapboxgl.Marker().setLngLat(coor);
+
+            // get the marker element
+            const element = marker.getElement();
+            element.id = 'marker'
+            // hover event listener
+            element.addEventListener('click', () => {
+            	popup_clicked.addTo(map);
+            	popup = popup_clicked;
+            });
+
+            element.addEventListener('mouseenter', () => popup.addTo(map));
+            element.addEventListener('mouseleave', () => popup.remove());
+
+
+
+            // add popup to marker
+            marker.setPopup(popup);
+            // add marker to map
+            marker.addTo(map);
+
+            // new mapboxgl.Marker()
+            // .setLngLat(coor)
+            // .setPopup(popup)
+            // .addTo(map);
+        }
+
+    };
+
+
+    populateMarker();
+
+// create the popup for current site
+const popup = new mapboxgl.Popup({ offset: 25 }).setHTML(
+	`<h5>${historicsite.name}</h5><p>${historicsite.address}</p>`
+	);
+
+new mapboxgl.Marker({ "color": "#b40219" })
+.setLngLat(historicsite.geometry.coordinates)
+.setPopup(popup)
+.addTo(map);
+
+
+</script>

@@ -1,0 +1,81 @@
+<% layout('layout/boilerplate') %>
+
+
+<div class="row">
+	<h1 class="text-center">New Site</h1>
+	<div class="col-6 offset-3">
+		<form action="/historicsites" method="POST" novalidate class="needs-validation" enctype="multipart/form-data">
+			<div class="mb-3">
+				<label for="title" class="form-label">Name</label>
+				<input type="text" id="Title" name="historicsite[name]" class="form-control" required=>
+				<div class="invalid-feedback">
+					Please enter a name.
+				</div>
+			</div>
+			<div class="mb-3">
+				<label for="location" class="form-label">Address</label>
+				<input type="text" id="location" name="historicsite[address]" class="form-control" required>
+				<div class="invalid-feedback">
+					Please enter an address.
+				</div>
+			</div>
+
+			<div class="mb-3">
+
+				<label class="form-label">Add People</label>
+				<select id="validationTagsNew" name="historicsite[people][]" multiple data-allow-new="true">
+					<option selected disabled hidden value="">Type in name ...</option>
+				</select>
+			</div>
+
+
+			<div class="mb-3">
+				<label class="form-label">Choose Image(s)</label>
+				<div class="form-file custom-file">
+					<input class="form-control custom-file-input" type="file" id="image" name="image" multiple
+					onchange="previewMultiple(event)">
+					<label for="image" class="form-label custom-file-label mt-2" style="font-size: 0.8rem"></label>
+				</div>
+				<div id="formFile"></div>
+			</div>
+
+
+			<div class="mb-3">
+				<label class="form-label">Add a Paragraph of Description</label>
+				<div class="form-file custom-file">
+					<div class="dynamicTextarea">
+						<div>
+							<textarea class="form-control mb-3" id="description" name="historicsite[description][]"></textarea>
+						</div>
+					</div>
+					<label for="add">New paragraph?</label>
+					<input type="checkbox" id="add" class="addNewPara" onchange="addNewTextarea()">
+				</div>
+			</div>
+
+
+
+
+
+			<div class="mb-3">
+				<button class="btn btn-dark">Add Historic Site</button>
+			</div>
+
+		</form>
+
+		<footer>
+			<a href="/campgrounds">All Historic Sites</a>
+		</footer>
+
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
