@@ -10,7 +10,6 @@
       "fetch": "readonly",
       "navigator": "readonly",
       "window": "readonly",
-
       "$": "readonly",
       "_": "readonly",
       "ApexCharts": "readonly",
@@ -18,7 +17,6 @@
       "L": "readonly",
       "mapboxgl": "readonly",
       "Plotly": "readonly",
-
       "htmlToElement": "readonly",
       "htmlToElements": "readonly"
     },
@@ -54,5 +52,8 @@
         }
       ]
     }
+  },
+  "dependencies": {
+    "react": "^18.1.0"
   }
 }

@@ -1,0 +1,26 @@
+Web App - The Seventh Ward of Philadelphia 
+
+1. Source of Data: 
+http://www.dubois-theward.org/resources/walking-tour/locations/
+  1a. Use Mapbox to create customized map tile (only showing the street name)
+  1b. Use data of the current historic sites to creaet a database
+
+2. Functionality
+  2a. Search and View All Historic Sites + Interactive Map 
+    a. Search by name
+    b. Filter by categories: religious buildings, buildings associated with historical figures ...
+
+   2b. Make New Place of Memory
+     a. Allow log in and log out // skip authentication
+     b. Once logged in, insert a new place (location, title, year of significance, image, audio, description ...)
+     c. New place of memory can be viewed on the map
+
+   2c. Make Comment under Existent Place
+     a. leave a comment (text)
+     b. leave photo related to this place
+     c. delete and edit the comment for the current user account
+
+where map came in:
+1. click on a map to create and save a new document
+2. after getting data from the post request, display it on the browser 
+
