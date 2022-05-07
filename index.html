@@ -1,0 +1,97 @@
+<html>
+<head>
+    <title>TODPhilly: assessing TOD index for all rail transit stations in DVRPC</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+    
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="top"><img src = "dvrpc_logo_white.png" alt="My Happy SVG" width=80px/>   TODPhilly
+        <div id="navbar-links" class="landing">
+            <ul id="landing-2" class="nav navbar-nav navbar-right" style="margin-top: 13px;">
+                <li class="landingLink"><a href="https://www.dvrpc.org/"  style="text-decoration: none">About DVRPC</a></li>
+                <li class="landingLink"><a href="https://github.com/CPLN-680-Spring-2022/Huang_lechuan_todphilly" style="text-decoration: none;">GitHub</a></li>
+                <li class="landingLink"><a href="https://en.wikipedia.org/wiki/Transit-oriented_development" style="text-decoration: none;">What is TOD</a></li>
+                <li class="landingLink"><a href="https://github.com/CPLN-680-Spring-2022/Huang_lechuan_todphilly/blob/main/Metadata.xlsx?raw=true" style="text-decoration: none;">Metadata</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main">
+       <div class="content" id="container">
+            <div class="cardclick" id="cardclick">
+                <h3>Welcome! To get started:</h3>
+                <h4>Click on a station to learn more about its existing TOD orientation and future potential with breakdown of decision factors.</h4>
+                <h4>Click on a dark-green dot - parcels larger than 1 acre to learn more about the existing developable parcels.</h4>
+                <h4>Choose any of the dropdown boxes to filter the stations.</h4>
+                <h4>To identify larger scale TOD development:</h4>
+                    <h4>1. Filter by your criteria;</h4>
+                    <h4>2. Check out the green dots around the remaining stations shown.</h4>
+            </div>
+            <div id="infobig" class="infobig">
+                <div id="Information" class="Information"></div>
+            </div>
+            <div id="scbig" class="scbig">
+                <div class="scorebox" class="scorebox">
+                    <div id="Scoreinfo" class="Scoreinfo"></div>
+                    <div id="stationinfo_all" class="stationinfo_all"></div>
+                </div>
+            </div>
+            <div id="mcdabig" class="mcdabig">
+                <div id="MCDAinfo" class="MCDAinfo"></div>
+            </div>
+        </div>
+    
+        <div class="mapbox">
+            <div class="map" id="map">
+                <div class="filters">
+                    <fieldset id="station-filters">
+                        <label for="score-select">Score Range</label>
+                        <select id="score-select" class="form-select" onInput="ModeSelect()">
+                            <option value="">All</option>
+                            <option>Larger than 7 (Ideal)</option>
+                            <option>Between 5 and 7 (Mediocre)</option>
+                            <option>Lower than 5 (Not ideal)</option>
+                        </select>
+  
+                        <label for="location-select">Municipality Level</label>
+                        <select id="location-select" class="form-select" onInput="ModeSelect()">
+                            <option value="">All</option>
+                            <option>Philadelphia Neighborhoods</option>
+                            <option>City</option>
+                            <option>Borough</option>
+                            <option>Township</option>
+                        </select>
+
+                        <label for="service-select">Service Mode</label>
+                        <select id="service-select" class="form-select" onInput="ModeSelect()">
+                            <option value="">All</option>
+                            <option>Regional Rail</option>
+                            <option>Transit Rail</option>
+                            <option>Light Rail</option>
+                            <option>Trolley</option>
+                        </select>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="Footer">
+        Re-evaluating TOD Opportunities in Greater Philadelphia&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#disclaimer" class="hp-link" style="text-decoration: none">&nbsp;&nbsp;Disclaimer</a>&nbsp;&nbsp;|&nbsp;&nbsp; - by Lechuan Huang
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+    <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+   <script src = "index.js"></script>
+ <!--  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly" defer></script>-->
+</body>
+
+</html>
