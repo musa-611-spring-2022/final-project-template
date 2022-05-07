@@ -1,0 +1,130 @@
+body{
+    margin: 0;
+    display: flex;
+    max-height: 100%;
+    flex-direction: column;
+    font-family: 'Open Sans', sans-serif;
+}
+a {
+    text-decoration: white;
+}
+a:link, a:visited{
+    color: white;
+}
+a:hover {
+    color: purple;
+}
+
+.top {
+    padding: 1rem;
+    padding-left: 2rem;
+    font-size: 28pt;
+    background-color: #24abe2;
+    color: #eee;
+}
+.landing {
+    top: 0;
+    right:0; 
+    bottom: 0;
+    font-size: 15pt;
+    position:absolute;
+    padding-right: 5%;
+  }
+
+ul > li{
+    display:inline-block;
+    padding: 10px;
+    color: white;
+}
+.main {
+    flex-direction: row;
+    display: flex;
+    height: 100%;
+}
+
+.mapbox {
+    width: 100%;
+}
+
+.filters {
+    padding: 10px;
+    position: relative;
+    z-index: 401;
+    font-size: 15px;
+    text-align: center;
+}
+
+.map {
+    flex-grow: 1;
+    height: 100%;
+    width: 100%;
+}
+
+.content {
+    flex-direction: column;
+    width: 600px;
+    background-color: #bbe2f2;
+    color: #666666;
+}
+.cardclick {
+    font-style: italic;
+    position: relative;
+    z-index: 401;
+    padding-bottom: 10px;
+    height: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.infobig {
+    padding-top: 10px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.Information {
+    background-color: #102c47;
+    color: white;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 20px;
+}
+.scbig {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.scorebox {
+    padding: 1rem;
+    background-color: white;
+    border: solid;
+    border-color: #102c47;
+    border-width: 1px;
+}
+.big {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.mcdabig {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.MCDAinfo {
+    background-color: white;
+    border: solid;
+    border-color: #102c47;
+    border-width: 1px;
+    padding-bottom: 10px;
+}
+.Footer{
+    bottom: 0;
+    height: 40px;
+    line-height: 40px;
+    font-size: 10pt;
+    background-color: #24abe2;
+    text-align: center;
+    color: white;
+}

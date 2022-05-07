@@ -1,0 +1,4340 @@
+{"type":"FeatureCollection",
+"features":[
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Malvern Borough",
+            "Shape__Are":11493.0449005},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.5179374,40.0376898]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Eddystone Borough",
+            "Shape__Are":5008.3058236},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.3369544,39.856016]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Eddystone Borough",
+            "Shape__Are":67488.4708716},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.3370882,39.8595735]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Eddystone Borough",
+            "Shape__Are":7100.8295594},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.3311961,39.8630616]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Eddystone Borough",
+            "Shape__Are":36009.867786},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.3273742,39.8630403]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Eddystone Borough",
+            "Shape__Are":6407.1026044},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.3290975,39.8637842]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Ridley Township",
+            "Shape__Are":22484.4814539},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.3198574,39.911037]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Clifton Heights Borough",
+            "Shape__Are":9991.9231737},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2860254,39.9311493]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Clifton Heights Borough",
+            "Shape__Are":4403.1571518},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.3001188,39.9346491]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Lansdowne Borough",
+            "Shape__Are":6728.5098051},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2663546,39.9383005]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Parking - Industrial: General",
+            "mun_name":"Eddystone Borough",
+            "Shape__Are":7636.8768073},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.3354383,39.8566597]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Parking - Industrial: General",
+            "mun_name":"Eddystone Borough",
+            "Shape__Are":22315.8477892},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.3283103,39.8644609]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"Chester City",
+            "Shape__Are":4867.533306},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.3489871,39.8562787]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"Chester City",
+            "Shape__Are":6652.1137446},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.3544879,39.8586105]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"Springfield Township",
+            "Shape__Are":12335.6237113},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.3317349,39.9083917]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Agriculture",
+            "lu15subn":"Agriculture",
+            "mun_name":"Malvern Borough",
+            "Shape__Are":53146.0436104},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.5161966,40.0305624]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Agriculture",
+            "lu15subn":"Agriculture",
+            "mun_name":"Haverford Township",
+            "Shape__Are":4384.083531},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.3044952,39.9900681]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Agriculture",
+            "lu15subn":"Agriculture",
+            "mun_name":"Cinnaminson Township",
+            "Shape__Are":4153.4938312},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9933952,39.9994643]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Agriculture",
+            "lu15subn":"Agriculture",
+            "mun_name":"Cinnaminson Township",
+            "Shape__Are":4657.4713037},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9788756,40.0108041]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Agriculture",
+            "lu15subn":"Agriculture",
+            "mun_name":"Cinnaminson Township",
+            "Shape__Are":47018.8763522},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9873058,40.0250791]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Agriculture",
+            "lu15subn":"Agriculture",
+            "mun_name":"Cinnaminson Township",
+            "Shape__Are":47613.5969269},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9935127,40.0281244]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Palmyra Borough",
+            "Shape__Are":9573.1103062},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0293799,39.9966568]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Palmyra Borough",
+            "Shape__Are":7760.5782999},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0305747,39.9978755]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Cinnaminson Township",
+            "Shape__Are":6753.1868266},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9844826,40.0061457]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Cinnaminson Township",
+            "Shape__Are":8113.7102172},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9905009,40.0090046]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Cinnaminson Township",
+            "Shape__Are":8315.670775},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9721622,40.0101267]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Cinnaminson Township",
+            "Shape__Are":8001.3671297},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0009977,40.0118586]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Cinnaminson Township",
+            "Shape__Are":7888.9442116},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9834305,40.0123868]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Riverton Borough",
+            "Shape__Are":12262.8572391},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0098139,40.0137378]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Cinnaminson Township",
+            "Shape__Are":5782.3043959},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0020634,40.0143691]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Cinnaminson Township",
+            "Shape__Are":19349.9227574},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.977768,40.0144998]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Cinnaminson Township",
+            "Shape__Are":6801.7643841},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9994259,40.0159832]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Cinnaminson Township",
+            "Shape__Are":10024.4397914},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9880657,40.0213]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Cinnaminson Township",
+            "Shape__Are":176264.8821586},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9894339,40.0192629]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Cinnaminson Township",
+            "Shape__Are":20810.8507325},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9922597,40.0223908]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Cinnaminson Township",
+            "Shape__Are":10261.5516776},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9848017,40.0241991]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Riverside Township",
+            "Shape__Are":17671.0108823},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9674598,40.0371524]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Riverside Township",
+            "Shape__Are":5873.420699},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9482048,40.0387158]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Parking - Industrial: General",
+            "mun_name":"Cinnaminson Township",
+            "Shape__Are":4127.8079792},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9975978,40.0173167]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Parking - Industrial: General",
+            "mun_name":"Riverside Township",
+            "Shape__Are":7029.3920208},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9607519,40.028244]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Mixed-Use",
+            "mun_name":"Cinnaminson Township",
+            "Shape__Are":5498.5704125},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9836998,40.009514]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Mixed-Use",
+            "mun_name":"Cinnaminson Township",
+            "Shape__Are":8467.7817053},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9740957,40.0116438]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Mixed-Use",
+            "mun_name":"Cinnaminson Township",
+            "Shape__Are":8180.2045451},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9911631,40.0232157]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Parking - Industrial: Mixed-Use",
+            "mun_name":"Cinnaminson Township",
+            "Shape__Are":13441.6016369},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9911569,40.0231911]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"Cinnaminson Township",
+            "Shape__Are":42603.0035987},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9880589,40.0100785]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"Cinnaminson Township",
+            "Shape__Are":12799.6427133},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.998505,40.0150327]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"Cinnaminson Township",
+            "Shape__Are":4216.0502663},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9976671,40.0165477]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"Cinnaminson Township",
+            "Shape__Are":10239.3260215},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9808811,40.0216319]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"Cinnaminson Township",
+            "Shape__Are":36347.9203907},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9819529,40.0231366]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"Riverside Township",
+            "Shape__Are":17778.5701651},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9650493,40.037069]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Parking - Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"Cinnaminson Township",
+            "Shape__Are":19931.2393569},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9813478,40.0227297]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Cherry Hill Township",
+            "Shape__Are":79293.9049472},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0104017,39.8742138]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Camden City",
+            "Shape__Are":5610.8372281},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0938881,39.9248858]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Camden City",
+            "Shape__Are":6564.6974816},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1283302,39.92922]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Camden City",
+            "Shape__Are":8458.1516513},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1285319,39.9305465]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Camden City",
+            "Shape__Are":75602.4111883},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1305377,39.9319118]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Camden City",
+            "Shape__Are":5486.0934112},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1270771,39.9387851]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Camden City",
+            "Shape__Are":5639.6865749},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1269437,39.9497453]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Pennsauken Township",
+            "Shape__Are":24036.9520198},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0494717,39.9656274]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Pennsauken Township",
+            "Shape__Are":11102.2200726},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.051684,39.9672174]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Pennsauken Township",
+            "Shape__Are":406449.5176769},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0978712,39.9687791]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Pennsauken Township",
+            "Shape__Are":7695.9052778},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0601016,39.9739276]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Pennsauken Township",
+            "Shape__Are":89210.0850383},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0617909,39.9756896]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Parking - Industrial: General",
+            "mun_name":"Cherry Hill Township",
+            "Shape__Are":7458.1744406},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0095327,39.874035]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Parking - Industrial: General",
+            "mun_name":"Camden City",
+            "Shape__Are":4443.0715616},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0981907,39.9279819]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Parking - Industrial: General",
+            "mun_name":"Pennsauken Township",
+            "Shape__Are":5854.664087},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0491774,39.964925]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Mixed-Use",
+            "mun_name":"Pennsauken Township",
+            "Shape__Are":7789.1990275},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0536051,39.9693708]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"Cherry Hill Township",
+            "Shape__Are":82037.6135108},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0082622,39.8757699]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"Camden City",
+            "Shape__Are":29406.015576},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0983213,39.9255696]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"Camden City",
+            "Shape__Are":4354.7522965},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1254992,39.9285659]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"Camden City",
+            "Shape__Are":12137.1272552},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1261871,39.9295409]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"Pennsauken Township",
+            "Shape__Are":37725.5436071},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.082622,39.96402]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"Pennsauken Township",
+            "Shape__Are":18821.2501356},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0487411,39.9668533]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"Pennsauken Township",
+            "Shape__Are":23277.6169909},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0514094,39.9693331]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"Pennsauken Township",
+            "Shape__Are":56828.7918094},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0574792,39.9715349]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"Pennsauken Township",
+            "Shape__Are":60119.5468163},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0556868,39.9724029]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"Pennsauken Township",
+            "Shape__Are":38417.7345993},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0629414,39.9741832]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Parking - Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"Cherry Hill Township",
+            "Shape__Are":4513.4628961},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0074171,39.8757742]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Parking - Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"Pennsauken Township",
+            "Shape__Are":6411.0887753},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0589428,39.9709746]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Colwyn Borough",
+            "Shape__Are":22845.1599159},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2575636,39.9111682]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Colwyn Borough",
+            "Shape__Are":6228.683731},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2493663,39.9143328]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"University - Southwest",
+            "Shape__Are":5589.3068509},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2158616,39.9362577]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Central",
+            "Shape__Are":5133.0608199},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1806074,39.939862]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Central",
+            "Shape__Are":10073.3297551},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1789454,39.9398755]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"University - Southwest",
+            "Shape__Are":8910.3367854},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.220238,39.9448095]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"University - Southwest",
+            "Shape__Are":10028.2487589},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2260702,39.9453972]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"University - Southwest",
+            "Shape__Are":8017.7984778},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2331174,39.9458356]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Central",
+            "Shape__Are":4711.463187},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1472675,39.9546084]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Central",
+            "Shape__Are":12884.4006841},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1542524,39.9591174]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Central",
+            "Shape__Are":5987.5489199},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1473145,39.9625074]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Central",
+            "Shape__Are":4255.0712607},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1353479,39.9640969]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Lower North",
+            "Shape__Are":4272.2589187},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1507987,39.9728041]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Lower North",
+            "Shape__Are":4234.4760287},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.139138,39.9756807]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Lower North",
+            "Shape__Are":11399.7774431},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1431983,39.9761033]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Lower North",
+            "Shape__Are":10643.6287},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.137389,39.9767559]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Lower North",
+            "Shape__Are":4912.2127892},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.134427,39.9781543]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"River Wards",
+            "Shape__Are":4877.0895457},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1228434,39.9847395]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"River Wards",
+            "Shape__Are":5107.2594554},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1263924,39.9871892]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Lower North",
+            "Shape__Are":12177.4540951},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1467751,39.9874634]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"River Wards",
+            "Shape__Are":5565.8240209},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1187061,39.9899085]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"River Wards",
+            "Shape__Are":5134.6573693},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1223568,39.9903092]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"River Wards",
+            "Shape__Are":7652.1640757},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1196896,39.9904338]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Lower North",
+            "Shape__Are":9769.5308332},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1563374,39.9917793]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"River Wards",
+            "Shape__Are":7533.6441904},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1090257,39.993112]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"North",
+            "Shape__Are":12718.9176081},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1256042,39.9940034]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"River Wards",
+            "Shape__Are":5814.7202613},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1089388,39.9948101]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"River Wards",
+            "Shape__Are":4888.8594195},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1098416,39.9959509]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"North",
+            "Shape__Are":4252.7060772},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1254634,39.9960356]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"River Wards",
+            "Shape__Are":4950.0448402},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1089701,39.9960333]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"North",
+            "Shape__Are":13645.8797286},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1250434,39.9971872]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"North",
+            "Shape__Are":6186.5804451},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1237034,39.9982264]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"North",
+            "Shape__Are":16149.0220152},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1570068,39.9981204]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"North",
+            "Shape__Are":11678.9353893},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.122577,39.9985079]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"North",
+            "Shape__Are":7485.1767919},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1247075,39.9988966]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"North",
+            "Shape__Are":17140.2332323},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1624676,39.9988195]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"North",
+            "Shape__Are":5938.5688173},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1572791,39.9996158]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"North",
+            "Shape__Are":4842.8594367},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1202534,40.0001537]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"North",
+            "Shape__Are":4800.7535431},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1089454,40.000184]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"River Wards",
+            "Shape__Are":7486.2376753},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1042165,40.0005216]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"North",
+            "Shape__Are":20061.5721844},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1619425,40.0007265]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"North",
+            "Shape__Are":7655.9336422},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1094843,40.0017174]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"North",
+            "Shape__Are":7660.6293523},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1220725,40.0015599]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"North",
+            "Shape__Are":6705.7952966},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1133978,40.0030598]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Lower Northeast",
+            "Shape__Are":15429.4630839},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0918167,40.007166]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Lower Northeast",
+            "Shape__Are":6238.7258718},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0756164,40.0096483]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Lower Northeast",
+            "Shape__Are":11299.1888022},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0943881,40.0101752]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Lower Northeast",
+            "Shape__Are":6957.6218353},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0852887,40.0106859]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"North",
+            "Shape__Are":4734.2343225},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1476832,40.0132714]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Lower Northeast",
+            "Shape__Are":7860.2489285},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0915567,40.0143884]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Lower Northeast",
+            "Shape__Are":11126.8174106},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0809884,40.0162365]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Lower Northeast",
+            "Shape__Are":4254.2890284},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0756454,40.0168922]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Lower Northeast",
+            "Shape__Are":14660.7172337},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0931608,40.0181506]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Lower Northeast",
+            "Shape__Are":5016.5913291},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0759012,40.0186996]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Lower Northeast",
+            "Shape__Are":20978.2005231},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0957366,40.055316]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Parking - Industrial: General",
+            "mun_name":"Central",
+            "Shape__Are":4178.5744001},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1468398,39.9547571]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Parking - Industrial: General",
+            "mun_name":"Lower Northeast",
+            "Shape__Are":15378.2225445},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0927119,40.0173536]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"University - Southwest",
+            "Shape__Are":5689.1527791},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2147388,39.9374627]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"Central",
+            "Shape__Are":21979.4387548},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1476338,39.9603367]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"Lower North",
+            "Shape__Are":4062.4239081},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1370527,39.9709967]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"Lower North",
+            "Shape__Are":4432.4737613},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1369175,39.9749541]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"Lower North",
+            "Shape__Are":19870.8305615},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1422019,39.9778786]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"Lower North",
+            "Shape__Are":10354.7702789},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1397384,39.9785355]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"Lower North",
+            "Shape__Are":6840.0343313},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1385446,39.9836119]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"Lower North",
+            "Shape__Are":12788.9417401},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1383538,39.9847562]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"Lower North",
+            "Shape__Are":7102.987213},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1368847,39.9862009]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"River Wards",
+            "Shape__Are":10607.9804074},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1068878,39.995303]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"North",
+            "Shape__Are":4327.3894611},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1593198,39.9971814]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"North",
+            "Shape__Are":6362.4949353},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1633195,40.0024042]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"North",
+            "Shape__Are":18458.543498},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1004472,40.0043194]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"Lower Northeast",
+            "Shape__Are":8837.8977869},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0885786,40.0058258]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"Lower Northeast",
+            "Shape__Are":7282.3617398},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0940287,40.0110184]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"Lower Northeast",
+            "Shape__Are":4461.4722866},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0920646,40.0113481]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"Lower Northeast",
+            "Shape__Are":67846.7174541},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0663764,40.0123298]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"Lower Northeast",
+            "Shape__Are":6496.0162321},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.088523,40.0136082]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Parking - Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"Central",
+            "Shape__Are":12739.3901763},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1478079,39.9590531]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Agriculture",
+            "lu15subn":"Agriculture",
+            "mun_name":"North",
+            "Shape__Are":7952.7732349},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1604675,39.9966592]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Conshohocken Borough",
+            "Shape__Are":10950.0831445},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.3033707,40.0718875]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Conshohocken Borough",
+            "Shape__Are":7207.6997212},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2968174,40.0721]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Conshohocken Borough",
+            "Shape__Are":61931.3911717},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.3118535,40.0731955]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Conshohocken Borough",
+            "Shape__Are":31129.7387424},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.3103945,40.0800294]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Bridgeport Borough",
+            "Shape__Are":4509.2058715},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.3424993,40.1048017]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Bridgeport Borough",
+            "Shape__Are":12742.8147742},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.3402628,40.1063633]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Bridgeport Borough",
+            "Shape__Are":7874.2480623},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.3464745,40.1084497]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Norristown Borough",
+            "Shape__Are":9702.5008051},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.3455654,40.1212768]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Parking - Industrial: General",
+            "mun_name":"Bridgeport Borough",
+            "Shape__Are":5909.1310929},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.3439622,40.1049052]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"Norristown Borough",
+            "Shape__Are":10144.126495},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.3307166,40.1087922]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Burlington City",
+            "Shape__Are":7529.0266714},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.8647268,40.0752077]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Burlington City",
+            "Shape__Are":22469.8296065},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.8698983,40.076785]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Parking - Industrial: General",
+            "mun_name":"Burlington City",
+            "Shape__Are":5674.5570495},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.8650255,40.0748358]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Agriculture",
+            "lu15subn":"Agriculture",
+            "mun_name":"Ewing Township",
+            "Shape__Are":102364.6807642},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.8297358,40.2626253]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Agriculture",
+            "lu15subn":"Agriculture",
+            "mun_name":"Hamilton Township",
+            "Shape__Are":15545.7190389},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.7081281,40.26515]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Agriculture",
+            "lu15subn":"Agriculture",
+            "mun_name":"Ewing Township",
+            "Shape__Are":488716.1173856},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.8287256,40.2707017]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Trenton City",
+            "Shape__Are":4908.3228074},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.7507051,40.1991224]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Trenton City",
+            "Shape__Are":8365.9301904},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.746804,40.2044072]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Trenton City",
+            "Shape__Are":8869.9923179},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.7537679,40.2046623]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Hamilton Township",
+            "Shape__Are":13395.7170039},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.7042023,40.2458002]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Ewing Township",
+            "Shape__Are":100964.1283685},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.7982562,40.2525856]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Ewing Township",
+            "Shape__Are":16011.1149458},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.7966706,40.2763378]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Ewing Township",
+            "Shape__Are":16896.2233643},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.7998212,40.2788449]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Ewing Township",
+            "Shape__Are":14432.8028726},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.8006388,40.2802253]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Ewing Township",
+            "Shape__Are":17315.3845739},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.7991014,40.2871027]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Parking - Industrial: General",
+            "mun_name":"Hamilton Township",
+            "Shape__Are":6846.5240021},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.6998207,40.2505333]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Parking - Industrial: General",
+            "mun_name":"Ewing Township",
+            "Shape__Are":5677.4004997},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.7961911,40.2522003]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Parking - Industrial: General",
+            "mun_name":"Ewing Township",
+            "Shape__Are":8859.1662401},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.8001122,40.279103]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Mixed-Use",
+            "mun_name":"Ewing Township",
+            "Shape__Are":26492.7694365},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.8134661,40.2568317]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"Trenton City",
+            "Shape__Are":6195.9447574},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.759383,40.2122065]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"Ewing Township",
+            "Shape__Are":7305.4766672},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.7987316,40.2775685]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Bristol Borough",
+            "Shape__Are":69380.8235889},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.8517051,40.1094296]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Tullytown Borough",
+            "Shape__Are":4889.5405772},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.8131894,40.1370554]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Tullytown Borough",
+            "Shape__Are":27781.8939645},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.8136255,40.1382828]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Tullytown Borough",
+            "Shape__Are":24269.3769818},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.8134742,40.1440732]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Tullytown Borough",
+            "Shape__Are":10394.5629585},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.8094962,40.1504972]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Penndel Borough",
+            "Shape__Are":16460.6664179},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9166246,40.1567509]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Penndel Borough",
+            "Shape__Are":19001.4596317},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9158797,40.15908]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Warminster Township",
+            "Shape__Are":8235.8062188},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0891482,40.1845368]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Warminster Township",
+            "Shape__Are":20217.3998253},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0908852,40.1864357]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Warminster Township",
+            "Shape__Are":43150.3587097},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0927538,40.1900673]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Warminster Township",
+            "Shape__Are":63575.889763},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0840973,40.1928347]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Warminster Township",
+            "Shape__Are":38635.2944235},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0853095,40.1967148]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"New Britain Borough",
+            "Shape__Are":47099.5040652},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1900796,40.2925839]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"New Britain Borough",
+            "Shape__Are":19715.3547561},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1680375,40.2995967]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"New Britain Borough",
+            "Shape__Are":20269.9553546},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1648748,40.3008776]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Abington Township",
+            "Shape__Are":70810.5094348},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1397027,40.0989572]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Springfield Township",
+            "Shape__Are":18607.9800687},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1876409,40.1159]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Springfield Township",
+            "Shape__Are":30762.5213422},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1911878,40.1201951]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Ambler Borough",
+            "Shape__Are":4829.657324},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2245193,40.1584671]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Hatboro Borough",
+            "Shape__Are":10762.5225171},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.104114,40.1678424]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Hatboro Borough",
+            "Shape__Are":18300.0408043},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0983176,40.1794547]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Hatboro Borough",
+            "Shape__Are":10380.2899371},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0974779,40.1813167]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Hatboro Borough",
+            "Shape__Are":4772.9408833},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.097842,40.1837925]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Hatboro Borough",
+            "Shape__Are":8252.3176102},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0968094,40.1855193]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Parking - Industrial: General",
+            "mun_name":"Tullytown Borough",
+            "Shape__Are":6858.6954963},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.8124782,40.1449024]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Parking - Industrial: General",
+            "mun_name":"Penndel Borough",
+            "Shape__Are":5933.9055394},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9161043,40.1584365]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Parking - Industrial: General",
+            "mun_name":"Warminster Township",
+            "Shape__Are":4260.9209761},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.094401,40.1887328]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Parking - Industrial: General",
+            "mun_name":"Warminster Township",
+            "Shape__Are":6764.201673},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0937163,40.1898481]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Parking - Industrial: General",
+            "mun_name":"Warminster Township",
+            "Shape__Are":9736.6599},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0955919,40.1904909]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Parking - Industrial: General",
+            "mun_name":"Abington Township",
+            "Shape__Are":4929.5403964},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1432333,40.098723]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Parking - Industrial: General",
+            "mun_name":"Abington Township",
+            "Shape__Are":20932.7296175},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1413914,40.1003259]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Mixed-Use",
+            "mun_name":"Bristol Borough",
+            "Shape__Are":4710.6612717},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.8541388,40.103275]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Mixed-Use",
+            "mun_name":"Tullytown Borough",
+            "Shape__Are":70988.9016607},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.8094436,40.1403644]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Mixed-Use",
+            "mun_name":"Chalfont Borough",
+            "Shape__Are":27041.4246199},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2115397,40.2854649]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Mixed-Use",
+            "mun_name":"Hatboro Borough",
+            "Shape__Are":89558.2145435},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1015611,40.1723345]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Parking - Industrial: Mixed-Use",
+            "mun_name":"Tullytown Borough",
+            "Shape__Are":4779.0658386},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.8097994,40.1391719]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Parking - Industrial: Mixed-Use",
+            "mun_name":"Tullytown Borough",
+            "Shape__Are":4942.3104276},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.8096843,40.1409619]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Parking - Industrial: Mixed-Use",
+            "mun_name":"Warminster Township",
+            "Shape__Are":4546.9318341},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0915909,40.1840835]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Parking - Industrial: Mixed-Use",
+            "mun_name":"Warminster Township",
+            "Shape__Are":21529.3010362},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0913478,40.1852623]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Parking - Industrial: Mixed-Use",
+            "mun_name":"Hatboro Borough",
+            "Shape__Are":20022.7559206},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1027047,40.172427]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"Tullytown Borough",
+            "Shape__Are":12674.053004},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.8181185,40.1386987]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"Warminster Township",
+            "Shape__Are":19717.0537225},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0834541,40.1948161]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"New Britain Borough",
+            "Shape__Are":71934.4698821},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1931401,40.2916768]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Parking - Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"Warminster Township",
+            "Shape__Are":11761.4239847},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0940636,40.1927945]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Parking - Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"Warminster Township",
+            "Shape__Are":6924.4054426},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0840534,40.1947215]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Agriculture",
+            "lu15subn":"Agriculture",
+            "mun_name":"Tullytown Borough",
+            "Shape__Are":9577.8890673},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.8091648,40.1435735]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Agriculture",
+            "lu15subn":"Agriculture",
+            "mun_name":"Chalfont Borough",
+            "Shape__Are":26722.3565732},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2160778,40.2916816]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Agriculture",
+            "lu15subn":"Agriculture",
+            "mun_name":"Abington Township",
+            "Shape__Are":27057.2170783},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0953273,40.1177535]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Folcroft Borough",
+            "Shape__Are":11640.2325862},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2730275,39.8981829]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Collingdale Borough",
+            "Shape__Are":6904.5914835},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2831014,39.9075928]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Sharon Hill Borough",
+            "Shape__Are":4375.8898897},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2694145,39.910875]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Upper Darby Township",
+            "Shape__Are":35908.8450725},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.3011611,39.9206704]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Mixed-Use",
+            "mun_name":"Sharon Hill Borough",
+            "Shape__Are":31655.8360302},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2634143,39.905906]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"Upper Darby Township",
+            "Shape__Are":4556.8260267},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2632554,39.9362485]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Agriculture",
+            "lu15subn":"Agriculture",
+            "mun_name":"Delanco Township",
+            "Shape__Are":7023.2171656},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9328916,40.040237]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Agriculture",
+            "lu15subn":"Agriculture",
+            "mun_name":"Delanco Township",
+            "Shape__Are":47372.1950042},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9295758,40.0447987]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Agriculture",
+            "lu15subn":"Agriculture",
+            "mun_name":"Delanco Township",
+            "Shape__Are":150470.244314},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9483338,40.0466448]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Delanco Township",
+            "Shape__Are":6801.2167897},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9299821,40.0405808]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Delanco Township",
+            "Shape__Are":6480.152744},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9487853,40.0501185]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Parking - Industrial: General",
+            "mun_name":"Delanco Township",
+            "Shape__Are":11883.3424233},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9293723,40.0402132]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"Delanco Township",
+            "Shape__Are":116168.5689372},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9448153,40.0500911]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"Delanco Township",
+            "Shape__Are":104261.7249601},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9367391,40.061452]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Yeadon Borough",
+            "Shape__Are":6699.0374502},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2607644,39.935216]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Yeadon Borough",
+            "Shape__Are":10102.885014},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2615364,39.9361902]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Yeadon Borough",
+            "Shape__Are":11566.1930168},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2600982,39.9373059]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"North Delaware",
+            "Shape__Are":23014.8625682},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0638044,40.0110594]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"North Delaware",
+            "Shape__Are":64799.9244886},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0574319,40.0105693]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"North Delaware",
+            "Shape__Are":129027.4083196},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0526452,40.0130623]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"North Delaware",
+            "Shape__Are":31292.2406405},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0419342,40.0172778]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"North Delaware",
+            "Shape__Are":82142.135035},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0384836,40.0197354]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"North Delaware",
+            "Shape__Are":8494.0150832},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.028602,40.024815]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Upper North",
+            "Shape__Are":6312.7353985},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1588947,40.0258155]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"North Delaware",
+            "Shape__Are":18194.5819198},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0330828,40.0260842]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Upper North",
+            "Shape__Are":8569.6242607},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1549692,40.0269587]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Upper North",
+            "Shape__Are":20190.6742275},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1578603,40.0289568]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Upper North",
+            "Shape__Are":8985.4043106},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1558392,40.0307721]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Lower Northwest",
+            "Shape__Are":12675.4468517},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2332852,40.0305443]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"North Delaware",
+            "Shape__Are":31877.4739627},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0262687,40.0320655]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Lower Northwest",
+            "Shape__Are":6438.8468013},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.233738,40.0345166]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Upper Northwest",
+            "Shape__Are":5737.1638786},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1593941,40.0364035]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Upper Northwest",
+            "Shape__Are":4434.9051101},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1628285,40.0366655]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Parking - Industrial: General",
+            "mun_name":"North Delaware",
+            "Shape__Are":4471.1136503},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.05266,40.0151271]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Mixed-Use",
+            "mun_name":"Sharon Hill Borough",
+            "Shape__Are":10555.0371201},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2573608,39.9088103]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Mixed-Use",
+            "mun_name":"North Delaware",
+            "Shape__Are":29312.0705432},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0234154,40.0315814]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Mixed-Use",
+            "mun_name":"North Delaware",
+            "Shape__Are":12978.3181327},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9950068,40.0484241]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Parking - Industrial: Mixed-Use",
+            "mun_name":"Sharon Hill Borough",
+            "Shape__Are":7298.5522984},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2622096,39.9086058]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"Yeadon Borough",
+            "Shape__Are":4168.2884255},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.260521,39.9363547]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"Upper Darby Township",
+            "Shape__Are":13344.6663315},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2509969,39.9620036]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"North Delaware",
+            "Shape__Are":24844.8447572},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0597139,40.0105441]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"North Delaware",
+            "Shape__Are":16068.7251703},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0567469,40.0123436]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"North Delaware",
+            "Shape__Are":26082.9344718},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.039604,40.0179252]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"North Delaware",
+            "Shape__Are":16824.2116036},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0373283,40.021161]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"North Delaware",
+            "Shape__Are":12497.8785106},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0315516,40.0271744]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"North Delaware",
+            "Shape__Are":49485.5038381},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.024483,40.0288798]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"Lower Northwest",
+            "Shape__Are":5316.7046319},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.232132,40.031336]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"Upper Northwest",
+            "Shape__Are":6169.8645788},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1703122,40.0373942]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"North Delaware",
+            "Shape__Are":8786.7928169},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0221593,40.0402201]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"Central Northeast",
+            "Shape__Are":6969.2155821},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0889276,40.061754]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Agriculture",
+            "lu15subn":"Agriculture",
+            "mun_name":"Upper North",
+            "Shape__Are":5208.7060397},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1199515,40.0326331]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Agriculture",
+            "lu15subn":"Agriculture",
+            "mun_name":"North Delaware",
+            "Shape__Are":4157.707864},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0217462,40.0410784]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Whitemarsh Township",
+            "Shape__Are":81005.5311977},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2925186,40.0724714]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Whitemarsh Township",
+            "Shape__Are":26952.2767528},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.283931,40.080207]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Upper Merion Township",
+            "Shape__Are":34058.695305},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.3503361,40.0888666]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Upper Merion Township",
+            "Shape__Are":27766.7949784},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.3502304,40.0915143]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"North Wales Borough",
+            "Shape__Are":4244.9013594},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2802357,40.2080082]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"North Wales Borough",
+            "Shape__Are":26994.0966562},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2831038,40.2085236]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"North Wales Borough",
+            "Shape__Are":4939.4437765},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2764896,40.2127372]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Upper Gwynedd Township",
+            "Shape__Are":26538.9548925},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2764166,40.2176433]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Upper Gwynedd Township",
+            "Shape__Are":46996.1685422},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2831135,40.2176672]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Upper Gwynedd Township",
+            "Shape__Are":26836.7171591},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2792815,40.2198526]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Upper Gwynedd Township",
+            "Shape__Are":11564.5932686},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2842203,40.2229079]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Upper Gwynedd Township",
+            "Shape__Are":86408.7779122},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2889968,40.2235155]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Upper Gwynedd Township",
+            "Shape__Are":43308.6769228},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2853738,40.2282723]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Lansdale Borough",
+            "Shape__Are":10732.9168138},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2825898,40.247802]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Lansdale Borough",
+            "Shape__Are":4590.8786556},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2788034,40.2498066]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Lansdale Borough",
+            "Shape__Are":13277.0024454},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2868505,40.2512587]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Lansdale Borough",
+            "Shape__Are":6868.4001672},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2821699,40.2530253]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Lansdale Borough",
+            "Shape__Are":133862.0056796},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2797473,40.2533421]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Parking - Industrial: General",
+            "mun_name":"Upper Gwynedd Township",
+            "Shape__Are":14001.2186138},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.281253,40.2140121]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Parking - Industrial: General",
+            "mun_name":"Upper Gwynedd Township",
+            "Shape__Are":16999.9471452},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2826321,40.2154399]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Parking - Industrial: General",
+            "mun_name":"Upper Gwynedd Township",
+            "Shape__Are":4192.7477232},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2888267,40.2238096]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Parking - Industrial: General",
+            "mun_name":"Upper Gwynedd Township",
+            "Shape__Are":30485.8408079},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2880521,40.2259271]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Parking - Industrial: General",
+            "mun_name":"Lansdale Borough",
+            "Shape__Are":6616.6030707},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2790039,40.252246]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Mixed-Use",
+            "mun_name":"Upper Merion Township",
+            "Shape__Are":18669.4676715},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.3523642,40.0894483]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"Lansdale Borough",
+            "Shape__Are":5028.195157},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2833836,40.2372662]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Agriculture",
+            "lu15subn":"Agriculture",
+            "mun_name":"Upper Gwynedd Township",
+            "Shape__Are":8526.7884548},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.272137,40.2047506]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Florence Township",
+            "Shape__Are":23332.9218307},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.7710032,40.1192046]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Bensalem Township",
+            "Shape__Are":103481.9192806},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9887321,40.1303156]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Bensalem Township",
+            "Shape__Are":22203.4821505},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9733897,40.1332854]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Bensalem Township",
+            "Shape__Are":9621.0528423},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9775777,40.1373639]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Cheltenham Township",
+            "Shape__Are":13643.3382567},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1435023,40.0978141]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: General",
+            "mun_name":"Lower Gwynedd Township",
+            "Shape__Are":88954.0604994},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2348698,40.162269]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Parking - Industrial: General",
+            "mun_name":"Bensalem Township",
+            "Shape__Are":8114.0231231},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9891341,40.1316105]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Parking - Industrial: General",
+            "mun_name":"Bensalem Township",
+            "Shape__Are":13062.3255274},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9836497,40.1335245]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Parking - Industrial: General",
+            "mun_name":"Lower Gwynedd Township",
+            "Shape__Are":11985.0961938},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2333603,40.1624503]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Mixed-Use",
+            "mun_name":"Bensalem Township",
+            "Shape__Are":13129.6328576},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9852685,40.1327466]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Parking - Industrial: Mixed-Use",
+            "mun_name":"Bensalem Township",
+            "Shape__Are":10515.55766},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9859033,40.132904]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Industrial",
+            "lu15subn":"Industrial: Warehousing/Distribution/Open Storage",
+            "mun_name":"Central Northeast",
+            "Shape__Are":14277.5624754},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0835228,40.0728534]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Agriculture",
+            "lu15subn":"Agriculture",
+            "mun_name":"Cheltenham Township",
+            "Shape__Are":6551.6960329},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.142623,40.0688868]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Agriculture",
+            "lu15subn":"Agriculture",
+            "mun_name":"Lower Gwynedd Township",
+            "Shape__Are":13730.8145281},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2375021,40.1744416]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Agriculture",
+            "lu15subn":"Agriculture",
+            "mun_name":"Upper Gwynedd Township",
+            "Shape__Are":50453.5636776},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2518072,40.2142775]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Agriculture",
+            "lu15subn":"Agriculture",
+            "mun_name":"Upper Gwynedd Township",
+            "Shape__Are":28664.884319},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2576284,40.217459]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Agriculture",
+            "lu15subn":"Agriculture",
+            "mun_name":"Upper Gwynedd Township",
+            "Shape__Are":252622.3346334},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2513401,40.2185295]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Agriculture",
+            "lu15subn":"Agriculture",
+            "mun_name":"Upper Gwynedd Township",
+            "Shape__Are":14464.9104307},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2514753,40.2215096]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Downingtown Borough",
+            "Shape__Are":17066.4949181},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.7128071,40.0009536]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Downingtown Borough",
+            "Shape__Are":4924.4086255},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.7125139,40.0092009]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Malvern Borough",
+            "Shape__Are":46009.3908898},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.5096142,40.0283952]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Chester City",
+            "Shape__Are":52819.4869296},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.4000262,39.83864]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Chester City",
+            "Shape__Are":6538.3249899},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.3730136,39.8524601]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Chester City",
+            "Shape__Are":9234.8148228},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.3644797,39.8523055]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Chester City",
+            "Shape__Are":10861.857336},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.3481745,39.8549864]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Chester City",
+            "Shape__Are":8897.1812344},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.3539911,39.8576875]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Eddystone Borough",
+            "Shape__Are":22184.6257308},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.3303457,39.8638814]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Norwood Borough",
+            "Shape__Are":6866.5625438},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.3043488,39.8970458]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: Transitional Land",
+            "mun_name":"Swarthmore Borough",
+            "Shape__Are":5037.0528857},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.3518546,39.9009482]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Cinnaminson Township",
+            "Shape__Are":10507.9479024},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9983522,39.994795]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Cinnaminson Township",
+            "Shape__Are":5239.0164224},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9918755,39.9999527]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Cinnaminson Township",
+            "Shape__Are":8680.2179443},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9743724,40.0073896]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Cinnaminson Township",
+            "Shape__Are":14955.0946895},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9713913,40.0087981]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Cinnaminson Township",
+            "Shape__Are":4623.1470182},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9965256,40.0095908]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Cinnaminson Township",
+            "Shape__Are":47714.5933683},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0011721,40.0105087]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Riverton Borough",
+            "Shape__Are":10719.2467007},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0090762,40.0124814]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Cinnaminson Township",
+            "Shape__Are":13584.0164818},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9970272,40.0156214]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Cinnaminson Township",
+            "Shape__Are":102483.5533835},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0017175,40.0206416]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Cinnaminson Township",
+            "Shape__Are":20941.9500347},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9854741,40.0275783]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Riverside Township",
+            "Shape__Are":13446.2360071},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9623357,40.0365276]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Riverside Township",
+            "Shape__Are":345898.1914786},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.947574,40.0393127]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Transportation",
+            "lu15subn":"Parking - Transportation: Facility",
+            "mun_name":"Cinnaminson Township",
+            "Shape__Are":5724.2103403},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9871109,40.0115573]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Transportation",
+            "lu15subn":"Parking - Transportation: Facility",
+            "mun_name":"Cherry Hill Township",
+            "Shape__Are":7296.178218},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.008543,39.8600352]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Transportation",
+            "lu15subn":"Parking - Transportation: Facility",
+            "mun_name":"Haddon Township",
+            "Shape__Are":4677.147798},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0442459,39.9060881]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Transportation",
+            "lu15subn":"Parking - Transportation: Facility",
+            "mun_name":"Haddon Township",
+            "Shape__Are":5168.5148407},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0473305,39.9069374]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Transportation",
+            "lu15subn":"Parking - Transportation: Facility",
+            "mun_name":"Camden City",
+            "Shape__Are":9554.3151689},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1266067,39.935259]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Transportation",
+            "lu15subn":"Parking - Transportation: Facility",
+            "mun_name":"Pennsauken Township",
+            "Shape__Are":14419.7491835},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0784332,39.961478]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Cherry Hill Township",
+            "Shape__Are":4207.0109817},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9929365,39.8639426]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Woodlynne Borough",
+            "Shape__Are":5913.7115461},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.099915,39.9153012]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Camden City",
+            "Shape__Are":11910.0300102},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0967773,39.9247496]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Camden City",
+            "Shape__Are":7115.5522543},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1239538,39.9415072]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Camden City",
+            "Shape__Are":4469.8861336},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1249664,39.9493548]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Pennsauken Township",
+            "Shape__Are":36138.6435676},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0708085,39.9702267]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: Transitional Land",
+            "mun_name":"Camden City",
+            "Shape__Are":6812.2673686},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0942759,39.9205954]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Transportation",
+            "lu15subn":"Parking - Transportation: Facility",
+            "mun_name":"Lower Northeast",
+            "Shape__Are":6545.2135438},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0773498,40.025249]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Lower South",
+            "Shape__Are":61272.7181271},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1809802,39.9081253]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"South",
+            "Shape__Are":20873.226911},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1655238,39.9383615]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"University - Southwest",
+            "Shape__Are":6697.5879035},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2377138,39.9448336]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"University - Southwest",
+            "Shape__Are":4768.1691714},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2086067,39.9493786]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"University - Southwest",
+            "Shape__Are":5019.150774},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2157182,39.9577071]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Central",
+            "Shape__Are":13688.2958158},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1342979,39.962313]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Central",
+            "Shape__Are":10305.0452396},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1366784,39.9643013]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Central",
+            "Shape__Are":6216.0162428},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1545163,39.9651473]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Central",
+            "Shape__Are":5284.1798665},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1363986,39.9668426]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Lower North",
+            "Shape__Are":4367.1732059},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1444661,39.9709167]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Lower North",
+            "Shape__Are":6758.9417991},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1452778,39.9748778]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Lower North",
+            "Shape__Are":6271.9818431},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1386,39.977671]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Lower North",
+            "Shape__Are":5783.0695243},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1508825,39.9884657]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"River Wards",
+            "Shape__Are":11838.1153815},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.123022,39.989453]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"North",
+            "Shape__Are":4895.7113164},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1623584,40.0016295]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"North",
+            "Shape__Are":4718.3317068},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1493112,40.0142458]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Lower Northeast",
+            "Shape__Are":4458.4801671},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0792649,40.0222331]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: Transitional Land",
+            "mun_name":"Central",
+            "Shape__Are":6127.9381765},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1399313,39.9548655]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: Transitional Land",
+            "mun_name":"Lower North",
+            "Shape__Are":4555.4615368},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1624802,39.9745376]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: Transitional Land",
+            "mun_name":"North",
+            "Shape__Are":9928.1182328},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1602438,40.0018585]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Parking - Undeveloped: Undetermined Use",
+            "mun_name":"Central",
+            "Shape__Are":4659.0306979},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1367152,39.9630881]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Transportation",
+            "lu15subn":"Parking - Transportation: Facility",
+            "mun_name":"Norristown Borough",
+            "Shape__Are":7191.0471207},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.3398841,40.111443]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Transportation",
+            "lu15subn":"Parking - Transportation: Facility",
+            "mun_name":"Norristown Borough",
+            "Shape__Are":11247.0249247},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.3446915,40.1213962]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Conshohocken Borough",
+            "Shape__Are":12511.8734119},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.3077712,40.0705958]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Bridgeport Borough",
+            "Shape__Are":25340.2660748},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.3329135,40.105485]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Norristown Borough",
+            "Shape__Are":45587.7505841},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.3323727,40.107706]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Norristown Borough",
+            "Shape__Are":7668.6815384},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.3479987,40.118367]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Burlington City",
+            "Shape__Are":6701.4661573},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.8592769,40.0710204]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Burlington City",
+            "Shape__Are":53769.094836},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.8715329,40.0787928]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Bordentown City",
+            "Shape__Are":6300.9699389},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.7103888,40.1400891]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Bordentown City",
+            "Shape__Are":5909.8013704},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.715016,40.1454512]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Bordentown City",
+            "Shape__Are":7135.9899355},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.7012663,40.1525558]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Bordentown City",
+            "Shape__Are":8833.9372938},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.7051485,40.1544251]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Transportation",
+            "lu15subn":"Parking - Transportation: Facility",
+            "mun_name":"Burlington City",
+            "Shape__Are":13344.7852911},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.868383,40.075322]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Ewing Township",
+            "Shape__Are":14879.0693764},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.8212713,40.2759015]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Trenton City",
+            "Shape__Are":5699.6366012},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.7545536,40.2083031]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Trenton City",
+            "Shape__Are":4174.367447},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.7543033,40.2215918]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Hamilton Township",
+            "Shape__Are":10922.403712},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.6898603,40.2492453]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Hamilton Township",
+            "Shape__Are":9574.5403352},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.7059523,40.2527009]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Hamilton Township",
+            "Shape__Are":28473.4909755},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.7098913,40.2543413]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Hamilton Township",
+            "Shape__Are":6176.4239357},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.7157257,40.2583086]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Ewing Township",
+            "Shape__Are":298785.7446928},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.8081472,40.2639105]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Ewing Township",
+            "Shape__Are":5384.9099078},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.8208312,40.2687828]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Ewing Township",
+            "Shape__Are":12314.1210374},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.7992622,40.2780258]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Ewing Township",
+            "Shape__Are":12345.3239921},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.8189713,40.2846428]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Ewing Township",
+            "Shape__Are":5180.4238911},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.8082522,40.2860878]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: Transitional Land",
+            "mun_name":"Hamilton Township",
+            "Shape__Are":7685.0297367},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.7067693,40.2585669]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Parking - Undeveloped: Undetermined Use",
+            "mun_name":"Ewing Township",
+            "Shape__Are":4543.3719629},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.8074961,40.2675269]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Transportation",
+            "lu15subn":"Parking - Transportation: Facility",
+            "mun_name":"Bristol Borough",
+            "Shape__Are":9591.5888536},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.8535135,40.1051747]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Transportation",
+            "lu15subn":"Parking - Transportation: Facility",
+            "mun_name":"Tullytown Borough",
+            "Shape__Are":4773.2193803},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.8169651,40.1411782]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Bristol Borough",
+            "Shape__Are":11836.5877593},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.8734746,40.102466]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Tullytown Borough",
+            "Shape__Are":7629.4325813},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.8111797,40.1377997]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Tullytown Borough",
+            "Shape__Are":11109.6395683},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.810414,40.1471423]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Tullytown Borough",
+            "Shape__Are":18978.1428414},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.8090643,40.1487509]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Penndel Borough",
+            "Shape__Are":7259.734611},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9148501,40.1560623]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Warminster Township",
+            "Shape__Are":15650.9313395},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.092162,40.1859176]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Warminster Township",
+            "Shape__Are":20474.1310272},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0975179,40.1883927]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Warminster Township",
+            "Shape__Are":14010.7746908},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0858555,40.1917992]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Warminster Township",
+            "Shape__Are":55949.7641853},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0881039,40.1952218]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Chalfont Borough",
+            "Shape__Are":19471.5832424},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2139544,40.2837097]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Chalfont Borough",
+            "Shape__Are":4746.9252305},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2066146,40.2882611]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Chalfont Borough",
+            "Shape__Are":7030.6884557},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2184407,40.289539]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Chalfont Borough",
+            "Shape__Are":6654.9100869},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2058508,40.2925224]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Chalfont Borough",
+            "Shape__Are":6693.298358},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2104612,40.2939285]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Abington Township",
+            "Shape__Are":6820.5200817},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1350444,40.1020259]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Abington Township",
+            "Shape__Are":6378.895839},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1231426,40.1104463]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Abington Township",
+            "Shape__Are":10947.9043963},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0931776,40.1127439]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Abington Township",
+            "Shape__Are":45643.3709095},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0887695,40.1149578]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Springfield Township",
+            "Shape__Are":23912.6845428},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1942554,40.1249161]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Ambler Borough",
+            "Shape__Are":15976.7215598},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2215348,40.1465356]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Hatboro Borough",
+            "Shape__Are":17728.1450026},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.10949,40.1707573]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: Transitional Land",
+            "mun_name":"Abington Township",
+            "Shape__Are":10926.615226},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1389471,40.1007522]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: Transitional Land",
+            "mun_name":"Springfield Township",
+            "Shape__Are":5340.1333313},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1913619,40.1227464]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Transportation",
+            "lu15subn":"Parking - Transportation: Facility",
+            "mun_name":"Lower Merion Township",
+            "Shape__Are":4304.2485475},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.271467,40.002912]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Upper Darby Township",
+            "Shape__Are":9708.8573812},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2895111,39.9343442]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: Transitional Land",
+            "mun_name":"Upper Darby Township",
+            "Shape__Are":6953.3505396},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2643241,39.9400637]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Delanco Township",
+            "Shape__Are":33511.1135029},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9277228,40.0333111]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Delanco Township",
+            "Shape__Are":6842.5434585},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9719931,40.045621]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Delanco Township",
+            "Shape__Are":60254.8234374},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9316461,40.0482782]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: Transitional Land",
+            "mun_name":"Delanco Township",
+            "Shape__Are":33055.9526555},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9322769,40.050062]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Parking - Undeveloped: Undetermined Use",
+            "mun_name":"Delanco Township",
+            "Shape__Are":5817.2721724},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9310031,40.0475577]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Transportation",
+            "lu15subn":"Parking - Transportation: Facility",
+            "mun_name":"Cheltenham Township",
+            "Shape__Are":6300.9791202},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1291333,40.0588163]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Transportation",
+            "lu15subn":"Parking - Transportation: Facility",
+            "mun_name":"Upper North",
+            "Shape__Are":11186.6495621},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1367592,40.0415115]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Darby Borough",
+            "Shape__Are":7424.2113968},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2590945,39.9145193]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Yeadon Borough",
+            "Shape__Are":23297.2703861},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2411847,39.9414641]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Lower Southwest",
+            "Shape__Are":22527.1378485},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2480951,39.9004796]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Lower Northwest",
+            "Shape__Are":9044.0741713},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1990383,40.0132038]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Upper North",
+            "Shape__Are":6155.2594626},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1418415,40.0216391]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"North Delaware",
+            "Shape__Are":37163.0798873},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0274912,40.0216904]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Upper North",
+            "Shape__Are":7337.5090306},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1478405,40.0292253]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Upper Northwest",
+            "Shape__Are":10476.3599019},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.1624196,40.0413444]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Upper Northwest",
+            "Shape__Are":13236.959987},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2008395,40.0568056]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: Transitional Land",
+            "mun_name":"North Delaware",
+            "Shape__Are":9287.1465332},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.02314,40.0336912]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Transportation",
+            "lu15subn":"Parking - Transportation: Facility",
+            "mun_name":"Lansdale Borough",
+            "Shape__Are":5342.1998212},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2846776,40.2456997]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Upper Merion Township",
+            "Shape__Are":12118.1094798},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.3521584,40.0928368]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Upper Merion Township",
+            "Shape__Are":6664.9365214},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.3399816,40.0988511]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Upper Merion Township",
+            "Shape__Are":4263.0924127},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.3309585,40.1012944]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Upper Gwynedd Township",
+            "Shape__Are":67870.6090435},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2845379,40.2165144]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Upper Gwynedd Township",
+            "Shape__Are":18920.2685791},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2849588,40.2195913]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Lansdale Borough",
+            "Shape__Are":6867.0308932},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2748884,40.2273877]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Lansdale Borough",
+            "Shape__Are":8240.7124597},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2827905,40.2315299]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Lansdale Borough",
+            "Shape__Are":38992.7146873},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2825565,40.2548553]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: Transitional Land",
+            "mun_name":"Lansdale Borough",
+            "Shape__Are":11070.9531315},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2733731,40.2344618]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Beverly City",
+            "Shape__Are":16033.6309834},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9259187,40.0663018]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Transportation",
+            "lu15subn":"Parking - Transportation: Facility",
+            "mun_name":"Bensalem Township",
+            "Shape__Are":8566.3931524},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9617435,40.1472254]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Transportation",
+            "lu15subn":"Parking - Transportation: Facility",
+            "mun_name":"Central Northeast",
+            "Shape__Are":6694.4560444},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0831556,40.0754122]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Bensalem Township",
+            "Shape__Are":4550.5636431},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9788025,40.1332093]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Bensalem Township",
+            "Shape__Are":5873.507695},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9714799,40.1368341]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Bensalem Township",
+            "Shape__Are":56736.8036995},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.96756,40.1387218]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Bensalem Township",
+            "Shape__Are":8135.7349493},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-74.9583222,40.1472739]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Lower Gwynedd Township",
+            "Shape__Are":17160.8960182},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2412835,40.1656256]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Upper Gwynedd Township",
+            "Shape__Are":10017.8341664},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.262917,40.2187558]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: General",
+            "mun_name":"Central Northeast",
+            "Shape__Are":8038.1067493},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.0845449,40.0689897]}},
+    {"type":"Feature",
+        "properties":{
+            "lu15catn":"Undeveloped",
+            "lu15subn":"Undeveloped: Transitional Land",
+            "mun_name":"Upper Gwynedd Township",
+            "Shape__Are":6646.3800001},
+        "geometry":{
+            "type":"Point",
+            "coordinates":[-75.2636268,40.2177854]}}]}
