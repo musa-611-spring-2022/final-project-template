@@ -1,4 +1,20 @@
 {
+  "name": "writeable-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "better-sqlite3": "^7.5.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "knex": "^1.0.5",
+    "pg": "^8.7.3"
+  },
   "devDependencies": {
     "eslint": "^8.6.0",
     "eslint-config-airbnb": "^19.0.4"
@@ -10,14 +26,28 @@
       "fetch": "readonly",
       "navigator": "readonly",
       "window": "readonly",
+      "dogMap":"readonly",
+      "dogFriendLayer":"readonly",
+      "dogLicenses":"readonly",
+      "dogRuns":"readonly",
+      "confirm":"readonly",
+      "requestAnimationFrame":"readonly",
+      "cancelAnimationFrame":"readonly",
+      "animationFrame":"readonly",
+      "petStores":"readonly",
+      "dogHotels":"readonly",
+      "animalHospitals":"readonly",
+      "getAnimals":"readonly",
 
       "$": "readonly",
       "_": "readonly",
       "ApexCharts": "readonly",
       "Chart": "readonly",
       "L": "readonly",
+      "turf":"readonly",
+      "apiHost":"readonly",
       "mapboxgl": "readonly",
-      "Plotly": "readonly",
+      "init":"readonly",
 
       "htmlToElement": "readonly",
       "htmlToElements": "readonly"
@@ -25,11 +55,9 @@
     "rules": {
       "arrow-body-style": "off",
       "arrow-parens": "off",
-      "camelcase": "off",
       "comma-dangle": "off",
       "func-names": "off",
       "no-console": "off",
-      "no-loop-func": "off",
       "no-plusplus": "off",
       "no-multiple-empty-lines": "off",
       "no-multi-spaces": "off",
@@ -38,6 +66,10 @@
       "prefer-const": "off",
       "quote-props": "off",
       "quotes": "off",
+      "no-restricted-globals":"off",
+      "no-alert":"off",
+      "no-use-before-define":"off",
+      "no-param-reassign":"off",
       "no-restricted-syntax": [
         "error",
         {
