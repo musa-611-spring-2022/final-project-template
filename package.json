@@ -1,7 +1,4 @@
 {
-  "dependencies": {
-    "http-server": "^14.1.0"
-  },
   "devDependencies": {
     "eslint": "^8.6.0",
     "eslint-config-airbnb": "^19.0.4"
@@ -9,20 +6,38 @@
   "eslintConfig": {
     "extends": "airbnb",
     "globals": {
-      "L": "readonly",
-      "_": "readonly",
       "document": "readonly",
       "fetch": "readonly",
+      "navigator": "readonly",
+      "window": "readonly",
+
+      "$": "readonly",
+      "_": "readonly",
+      "ApexCharts": "readonly",
+      "Chart": "readonly",
+      "L": "readonly",
+      "mapboxgl": "readonly",
+      "Plotly": "readonly",
+
       "htmlToElement": "readonly",
       "htmlToElements": "readonly"
     },
     "rules": {
+      "arrow-body-style": "off",
       "arrow-parens": "off",
+      "camelcase": "off",
+      "comma-dangle": "off",
+      "func-names": "off",
       "no-console": "off",
+      "no-loop-func": "off",
       "no-plusplus": "off",
       "no-multiple-empty-lines": "off",
       "no-multi-spaces": "off",
+      "no-unused-vars": "off",
+      "no-var": "off",
       "prefer-const": "off",
+      "quote-props": "off",
+      "quotes": "off",
       "no-restricted-syntax": [
         "error",
         {
