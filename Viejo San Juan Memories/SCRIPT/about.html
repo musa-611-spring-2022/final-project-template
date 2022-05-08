@@ -1,0 +1,96 @@
+<!DOCTYPE = html>
+<html style= "height: 100%;margin:0; width:100%;">
+<head>
+
+<title> Viejo San Juan Map</title>
+
+<style>
+body {
+  background-image: url('images/contact.JPG');
+  background-repeat: no-repeat;
+ background-attachment: fixed;
+ background-size: cover;
+ z-index: 0;
+}
+</style>
+<meta name= "viewport" content= "width=device-width, initial-scale=1.0">
+</head>
+
+<body style= "height: 100%; margin: 0;">
+  <div id="mySidenav" class="sidenav">
+
+    <a href="about.html" id="about">About</a>
+    <a href="HomeSalePrices.html" id="add">Home Values</a>
+    <a href="sounds.html" id="sounds">Sounds</a>
+    <a href="contact.html" id="contact">Contact</a>
+  </div>
+
+<div id="home" class ="home">
+  <a href= "index.html" id="home"> <img src = "images/icons/home.png" width = "141" height = "82" /></a>
+</div>
+
+<div id="aboutText" class ="aboutText">
+   <img src = "images/aboutText.png" width="793" height= "437"/>
+</div>
+
+
+<style type= "text/css">
+#aboutText{
+  z-index: 2
+  position:relative;
+  text-align: center;
+  top: 350px;
+}
+
+#home {
+  z-index: 2;
+}
+
+#mySidenav a {
+  position: fixed; /* Position them relative to the browser window */
+  left: -11px; /* Position them outside of the screen */
+  transition: 0.3s; /* Add transition on hover */
+  padding: 15px; /* 15px padding */
+  width: 100px; /* Set a specific width */
+  text-decoration: none; /* Remove underline */
+  font-size: 20px; /* Increase font size */
+  color: white; /* White text color */
+  font-family: cy, sans-serif;
+  border-radius: 0 5px 5px 0; /* Rounded corners on the top right and bottom right side */
+}
+
+#enter {
+position: relative;
+text-align: center;
+top: 350px;
+}
+#mySidenav a:hover {
+  left: 0; /* On mouse-over, make the elements appear as they should */
+}
+
+/* The about link: 20px from the top with a green background */
+#about {
+  top: 100px;
+  background-color: #e2db7d; /*lime green */
+  position: fixed;
+  z-index: 1;
+}
+
+#add {
+  top: 150px;
+  background-color: #e5aba1; /* peach */
+  z-index: 1;
+}
+
+#sounds {
+  top: 230px;
+  background-color: #ed6145;/*burnt orange */
+}
+
+#contact {
+  top: 280px;
+  background-color: #9f5645 /*brown*/
+}
+
+</body>
+</html>

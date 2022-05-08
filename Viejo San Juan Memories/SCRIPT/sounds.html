@@ -1,0 +1,605 @@
+<!DOCTYPE = html>
+<html style= "height: 100%;margin:0; width:90%;">
+<head>
+
+<title> Sounds Map </title>
+
+<meta name= "viewport" content= "width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="sound.images.css" />
+<link rel="stylesheet" href="lib/leaflet.css" />
+<link rel="stylesheet" href="lib/MarkerCluster.css" />
+<link rel="stylesheet" href="css/sound.map.css" />
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script>
+</head>
+<body style= "height: 100%; margin: 0;">
+  <div id= "map" style= "width: 183%; height: 180%; background:#53beb8; margin: 0;"></div>
+  	<script src="lib/reqwest.min.js"></script>
+  	<script src="LEAFLET/leaflet.js"></script>
+  	<script src="LEAFLET/leaflet.markercluster.js"></script>
+  	<script src="sound.images.js"></script>
+
+    <div id="mySidenav" class="sidenav">
+
+      <a href="about.html" id="about">About</a>
+      <a href="HomeSalePrices.html" id="add">Home Values</a>
+      <a href="sounds.html" id="sounds">Sounds</a>
+      <a href="contact.html" id="contact">Contact</a>
+    </div>
+
+    <div id="home" class ="home">
+      <a href= "index.html" id="home"> <img src = "images/icons/home.png" width = "141" height = "82" /></a>
+    </div>
+
+  <audio id= "sounds" loop = "false" volume = "30">
+    <source src="images/sounds/PDA.wav" id="A" type="audio/wav">
+    <source src="sounds/Calle de San Jose.m4a" id="S" type="audio/wav">
+    <source src="sounds/Calle Recinto Sur_Pianist.m4a" id="D" type="audio/wav">
+    <source src="sounds/Elderly_People.m4a" id="F" type="audio/wav">
+    <source src="sounds/Plaza de armas 2.m4a" id="G" type="audio/wav">
+    <source src="sounds/Plaza de armas 3_history.m4a" id="H" type="audio/wav">
+    <source src="sounds/Plaza de armas.m4a" id="J" type="audio/wav">
+    <source src="sounds/Plaza San Jose.m4a" id="J" type="audio/wav">
+  </audio>
+<style type= "text/css">
+#mySidenav a {
+  position: fixed; /* Position them relative to the browser window */
+  left: -11px; /* Position them outside of the screen */
+  transition: 0.3s; /* Add transition on hover */
+  padding: 15px; /* 15px padding */
+  width: 100px; /* Set a specific width */
+  text-decoration: none; /* Remove underline */
+  font-size: 20px; /* Increase font size */
+  color: white; /* White text color */
+  font-family: cy, sans-serif;
+  border-radius: 0 5px 5px 0; /* Rounded corners on the top right and bottom right side */
+}
+
+#home{
+  z-index: 2;
+}
+
+#mySidenav a:hover {
+  left: 0; /* On mouse-over, make the elements appear as they should */
+}
+
+/* The about link: 20px from the top with a green background */
+#about {
+  top: 100px;
+  background-color: #e2db7d; /*lime green */
+  position: fixed;
+  z-index: 1;
+}
+
+#add {
+  top: 150px;
+  background-color: #e5aba1; /* peach */
+  z-index: 1;
+}
+
+#sounds {
+  top: 230px;
+  background-color: #ed6145;/*burnt orange */
+}
+
+#contact {
+  top: 280px;
+  background-color: #9f5645 /*brown*/
+}
+#Filters {grid-row:1;
+  position: fixed;
+  top: 100px;
+  left: 250px;
+  background-color: #93278f;
+}
+#plaza_home_prices-list { grid-area: list; }
+
+#plaza_home_prices-list {
+  overflow-y: auto;
+}
+
+#Filters {
+  border-radius: 5px 5px 5px 5px;
+  display: flex;
+  gap: 10rem;
+  align-items: center;
+    font-family: cy, sans-serif;
+    color: #ffffff;
+  z-index: 2;
+}
+#plaza-name{
+  font-family: cy, sans-serif;
+  color: #93278f;
+}
+
+#map{
+  z-index: 0;
+}
+
+#Elderly{
+  font-family: cy, san-sans-serif;
+}
+
+#plaza-name{
+  min-width: 10rem;
+}
+</style>
+
+<script type = "text/javascript">
+
+// Declare map object
+
+var mapOptions = {
+          //center: [18.46551898274357, -66.1154130910439],
+          maxZoom: 24,
+          minZoom: 5,}
+var map = L.map('map').setView([18.453883, -66.105469],12);
+
+//add markers to maps3
+
+</script>
+
+<div id="markers" class="markers"></div>
+
+<style type= "text/css">
+
+#markers{
+  z-index: 1
+}
+</style>
+
+
+
+<script type = "text/javascript">
+
+
+var geojsonMarkerOptions = {
+    radius: 30,
+    fillColor: "#93278f",
+    color: "#000",
+    weight: 1,
+    opacity: 1,
+    fillOpacity: 0.3
+};
+
+var soundFeatures = [
+  {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "Plaza": "Plaza de Armas",
+          "Sound_Level": "Sound Level: ~ 99 decibels",
+          "Dominant_Sounds": "Dominant Sounds: traffic",
+          "Secondary_Sounds": "Secondary Sounds: fountain, tourists, locals, bar/restaurant music"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.11744731664658,
+            18.465120904950375
+          ]
+        }
+      },
+
+      {
+        "type": "Feature",
+        "properties": {
+          "Plaza": "Calle del Recinto Sur",
+          "Sound_Level": "Noise Level: ~ 84 decibels",
+          "Dominant_Sounds": "Dominant Sounds: tourists",
+          "Secondary_Sounds": "Secondary Sounds: pianist, traffic"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.1176323890686,
+         18.463495204643785
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "Plaza": "Plaza de San Jose",
+          "Sound_Level": "Noise Level: ~ 93 decibels",
+          "Dominant_Sounds": "Dominant Sounds: bar/restaurant music",
+          "Secondary_Sounds": "Secondary Sounds: tourists, traffic, tour guides"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.1202609539032,
+          18.467265584608096
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "Plaza": "Plaza de Colon",
+          "Sound_Level": "Noise Level: ~ 94 decibels",
+          "Dominant_Sounds": "Dominant Sounds: traffic",
+          "Secondary_Sounds": "Secondary Sounds: tour guides, tourists, market, fountain"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.1118683218956,
+          18.466021521025468
+          ]
+        }
+      }
+    ]
+  }
+]
+//add markers and plaza descriptions + Sounds
+
+L.geoJSON(soundFeatures, {
+    pointToLayer: function (feature, latlng) {
+        return L.circleMarker(latlng, geojsonMarkerOptions).bindPopup("<strong>" + feature.properties.Plaza + "</strong>" + "<br>" + feature.properties.Sound_Level + "<br>" + feature.properties.Dominant_Sounds + "<br>" + feature.properties.Secondary_Sounds);
+    }
+}).addTo(map);
+
+//add plaza diagrams to maps
+
+var diagramLocations = [
+  {
+      "type": "Feature",
+      "properties": {
+        "Image":"images/plaza_diagrams/plazaDeColon.png",
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.11220896244049,
+          18.466034241557647
+        ]
+      }
+    },
+    {
+        "type": "Feature",
+        "properties": {
+          "Image":"images/plaza_diagrams/plazaDeArmas.png",
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.11769407987595,
+           18.464925007607537
+          ]
+        }
+      },
+      {
+          "type": "Feature",
+          "properties": {
+            "Image":"images/plaza_diagrams/plazaSanJose.png",},
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -66.12022876739502,
+              18.466995911059442
+            ]
+          }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+              "Image":"images/plaza_diagrams/plazaRecintoSur.png",},
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -66.11748218536377,
+                18.463413792016897
+              ]
+            }
+          },
+];
+
+
+//add sounds to maps
+
+var soundLocations = [
+    {
+        "type": "Feature",
+        "properties": {
+          "Description": "Listen to the the historical usage of historic plazas by longtime residents in Viejo San Juan:",
+          "Sound": "images/sounds/Elderly_People.wav",},
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.11839145421982,
+           18.464726565915313
+          ]
+        }
+      },
+    {
+          "type": "Feature",
+          "properties": {
+            "Description": "Architect Ojeda discussing the historic building typologies:",
+            "Sound": "images/sounds/Calle de San Jose.wav",},
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -66.12070351839066,
+            18.467481831958803
+            ]
+          }
+        },
+    {
+              "type": "Feature",
+              "properties": {
+                "Description": "Local pianist playing music:",
+                "Sound": "images/sounds/Calle Recinto Sur_Pianist.wav",},
+              "geometry": {
+                "type": "Point",
+                "coordinates": [
+                  -66.1175411939621,
+                  18.46380813406883
+                ]
+              }
+            },
+      {
+              "type": "Feature",
+              "properties": {
+              "Description": "Loud noise from vehicle traffic:",
+              "Sound": "images/sounds/PDA.wav",},
+              "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -66.11852824687958,
+                18.465075110786366
+                  ]
+                }
+              },
+        {
+            "type": "Feature",
+            "properties": {
+            "Description": "Salsa!",
+            "Sound": "images/sounds/Plaza de armas 2.wav",},
+            "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -66.11715495586394,
+              18.465360052052763
+                ]
+              }
+            },
+        {
+                "type": "Feature",
+                "properties": {
+                "Description": "How the historic squares began...",
+                "Sound": "images/sounds/Plaza de armas 3_history.wav",},
+                "geometry": {
+                "type": "Point",
+                "coordinates": [
+                  -66.11282855272293,
+                  18.466309004822467
+                    ]
+                  }
+                },
+          {
+              "type": "Feature",
+              "properties": {
+              "Description": "...and then things started changing",
+              "Sound": "images/sounds/Plaza de armas.wav",},
+              "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -66.11743524670601,
+                18.466647370090293
+              ]
+            }
+          }
+];
+
+
+//--------------create array of photo content----------------------
+
+var photoLocations = [
+    {
+        "type": "Feature",
+        "properties": {
+          "Description": "Nick Quijano's Art Studio",
+          "Photo": "images/photos/an artists materials.JPG",},
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.11734941601753,
+            18.466364975063204
+          ]
+        }
+      },
+    {
+          "type": "Feature",
+          "properties": {
+            "Description": "Calle Recinto Sur:",
+            "Photo": "images/photos/CRS_pianist.JPG",},
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -66.11766457557678,
+              18.46328658471007
+            ]
+          }
+        },
+    {
+              "type": "Feature",
+              "properties": {
+                "Description": "Nick's archives",
+                "Photo": "images/photos/Nic's archives.JPG",},
+              "geometry": {
+                "type": "Point",
+                "coordinates": [
+                  -66.11733064055443,
+                  18.46630518866902
+                ]
+              }
+            },
+      {
+              "type": "Feature",
+              "properties": {
+              "Description": "Empanada stand",
+              "Photo": "images/photos/PC_empanada.JPG",},
+              "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -66.11237123608589,
+                18.46642730553709
+                  ]
+                }
+              },
+        {
+            "type": "Feature",
+            "properties": {
+            "Description": "Artisan market at Plaza de Colon",
+            "Photo": "images/photos/PC_markets.JPG",},
+            "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -66.11264079809189,
+              18.46599226379789
+                ]
+              }
+            },
+        {
+                "type": "Feature",
+                "properties": {
+                "Description": "tourists or locals?",
+                "Photo": "images/photos/PDA_tourists.JPG",},
+                "geometry": {
+                "type": "Point",
+                "coordinates": [
+                  -66.11770749092102,
+                  18.46526083148691
+                    ]
+                  }
+                },
+          {
+              "type": "Feature",
+              "properties": {
+              "Description": "Local tourguides",
+              "Photo": "images/photos/PDA_tourguides.JPG",},
+              "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -66.11754521727562,
+                18.46501659600345
+              ]
+            }
+          }
+];
+//--------------------------- add custom icons---------------------
+
+var soundIcon = L.icon({
+    iconUrl: 'images/icons/sound.png',
+    //shadowUrl: 'images/icons/soundShadow.png',
+    iconSize:     [20, 30], // size of the icon
+  //  shadowSize:   [50, 64], // size of the shadow
+    iconAnchor:   [0, 0], // point of the icon which will correspond to marker's location
+    //shadowAnchor: [4, 62],  // the same for the shadow
+    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+});
+
+var diagramIcon = L.icon({
+    iconUrl: 'images/icons/diagram.png',
+    //shadowUrl: 'images/icons/soundShadow.png',
+    iconSize:     [20, 30], // size of the icon
+  //  shadowSize:   [50, 64], // size of the shadow
+    iconAnchor:   [0, 0], // point of the icon which will correspond to marker's location
+    //shadowAnchor: [4, 62],  // the same for the shadow
+    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+});
+
+var photoIcon = L.icon({
+    iconUrl: 'images/icons/photo.png',
+    //shadowUrl: 'images/icons/soundShadow.png',
+    iconSize:     [20, 20], // size of the icon
+  //  shadowSize:   [50, 64], // size of the shadow
+    iconAnchor:   [0, 0], // point of the icon which will correspond to marker's location
+    //shadowAnchor: [4, 62],  // the same for the shadow
+    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+});
+
+//------------------create layers to add multi-media------------------
+
+var diagramsLayer = L.geoJson(diagramLocations, {
+        pointToLayer: function (feature, latlng) {
+            return L.marker(latlng, {icon: diagramIcon}).bindPopup('<img src="'+ feature.properties.Image +'" style = "width:500px;height:500px;">');
+        }
+    }).addTo(map);
+
+var soundsLayer = L.geoJson(soundLocations, {
+            pointToLayer: function (feature, latlng) {
+                return L.marker(latlng, {icon: soundIcon}).bindPopup(feature.properties.Description + "<br>" + '<audio controls> <source src="'+ feature.properties.Sound +'" type = "audio/wav;"> </audio>');
+            }
+        }).addTo(map);
+
+var photoLayer = L.geoJson(photoLocations, {
+            pointToLayer: function (feature, latlng) {
+                return L.marker(latlng, {icon: photoIcon}).bindPopup(feature.properties.Description + "<br>" + '<img src="'+ feature.properties.Photo +'" style = "width:435px;height:290px;">');
+            }
+        }).addTo(map);
+
+//---------------------ARCHIVED CODE---------------------------------------------
+
+//L.marker([ -66.1126783490181,18.466097844204384], {icon: soundIcon}).addTo(map);
+
+/*function onEachAudio(feature, layer) {
+   layer.bindPopup(feature.properties.Details + "<br>" + feature.properties.html);
+ };
+
+ new L.GeoJSON.AJAX("audio.geojson", {
+   onEachFeature: onEachAudio,
+   pointToLayer: function(feature, latlng) {
+     return L.marker(latlng, {icon: audioIcon});
+   }
+ }).addTo(map);
+/*var plazaColonContent =
+  '"Plaza: Plaza de Colon" <br>,
+  "Sound_Level:Sound Level ~ 94 decibels",<br>
+  "Dominant Sounds: traffic", <br>
+  "Secondary Sounds: tour guides, tourists, market, fountain"';
+
+L.Marker(-66.1118683218956,18.466021521025468).bindPopup(plazaColonContent).addTo(map);*/
+
+
+// Reference Tiles
+
+//L.tileLayer('maps3/{x}/{y}/{z}.png').addTo(map);
+//L.tileLayer('https://stamen-tiles.a.ssl.fastly.net/toner/{z}/{x}/{y}.jpg', {
+  //attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.',
+//}).addTo(map);
+
+/*var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '© OpenStreetMap, Tiles courtesy of Humanitarian OpenStreetMap Team'
+  }).addTo(map);
+
+  const plazaHomeList = document.querySelector('#plaza_home_prices-list');
+  const plazaNameSelect = document.querySelector('#plaza-name');*/
+
+
+//image overlay
+
+
+var imageBounds = [[18.474066, -66.130234],[18.457140, -66.103148]];
+
+var imageUrl = 'images/interactive map layer-01.png';
+      var overLay = L.imageOverlay(imageUrl, imageBounds);
+      map.addLayer(overLay);
+      map.fitBounds(imageBounds);
+
+//add images and captions to maps
+
+
+
+//newOverlay.on('click', function(d) {alert('I have been clicked ' + this)});
+
+</script>
+
+</body>
+</html>
