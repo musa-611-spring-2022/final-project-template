@@ -1,0 +1,289 @@
+<html>
+
+<head>
+  <title>Dogs in New York City</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
+  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <div class="content">
+    <div class="map-container">
+      <div class="map" id="dog-map"></div>
+    </div>
+    <canvas class="the-canvas"></canvas>
+    <div class="slides">
+      <!-- slide 0 Introduction-->
+      <div class="slide introdcution">
+        <center>
+          <h1>Introduction</h1>
+        </center>
+        <p>Dogs are human's friends. This is especially true in megacities such as NYC, where people are busy surviving
+          and need accompany after their work. The trend of having a dog is pervasive in NYC, but how to carefully breed
+          our dogs is not clear to each dog owner.
+          <br>
+          <br>
+          This website will serve as a guidebook for each potential and already dog owner, providing information about
+          dog runs, pet supply stores, dog-friendly hotels, vet clinics, dog licenses, dog shelters & breeders, and dog
+          friends service.
+          <br>
+          <br>
+          Overall, the web application will provide resources as much as possible for dog raisings in this way to make
+          sure each dog can have healthy life and give good accompany to their owners.
+        </p>
+      </div>
+      <!-- slide 1 Dog Runs-->
+      <div class="slide">
+        <center>
+          <h2>Dog Runs</h2>
+        </center>
+        <div id="weatherInfo"></div>
+        <p>A dog run is any dedicated outdoor space or structure for your dog to run free, scratch, roll, and be her
+          delightful canine self.
+        </p>
+        <p>
+          There are <b>87 dog runs</b> in New York City which are mainly distributed around Manhattan Island and
+          Brookyln.
+        </p>
+        <p>
+          <b>Click through each dog run and find the one your doggy loves!</b>
+        </p>
+        <div class="dogRunsMap">
+          <button>Overall Map </button>
+        </div>
+      </div>
+      <!-- slide 2 Dog Runs - Focus Group-->
+      <div class="slide">
+        <center>
+          <h3>Dog Runs - Focus Group</h3>
+        </center>
+        <p>The biggest dog run in NYC is <b><a href='https://www.google.com/search?q=Rockaway Freeway Dog Park'
+              target='_blank' style="color:white;">Rockaway Freeway Dog Park</a></b> in Queens.
+          Its area is <b>8259 sqm</b>, which equals to 1.15 standard soccer fileds.
+          Your doggy can freely chase frisbee here.
+        </p>
+        <center><img id="BiggestDogRuns"
+            src="https://cdn.businessyab.com/assets/uploads/af3fcb1a2a262247cd88d8e4b6b70bcc__united_states_new_york_queens_county_queens_far_rockaway_beach_channel_drive_83_02_freeway_dog_run_44563.jpg">
+        </center>
+      </div>
+      <!-- slide 3 Dog Licenses -->
+      <div class="slide">
+        <center>
+          <h2>Dog Licenses</h2>
+        </center>
+        <p>Play with the map to know the star breed around your neighborhood.</p>
+        <form id="form1">
+          Zip Code: <input type="text" id="zipcodeTypeIn" value="all">
+          <input type="submit" value="Check" />
+        </form>
+        <p>The percentage for Male Dog is <b>54.6%</b> <br>
+          The percentage for Female Dog it is <b>45.3%</b><br>
+          The average year is <b>9.78</b><br>
+          The most popular breed is <b>Yorkshire Terrier</b>.<br>
+          There are <b>30379</b> Yorkshire Terrier in NYC<br>
+        </p>
+        <center><img id="BiggestDogRuns"
+            src="https://highlandcanine.com/wp-content/uploads/2021/05/yorkshire-terrier-sitting-on-decking.jpg">
+        </center>
+      </div>
+      <!-- slide 4 Dog Licenses - Focus Group -->
+      <div class="slide">
+        <center>
+          <h3>Dog Licenses - Focus Group</h3>
+        </center>
+        <P>The farest hometown of NYDogers, <b>BETTY & LUCA</b>, is Clallam County, <b>Washington</b>
+          <br>
+          The breeds of these dogs are
+          <br>
+          <b>American Pit Bull Mix</b>
+          <br>
+          Look at them running at the snow!
+          <br>
+          How happy they are!
+        </P>
+        <center><img id="BiggestDogRuns"
+            src="https://p0.pikrepo.com/preview/623/853/brown-and-white-american-pitbull-terrier-mix-on-snow-covered-ground-during-daytime.jpg">
+        </center>
+      </div>
+      <!-- slide 5 Pet Store -->
+      <div class="slide">
+        <center>
+          <h2>Pet Store</h2>
+        </center>
+        <p>There are <b>109</b> pet stores in NYC.
+          <br>
+          Check the nearest pet stores around you.
+          <br>
+          Make sure your doggy get the dog snacks!!
+          <br>
+          <center><img id="BiggestDogRuns"
+              src="https://brisbanista.com.au/wp-content/uploads/2018/08/dog-mcdobbie-hu-420836-unsplash-1024x768.jpg">
+          </center>
+        </p>
+      </div>
+      <!-- slide 6 Dog Friendly Hotel -->
+      <div class="slide">
+        <center>
+          <h2>Dog Friendly Hotel</h2>
+        </center>
+        <p>We know travelling with dogs takes effort. Here we provide <b>60 dog friendly hotels</b>
+          in New York City. You can take a look and <b>directly book a trip</b> with your dog to New York right now!
+          <br>
+          <center><img id="BiggestDogRuns"
+              src="https://www.ihgplc.com/-/media/ihg/images/news/2021/2021_july-8_pets-and-points/ihg-pet-rate-ltf-3840x2160.jpg?h=2160&w=3840&crop=crop&cropw=770&croph=433&hash=F0BE66CCCF79D39F41EDD40F85B410BF">
+          </center>
+          <br>
+          <i>Note: The hotels are based on the top 60 results of relavant search through Google Place API.</i>
+        </p>
+      </div>
+      <!-- slide 7 Animal Hospital -->
+      <div class="slide">
+        <center>
+          <h2>Animal Hospital</h2>
+        </center>
+        <p>
+          Need emergent dog care? Here 60 pet hospitals are shown on the map. Click each dot in the map to carefully
+          look at the <b>ratings</b> and decide the <b>transportation</b> at a click!
+          <br>
+          <center><img id="BiggestDogRuns"
+              src="https://cdn.shopify.com/s/files/1/0654/0895/articles/doctor-dog_5dc4901a-3248-4e79-97b4-253fa61dce5a.jpg?v=1525270302">
+          </center>
+          <i>Note: The hotels are based on the top 60 results of relavant search through Google Place API.</i>
+        </p>
+      </div>
+      <!-- slide 8 Get a dog -->
+      <div class="slide">
+        <center>
+          <h2>Get a Dog</h2>
+        </center>
+        <p>
+          If you are still hesitating about raising a dog, take a look at the dog rescues and dog breeders!
+          Here we provide <b>40 dog rescues and 40 dog breeders</b> on the map in different color.
+          <br>
+          <br>
+          We strongly recommend the dog adoption, here are the <a
+            href="https://www.humanesociety.org/resources/top-reasons-adopt-pets#:~:text=Overburdened%20shelters%20take%20in%20millions,the%20animals%20they%20take%20in!"
+            target="_blank" style="color: white;"><b>reasons</b></a>
+          <center><img id="BiggestDogRuns"
+              src="https://www.pd.com.au/wp-content/uploads/2021/07/6-Steps-to-finding-an-ethical-dog-breeder-no-2.jpg">
+          </center>
+          <i>Note: The hotels are based on the top 60 results of relavant search through Google Place API.</i>
+        </p>
+      </div>
+      <!-- slide 9 dog friend -->
+      <div class="slide">
+        <center>
+          <h2>Dog Friend Network</h2>
+        </center>
+        <p>Dogs are domesticated and <b>social</b> animals. They enjoy friendly interactions with familiar humans or other
+          animals and tend to avoid isolation.
+          <br>
+          <center>
+            <img id="BiggestDogRuns"
+            src="https://cf.ltkcdn.net/dogs/images/orig/250841-1710x1092-Two_dogs.jpg">
+          </center>
+          <br>
+          Dogs are not only your pets. When you are at work,they will feel lonely at home! 
+          Check out the map, <b>become a member of this dog friend network</b> to find other dogs in NYC and concat them for a dog party!
+        </p>
+        <div class="Register">
+          <button>Regesiter Now! </button>
+        </div>
+        <div class="register-form hidden">
+          <div class="register-form-closer">
+            <button class="close-register-form">Cancel</button>
+          </div>
+          <div class="register-step step-select-location">
+            <p>Click a point on the map nearest to the dog residence.</p>
+            <button class="continue-btn">Continue</button>
+          </div>
+          <div class="register-step step-give-details">
+            <strong><label for="name">Name</label></strong>
+            <br>
+            <input type="text" id="name">
+            <br>
+            <strong><label for="birth-datetime">DOB</label></strong>
+            <br>
+            <input class="full-width-step-field" id="birth-datetime" type="date">
+            <br>
+            <strong><label for="gender">Gender</label></strong>
+            <br>
+            <select class="full-width-step-field" id="gender">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="transgender">Transgender</option>
+              <option value="non-binary">Non-binary</option>
+              <option value="preferNotToRespond">Prefer not to respond</option>
+            </select>
+            <br>
+            <br>
+            <div id="multiAvailabilites">
+              <strong>Availabilities</strong>
+              <br>
+              <input type="checkbox" id="6-8">
+              <label for="6-8">06 - 08 AM</label>
+              <input type="checkbox" id="8-10">
+              <label for="8-10">08 - 10 AM</label>
+              <input type="checkbox" id="10-12">
+              <label for="10-12">10 - 12 AM</label>
+              <br>
+              <input type="checkbox" id="12-14">
+              <label for="12-14">12 - 14 PM</label>
+              <input type="checkbox" id="8-10">
+              <label for="14-16">14 - 16 PM</label>
+              <input type="checkbox" id="10-12">
+              <label for="16-18">16 - 18 PM</label>
+              <br>
+              <input type="checkbox" id="18-20">
+              <label for="18-20">18 - 20 PM</label>
+              <input type="checkbox" id="20-22">
+              <label for="20-22">20 - 22 PM</label>
+              <input type="checkbox" id="22-24">
+              <label for="22-24">22 - 24 PM</label>
+            </div>
+
+            <textarea class="full-width-step-field" id="detail" placeholder="Give any details"></textarea>
+            <br>
+            <strong><label for="email">Email</label></strong>
+            <br>
+            <input type="email" id="email" pattern=".+@globex\.com" size="30" required>
+
+            <strong><button>Submit!</button></strong>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="direction"><strong>
+      ---------------------------------------------------------------------Introduction-------------------------------------------------------------------------------------------------------------------------------------Dog Runs-------------------------------------------------------------------------------------------------------------------------------Dog Runs - Focus Group-------------------------------------------------------------------------------------------------------------------------------Dog Licenses-----------------------------------------------------------------------------------------------------------------------------------------------------------Dog Licenses - Focus Group-------------------------------------------------------------------------------------------------------------------------------------------Pet Store--------------------------------------------------------------------------------------------------------------------------------------------------Dog Friendly Hotel--------------------------------------------------------------------------------------------------------------------------------------------------------Animal Hospital------------------------------------------------------------------------------------------------------------------------------------------------------Get a Dog--------------------------------------------------------------------------------------------------------------------------------------------Dog Friend Network---------------------------------------------------------------------------------------------------------------------------------------------------------
+    </div>
+    </strong>
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+  <script src='https://unpkg.com/@turf/turf@6/turf.min.js'></script>
+  <script src="data/dogRuns.js"></script>
+  <script src="data/petStores.js"></script>
+  <script src="data/animalHotel.js"></script>
+  <script src="data/animalHospital.js"></script>
+  <script src="data/getAnimals.js"></script>
+  <script src="data/dogLicenses.js"></script>
+  <script src="dogImgParticular.js"></script>
+  <script src="tools.js"></script>
+  <script src="index.js"></script>
+  <script src="dogFriendRegister.js"></script>
+
+</body>
+
+</html>
