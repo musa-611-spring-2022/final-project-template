@@ -1,0 +1,629 @@
+<!DOCTYPE = html>
+<html style= "height: 100%;margin:0; width:90%;">
+<head>
+
+<title> Viejo San Juan Map</title>
+
+<meta name= "viewport" content= "width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script>
+
+
+
+</head>
+
+<body style= "height: 100%; margin: 0;">
+
+<style type= "text/css">
+#mySidenav a {
+  position: fixed; /* Position them relative to the browser window */
+  left: -11px; /* Position them outside of the screen */
+  transition: 0.3s; /* Add transition on hover */
+  padding: 15px; /* 15px padding */
+  width: 100px; /* Set a specific width */
+  text-decoration: none; /* Remove underline */
+  font-size: 20px; /* Increase font size */
+  color: white; /* White text color */
+  font-family: cy, sans-serif;
+  border-radius: 0 5px 5px 0; /* Rounded corners on the top right and bottom right side */
+}
+
+#mySidenav a:hover {
+  left: 0; /* On mouse-over, make the elements appear as they should */
+}
+
+/* The about link: 20px from the top with a green background */
+#about {
+  top: 100px;
+  background-color: #e2db7d; /*lime green */
+  position: fixed;
+  z-index: 1;
+}
+
+#add {
+  top: 150px;
+  background-color: #e5aba1; /* peach */
+  z-index: 1;
+}
+
+#sounds {
+  top: 230px;
+  background-color: #ed6145;/*burnt orange */
+}
+
+#contact {
+  top: 280px;
+  background-color: #9f5645 /*brown*/
+}
+#Filters {grid-row:1;
+  position: fixed;
+  top: 100px;
+  left: 250px;
+  background-color: #93278f;
+}
+#plaza_home_prices-list { grid-area: list; }
+
+#plaza_home_prices-list {
+  overflow-y: auto;
+}
+
+#Filters {
+  border-radius: 5px 5px 5px 5px;
+  display: flex;
+  gap: 10rem;
+  align-items: center;
+    font-family: cy, sans-serif;
+    color: #ffffff;
+  z-index: 2;
+}
+#plaza-name{
+  font-family: cy, sans-serif;
+  color: #93278f;
+}
+
+#map{
+  z-index: 0;
+}
+
+}
+
+#plaza-name{
+  min-width: 10rem;
+}
+</style>
+
+<div id= "map" style= "width: 183%; height: 180%; background:#f1a340; margin: 0;"></div>
+
+<div id="mySidenav" class="sidenav">
+
+
+  <a href="about.html" id="about">About</a>
+  <a href="HomeSalePrices.html" id="add">Home Values</a>
+  <a href="sounds.html" id="sounds">Sounds</a>
+  <a href="#" id="contact">Contact</a>
+</div>
+
+
+<script type = "text/javascript">
+
+// Declare map object
+
+var mapOptions = {
+          //center: [18.46551898274357, -66.1154130910439],
+          maxZoom: 24,
+          minZoom: 5,}
+var map = L.map('map').setView([18.453883, -66.105469],12);
+
+//add markers to maps3
+
+</script>
+
+<div id="markers" class="markers"></div>
+
+<style type= "text/css">
+
+#markers{
+  z-index: 1
+}
+</style>
+
+<script type = "text/javascript">
+
+var someFeatures = [
+  {
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "Nearest Plaza": "Plaza Colon",
+        "Footage": "462 sqft",
+        "Home_Sale_Price": "$55K"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.11231356859207,
+          18.46582816882028
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nearest Plaza": "Plaza Colon",
+        "Footage": "1406 sqft",
+        "Home_Sale_Price": "$460K"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.1128371746362,
+          18.4677987429789
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nearest Plaza": "Plaza Colon",
+        "Footage": "1800 sqft",
+        "Home_Sale_Price": "$750K"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.112655167246,
+          18.4677166904136
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nearest Plaza": "Plaza Colon",
+        "Footage": "611 sqft",
+        "Home_Sale_Price": "$229K"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.1151875724802,
+          18.4662884635286
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nearest Plaza": "Plaza Colon",
+        "Footage": "4500 sqft",
+        "Home_Sale_Price": "$360K"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.1142558212215,
+          18.4666871097085
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nearest Plaza": "Plaza Colon",
+        "Footage": "866 sqft",
+        "Home_Sale_Price": "$235K"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.1150858323069,
+          18.4673896090415
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nearest Plaza": "Plaza Colon",
+        "Footage": "583 sqft",
+        "Home_Sale_Price": "$225K"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.1136050733496,
+          18.4679080901751
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nearest Plaza": "Plaza Colon",
+        "Footage": "1086 sqft",
+        "Home_Sale_Price": "$278K"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.1147479611423,
+          18.4675840454579
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nearest Plaza": "Plaza de Armas",
+        "Footage": "N/A",
+        "Home_Sale_Price": "$394K"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.115315867246,
+          18.4654743990968
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nearest Plaza": "Plaza de Armas",
+        "Footage": "1397 sqft",
+        "Home_Sale_Price": "$375K"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.118799918813,
+          18.4658793513963
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nearest Plaza": "Plaza de Armas",
+        "Footage": "505 sqft",
+        "Home_Sale_Price": "$251K"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.1168121592947,
+          18.4669062969728
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nearest Plaza": "Plaza de Armas",
+        "Footage": "7788 sqft",
+        "Home_Sale_Price": "$1.8M"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.1166525899777,
+          18.4668295262687
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nearest Plaza": "Plaza de Armas",
+        "Footage": "2624 sqft",
+        "Home_Sale_Price": "$640K"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.1154350672459,
+          18.4671521565311
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nearest Plaza": "Plaza de Armas",
+        "Footage": "3322 sqft",
+        "Home_Sale_Price": "$910K"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.1154350672459,
+          18.4671521565311
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nearest Plaza": "Plaza San Jose",
+        "Footage": "N/A",
+        "Home_Sale_Price": "$153K"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.1183989080122,
+          18.4675897393989
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nearest Plaza": "Plaza San Jose",
+        "Footage": "N/A",
+        "Home_Sale_Price": "$2.6M"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.1194329899777,
+          18.4665856210412
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nearest Plaza": "Plaza San Jose",
+        "Footage": "2037 sqft",
+        "Home_Sale_Price": "$850K"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.1173414034716,
+          18.4670546384852
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nearest Plaza": "Plaza San Jose",
+        "Footage": "7022 sqft",
+        "Home_Sale_Price": "$2.85M"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.1181511476484,
+          18.46727774369
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nearest Plaza": "Plaza San Jose",
+        "Footage": "1506 sqft",
+        "Home_Sale_Price": "$1.25M"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.1172129458009,
+          18.4669996385472
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nearest Plaza": "Plaza San Jose",
+        "Footage": "964 sqft",
+        "Home_Sale_Price": "$424K"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.1146884138312,
+          18.4679131954791
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nearest Plaza": "Calle Recinto Sur",
+        "Footage": "3900 sqft",
+        "Home_Sale_Price": "$3.5M"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.1131161402582,
+          18.4639510357485
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nearest Plaza": "Calle Recinto Sur",
+        "Footage": "3900 sqft",
+        "Home_Sale_Price": "$3.95M"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.1131161402582,
+          18.4639510357485
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nearest Plaza": "Calle Recinto Sur",
+        "Footage": "26363 sqft",
+        "Home_Sale_Price": "$7.5M"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.1145336458008,
+          18.4659138162155
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nearest Plaza": "Calle Recinto Sur",
+        "Footage": "7249 sqft",
+        "Home_Sale_Price": "$2.2M"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.1152720653984,
+          18.4659324868663
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nearest Plaza": "Calle Recinto Sur",
+        "Footage": "3900 sqft",
+        "Home_Sale_Price": "$4.25M"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.1129659365631,
+          18.4639917419385
+        ]
+      }
+    }
+  ]
+}
+]
+var geojsonMarkerOptions = {
+    radius: 4,
+    fillColor: "#ff7800",
+    color: "#000",
+    weight: 1,
+    opacity: 1,
+    fillOpacity: 0.4
+};
+
+
+//add markers
+
+L.geoJSON(someFeatures, {
+    pointToLayer: function (feature, latlng) {
+        return L.circleMarker(latlng, geojsonMarkerOptions).bindPopup('<strong>Home Sale Price: </strong>' + feature.properties.Home_Sale_Price + "<br>" + '<strong>Total Square Foot: </strong>'+ feature.properties.Footage);
+    }
+}).addTo(map);
+
+
+const homePriceLayer = L.layerGroup().addTo(map);
+
+// Reference Tiles
+
+//L.tileLayer('maps3/{x}/{y}/{z}.png').addTo(map);
+//L.tileLayer('https://stamen-tiles.a.ssl.fastly.net/toner/{z}/{x}/{y}.jpg', {
+  //attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.',
+//}).addTo(map);
+
+var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '© OpenStreetMap, Tiles courtesy of Humanitarian OpenStreetMap Team'
+  }).addTo(map);
+
+  const plazaHomeList = document.querySelector('#plaza_home_prices-list');
+  const plazaNameSelect = document.querySelector('#plaza-name');
+
+
+//image overlay
+
+var imageBounds = [[18.474066, -66.130234],[18.457140, -66.103148]];
+
+var imageUrl = 'images/interactive map layer-01.png';
+      var overLay = L.imageOverlay(imageUrl, imageBounds);
+      map.addLayer(overLay);
+      map.fitBounds(imageBounds);
+
+</script>
+
+</body>
+</html>
+
+//-----------------------------ARCHIVED CODE-------------------------
+
+/*let updateDataMarkers = (DataPointsToShow) => {
+    homePriceLayer.clearLayers();
+        for (const point of DataToShow) {
+          const lat = plaza_home_prices['y'];
+          const long= plaza_home_prices['x'];
+          const homeSalePrices = plaza_home_prices['HOUSE SALE PRICE'];
+          const marker = L.marker([lat, long]);
+          marker.bindTooltip(homeSalePrices);
+          homePriceLayer.addLayer(marker);
+        }
+      };
+
+//append list of plazas
+let updatePlazaList = (DataPointsToShow) => {
+        plazaHomeList.innerHTML = '';
+        for (const price of DataPointsToShow) {
+          const price = plaza_home_prices['HOUSE SALE PRICE'];
+          const priceLi = htmlToElement(`<li>${price}</li>`);
+          schoolList.appendChild(priceLi);
+        }
+      };
+
+let filteredPlazaHomes = () => {
+        const selectedPlaza = plazaNameSelect.value;
+        const fPlazas = plaza_home_prices.filter(home => {
+          const plaza = home['NEAREST HISTORIC PLAZA'];
+          const plazaMatch = (plaza === selectedPlaza || selectedPlaza === '');
+          if (plazaCodeMatch) {
+            return true;
+          }
+          return false;
+        });
+        return fPlazas;
+      };
+
+
+let handleSelectChange = () => {
+        const homesToShow = filteredPlazaHomes() || [];
+        updateDataMarkers(homesToShow);
+        updateSchoolList(homesToShow);
+      };
+
+      plazaNameSelect.addEventListener('change', handleSelectChange);
+
+      // The code below will be run when this script first loads. Think of it as the
+      // initialization step for the web page.
+      updateDataMarkers(plaza_home_prices);
+      updatePlazaList(plaza_home_prices);
+
+<!--
+      <fieldset id="Filters">
+        <label for="plaza-name">Name of Plaza</label>
+        <select id="plaza-name" class="plaza-select">
+          <option value="">All</option>
+          <option>Plaza Colon</option>
+          <option>Plaza de Armas</option>
+          <option>Plaza San Jose</option>
+          <option>Calle Recinto Sur</option>
+        </select>
+      </fieldset>
+
+      <ol id="plaza_home_prices-list"></ol> -->

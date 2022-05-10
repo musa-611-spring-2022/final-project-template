@@ -1,0 +1,17 @@
+
+#Filters { grid-area: filters; }
+#plaza_home_prices-list { grid-area: list; }
+
+#plaza_home_prices-list {
+  overflow-y: auto;
+}
+
+#Filters {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+#plaza-name{
+  min-width: 10rem;
+}

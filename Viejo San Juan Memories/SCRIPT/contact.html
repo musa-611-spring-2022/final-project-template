@@ -1,0 +1,156 @@
+<!DOCTYPE = html>
+<html style= "height: 100%;margin:0; width:100%;">
+<head>
+
+<title> Viejo San Juan Map</title>
+
+<style>
+body {
+  background-image: url('images/add memories.JPG');
+  background-repeat: no-repeat;
+ background-attachment: fixed;
+ background-size: cover;
+ z-index: 0;
+}
+</style>
+<meta name= "viewport" content= "width=device-width, initial-scale=1.0">
+</head>
+
+<body style= "height: 100%; margin: 0;">
+  <div id="mySidenav" class="sidenav">
+
+    <a href="about.html" id="about">About</a>
+    <a href="HomeSalePrices.html" id="add">Home Values</a>
+    <a href="sounds.html" id="sounds">Sounds</a>
+  </div>
+
+<div id="home" class ="home">
+  <a href= "index.html" id="home"> <img src = "images/icons/home.png" width = "141" height = "82" /></a>
+</div>
+
+<div id="contactUs" class ="contactUs">
+   <img src = "images/icons/contactUs.png" width="257" height= "99"/>
+</div>
+
+
+</style>
+</head>
+<body>
+
+
+<div id="form" class="form">
+  <form action="/action_page.php">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+</body>
+</html>
+<style type= "text/css">
+
+
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  font-family: cy, sans-serif;
+  color: #ffffff
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #93278f;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+    font-family: cy, sans-serif;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #53beb8;
+}
+
+/* Add a background color and some padding around the form */
+#form {
+  position: fixed;
+  border-radius: 5px;
+  padding: 20px;
+  width:260;
+  font-family: cy, sans-serif;
+  text-align: center;
+  top:120px;
+  left: 500px;
+}
+
+#contactUs{
+  z-index: 2
+  position:relative;
+  text-align: center;
+  top: 350px;
+}
+
+#home {
+  z-index: 2;
+}
+
+#mySidenav a {
+  position: fixed; /* Position them relative to the browser window */
+  left: -11px; /* Position them outside of the screen */
+  transition: 0.3s; /* Add transition on hover */
+  padding: 15px; /* 15px padding */
+  width: 100px; /* Set a specific width */
+  text-decoration: none; /* Remove underline */
+  font-size: 20px; /* Increase font size */
+  color: white; /* White text color */
+  font-family: cy, sans-serif;
+  border-radius: 0 5px 5px 0; /* Rounded corners on the top right and bottom right side */
+}
+
+
+#mySidenav a:hover {
+  left: 0; /* On mouse-over, make the elements appear as they should */
+}
+
+/* The about link: 20px from the top with a green background */
+#about {
+  top: 100px;
+  background-color: #e2db7d; /*lime green */
+  position: fixed;
+  z-index: 1;
+}
+
+#add {
+  top: 150px;
+  background-color: #e5aba1; /* peach */
+  z-index: 1;
+}
+
+#sounds {
+  top: 230px;
+  background-color: #ed6145;/*burnt orange */
+}
+
+#contact {
+  top: 280px;
+  background-color: #9f5645 /*brown*/
+}
+
+</body>
+</html>
