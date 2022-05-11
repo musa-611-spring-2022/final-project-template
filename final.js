@@ -56,11 +56,15 @@ function updateMap(features) {
     // let featureJson = features.addTo(layerGroup);
     const geoJsonLayer = L.geoJSON(features, { style: myStyle, pointsToLayer: (p, latlng) => L.marker(latlng) })
       .bindTooltip(l => l.feature.properties)
-      .bindPopUp(feature.properties.popUpContent)
       .addTo(layerGroup);
   
     return geoJsonLayer;
   }  
+
+  //not sure if this will work to add in popup's
+function onEachFeature(feature, layer) {
+  layer.bindPopup(feature.property.popUpContent);
+}
 
 function showSlide(slide) {
   slideTitleDiv.innerHTML = `<h3>${slide.properties.titleSlide}</h3>`;
