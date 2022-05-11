@@ -128,7 +128,7 @@ let legend = L.control({position: "bottomleft"});
 legend.onAdd = function() {
     let div = L.DomUtil.create("div", "legend");
     div.innerHTML = 
-        '<p> Explore city level, census, and Laal community data. Laal is located in the neighborhood of Norwood, the Bronx, NYC.</p><hr>';
+        '<p> Explore city level, census, and Laal community data. Click on the map for more information.</p><hr>';
     return div;
 };
 legend.addTo(map);
