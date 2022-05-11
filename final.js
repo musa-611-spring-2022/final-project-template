@@ -146,7 +146,12 @@ new CharacterData("myChart", {
       data: yValues
     }]
   },
-  options: {}
+  options: {
+    title: {
+      display: true,
+      text: "Number of Bangladeshi Population by Census Tract"
+    }
+  }
 });
 
 /*
