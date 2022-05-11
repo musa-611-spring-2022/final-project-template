@@ -37,13 +37,115 @@
           "show": false
         }
       },
-        "contentSlide": "Bangladeshis are one of the fastest growing immigrant communities in NYC
-         and the poorest compared to other Asian ethnic communities. According to a 2022 report by DOHMH on AAPI Health, 58% of 
-         Bangladeshi's in NYC earn an income 200% below the federal poverty level and Bangladeshi households in NYC are the most 
-         rent burdened of AAPI New Yorkers, 70% pay over 30% of their income on housing. Like most immigrant communities, this 
-         population faces a range of economic and social stressors, including financial strains, discrimination, inadequate housing,
-          and social isolation.",
+        "contentSlide": "Bangladeshis are one of the fastest growing immigrant communities in NYC and the poorest compared to other Asian ethnic communities. According to a 2022 report by DOHMH on AAPI Health, 58% of Bangladeshi's in NYC earn an income 200% below the federal poverty level and Bangladeshi households in NYC are the most rent burdened of AAPI New Yorkers, 70% pay over 30% of their income on housing. Like most immigrant communities, this population faces a range of economic and social stressors, including financial strains, discrimination, inadequate housing, and social isolation.",
         "titleSlide": "New York City"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -73.87782096862793,
+              40.88749773048662
+            ],
+            [
+              -73.8813829421997,
+              40.88308522083045
+            ],
+            [
+              -73.88232707977295,
+              40.8837665834404
+            ],
+            [
+              -73.88382911682129,
+              40.883409680091006
+            ],
+            [
+              -73.8868761062622,
+              40.88435060295149
+            ],
+            [
+              -73.88421535491943,
+              40.879418720645106
+            ],
+            [
+              -73.88219833374023,
+              40.87494077237454
+            ],
+            [
+              -73.87962341308594,
+              40.86854781412486
+            ],
+            [
+              -73.87400150299072,
+              40.87266923354431
+            ],
+            [
+              -73.87176990509033,
+              40.87636855689051
+            ],
+            [
+              -73.87108325958252,
+              40.88048948948312
+            ],
+            [
+              -73.87451648712158,
+              40.88022991074936
+            ],
+            [
+              -73.87460231781006,
+              40.88159268774445
+            ],
+            [
+              -73.87799263000488,
+              40.882144279979755
+            ],
+            [
+              -73.87782096862793,
+              40.88749773048662
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "stroke": "#fb2828",
+        "stroke-width": 1,
+        "stroke-opacity": 0.5,
+        "fill": "#f2eded",
+        "fill-opacity": 0.2,
+        "slideNum": 1,
+        "popUpContent": "will edit",
+        "chart": {
+          "series": [25, 15, 44, 55, 41, 17],
+          "chart": {
+          "width": "100%",
+          "type": "pie"
+        },
+        "labels": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "theme": {
+          "monochrome": {
+            "enabled": true
+          }
+        },
+        "plotOptions": {
+          "pie": {
+            "dataLabels": {
+              "offset": -5
+            }
+          }
+        },
+        "title": {
+          "text": "Monochrome Pie"
+        },
+        "legend": {
+          "show": false
+        }
+      },
+        "contentSlide": "",
+        "titleSlide": "Bronx, NYC"
       },
       "geometry": {
         "type": "Polygon",
