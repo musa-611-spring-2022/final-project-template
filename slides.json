@@ -144,8 +144,8 @@
           "show": false
         }
       },
-        "contentSlide": "Laal is part of the Bronx People's Platform, a policy group advocating for better planning and public services throughout the Bronx.",
-        "titleSlide": "Bronx, NYC"
+        "contentSlide": "Norwood is located in the Bronx. In the past, the Bronx has not had access to the same amenities in other boroughs of NYC. To increase access adn equity, Laal is part of the Bronx People's Platform, a policy group advocating for better planning and public services throughout the Bronx.",
+        "titleSlide": "Norwood, the Bronx, NYC"
       },
       "geometry": {
         "type": "Polygon",
@@ -327,7 +327,7 @@
           "slideNum": 9,
           "popUpContent": "99% of the structures in this tract are multi-unit! 43% of residents moved to this area in 2016.",
           "chart": "edit",
-          "contentSlide": "The total population is 5,693. 97% of this tract's households are renter-occupied. 50.4% are foreign-born, with 24% being from Asia. ",
+          "contentSlide": "The total population is 5,693. 97% of this tract's households are renter-occupied. 50.4% are foreign-born, with 24% being from Asia. This census tract borders a beautiful green space, Woodlawn Cemetary to the north.",
           "titleSlide": "Census Tract 431.01"
         },
         "geometry": {
@@ -361,7 +361,7 @@
         "slideNum": 5,
         "popUpContent": "Of the 132 housholds Laal counted, 86% rent their place of residence and 12.4% own their place of residence.",
         "chart": "edit",
-        "contentSlide": "Laals 2020 Demographic Survey was born as a result of a lack of data that presently exists about this community, and was conducted alongside Laals efforts to count the Bangladeshi population in the 2020 Census. Prior to this phone banking initiative, hundreds of families in the district remained unrepresented and unaccounted for when it came to federal and state funding. Laal counted 554 individuals and 132 households in Norwood during their Census 2020 outreach. This was the first quantitative research conducted by a CBO about the Bangladeshi community in Norwood.",
+        "contentSlide": "Laals 2020 Demographic Survey was born as a result of a lack of data that presently exists about this community, and was conducted alongside Laals efforts to count the Bangladeshi population in the 2020 Census. Prior to this phone banking initiative, hundreds of families in the district remained unrepresented and unaccounted for when it came to federal and state funding. Laal counted 554 individuals and 132 households in Norwood during their Census 2020 outreach. This was the first quantitative research conducted by a CBO about the Bangladeshi community in Norwood. In addition to counting individuals and households for the census, Laal's surveys collected other vital information: 14% of household surveyed were undocumented; 58% of households surveyed reported financial hardships due to COVID-19; and 72% of households surveyed received SNAP benefits before the onset of COVID-19.",
         "titleSlide": "Norwood"
       },
       "geometry": {
