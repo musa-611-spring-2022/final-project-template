@@ -133,6 +133,22 @@ legend.onAdd = function() {
 };
 legend.addTo(map);
 
+var xValues = ["425", "419", "431.01", "423", "429.02", "429.01"]
+var yValues = [164, 104, 81, 77, 45, 528]
+var barColors = ["#ff000", "#c90000", "#af0000", "#8c0000", "#660000"]
+
+new CharacterData("myChart", {
+  type: "bar",
+  data: {
+    labels: xValues, 
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {}
+});
+
 /*
 var census = [
   {
