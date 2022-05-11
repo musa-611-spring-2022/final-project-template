@@ -1,4 +1,4 @@
-let map = L.map('map').setView([40.878344,-73.878264], 15); //zoomed to NYC
+let map = L.map('map').setView([40.878344,-73.880724], 15); //zoomed to NYC
 let layerGroup = L.layerGroup().addTo(map);
 
 //L.marker([40.87369498325355, -73.880724989077587]).addTo(map);
@@ -61,16 +61,23 @@ const slideChartDiv = document.querySelector('#story');
 function updateMap(features) {
     layerGroup.clearLayers();
     // let featureJson = features.addTo(layerGroup);
-    const geoJsonLayer = L.geoJSON(features, { style: myStyle, pointsToLayer: (p, latlng) => L.marker(latlng) })
+    const geoJsonLayer = L.geoJSON(features, { style: myStyle, pointsToLayer: (p, latlng) => L.marker(latlng), onEachFeature: addPopUP})
       .bindTooltip(l => l.feature.properties)
       .addTo(layerGroup);
   
     return geoJsonLayer;
   }  
 
-  //not sure if this will work to add in popup's
-function onEachFeature(feature, layer) {
-  layer.bindPopup(feature.property.popUpContent);
+  //adding popup to each layer- not working
+function addTextToDiv(text) {
+  const markerPlace = document.querySelector(".marker-position");
+  markerPlace.popUpConent = text;
+}
+
+function addPopUP (feature, layer) {
+  if (feature.properties && feature.properties.popUpContent) {
+    layer.bindPopup(feature.properties.popUpContent);
+  }
 }
 
 function showSlide(slide) {
@@ -116,22 +123,12 @@ function jumpToSlide() {
 slidePrevButton.addEventListener('click', goPrevSlide);
 slideNextButton.addEventListener('click', goNextSlide);
 
-/*
-var chart = new ApexCharts(document.querySelector("#chart"), options);
-chart.render();
-//add image overlay
-var imageUrl = '...jpg',
-    imageBounds = [[40.712216, -74.22655], [40.773941, -74.12544]];
-L.imageOverlay(imageUrl, imageBounds).addTo(map);
-*/
-
-
 //added legend to the map, added in css
 let legend = L.control({position: "bottomleft"});
 legend.onAdd = function() {
     let div = L.DomUtil.create("div", "legend");
     div.innerHTML = 
-        '<p>Norwood is located in the Bronx, NYC.</p><hr>';
+        '<p> Explore city level, census, and Laal community data. Laal is located in the neighborhood of Norwood, the Bronx, NYC.</p><hr>';
     return div;
 };
 legend.addTo(map);
@@ -181,89 +178,4 @@ var census = [
       "total_pop":3224
   },   
 ];
-
-
-JSC.Chart('chartDiv', {
-  type: 'horizontal column',
-  series: [
-     {
-        name:'',
-        points: [
-           {x: 'NYC', y: 50},
-           {x: 'Bronx', y: 32},
-           {x: 'CD 7', y: 40},
-           {x: 'Norwood', y: 30}
-        ]
-     },
-  ]
-});
-
-let norwood = L.polygon([
-  [
-    -73.87782096862793,
-    40.88749773048662
-  ],
-  [
-    -73.8813829421997,
-    40.88308522083045
-  ],
-  [
-    -73.88232707977295,
-    40.8837665834404
-  ],
-  [
-    -73.88382911682129,
-    40.883409680091006
-  ],
-  [
-    -73.8868761062622,
-    40.88435060295149
-  ],
-  [
-    -73.88421535491943,
-    40.879418720645106
-  ],
-  [
-    -73.88219833374023,
-    40.87494077237454
-  ],
-  [
-    -73.87962341308594,
-    40.86854781412486
-  ],
-  [
-    -73.87400150299072,
-    40.87266923354431
-  ],
-  [
-    -73.87176990509033,
-    40.87636855689051
-  ],
-  [
-    -73.87108325958252,
-    40.88048948948312
-  ],
-  [
-    -73.87451648712158,
-    40.88022991074936
-  ],
-  [
-    -73.87460231781006,
-    40.88159268774445
-  ],
-  [
-    -73.87799263000488,
-    40.882144279979755
-  ],
-  [
-    -73.87782096862793,
-    40.88749773048662
-  ]],
-  {
-      color: "red",
-      fillColor: "#fb2828",
-      fillOpacity: "0.5",
-  }
-).addTo(map);
-norwood.bindPopup("<b>Norwood</b>");
 */
