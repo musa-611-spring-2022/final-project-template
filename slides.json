@@ -37,7 +37,12 @@
           "show": false
         }
       },
-        "contentSlide": "Bangladeshis are one of the fastest growing immigrant communities in NYC and the poorest compared to other Asian ethnic communities. According to a 2022 report by DOHMH on AAPI Health, 58% of Bangladeshi's in NYC earn an income 200% below the federal poverty level and Bangladeshi households in NYC are the most rent burdened of AAPI New Yorkers, 70% pay over 30% of their income on housing.Like most immigrant communities, this population faces a range of economic and social stressors, including financial strains, discrimination, inadequate housing, and social isolation.",
+        "contentSlide": "<p>Bangladeshis are one of the fastest growing immigrant communities in NYC
+         and the poorest compared to other Asian ethnic communities. According to a 2022 report by DOHMH on AAPI Health, 58% of 
+         Bangladeshi's in NYC earn an income 200% below the federal poverty level and Bangladeshi households in NYC are the most 
+         rent burdened of AAPI New Yorkers, 70% pay over 30% of their income on housing. </p> <p>Like most immigrant communities, this 
+         population faces a range of economic and social stressors, including financial strains, discrimination, inadequate housing,
+          and social isolation.</p>",
         "titleSlide": "New York City"
       },
       "geometry": {

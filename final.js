@@ -1,4 +1,4 @@
-let map = L.map('map').setView([40.751,-73.798], 9.95); //zoomed to NYC
+let map = L.map('map').setView([40.878344,-73.878264], 15); //zoomed to NYC
 let layerGroup = L.layerGroup().addTo(map);
 
 //L.marker([40.87369498325355, -73.880724989077587]).addTo(map);
@@ -59,18 +59,7 @@ function updateMap(features) {
       .addTo(layerGroup);
   
     return geoJsonLayer;
-  } 
-
-
-// function dataCollection() {
-//     return {
-//       type: 'FeatureCollection',
-//       features: slides.features.filter(f => f.properties.slideNum === slideNum),
-//     };
-//   }
-
-
-let slideToShow = { features: [] };  
+  }  
 
 function showSlide(slide) {
   slideTitleDiv.innerHTML = `<h3>${slide.properties.titleSlide}</h3>`;
@@ -84,7 +73,6 @@ function showSlide(slide) {
   };
 })
 }
-
 
 function showCurrentSlide() {
   const slide = slides.features[currentSlideIndex];
@@ -131,7 +119,7 @@ let legend = L.control({position: "bottomleft"});
 legend.onAdd = function() {
     let div = L.DomUtil.create("div", "legend");
     div.innerHTML = 
-        '<p><b>Click on the map to view the data!</b></p><hr>';
+        '<p>Norwood is located in the Bronx, NYC.</p><hr>';
     return div;
 };
 legend.addTo(map);
