@@ -1,4 +1,4 @@
-# MUSA611 Final Project Proposal
+# MUSA611 Final Project - An shipping facilitiy searching app for Philadelphia
 
 
 ## Team Member
